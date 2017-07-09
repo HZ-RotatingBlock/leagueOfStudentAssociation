@@ -1,0 +1,620 @@
+
+/*主体开始*/
+.main{
+    position:relative;
+    margin:0 auto;
+    margin-top:100px;
+    width:900px;
+    height:auto;
+}
+/*活动名称标题*/
+h1.article_title{
+    margin:0 auto;
+    width:100%;
+    font-size:34px;
+    font-weight:700;
+    line-height:44px;
+    text-align:center;
+    color:#000;
+}
+/*发布方信息*/
+.article_info{
+    position:relative;
+    margin-top:30px;
+    width:100%;
+    height:80px;
+}
+img.artical_header_img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    box-shadow:1px 1px 5px #000;
+}
+.artical_user,
+.association_info_bottom_name{
+    position:absolute;
+    top:5px;
+    left:80px;
+    font-size:20px;
+    font-weight:700;
+    line-height:25px;
+    text-align:center;
+    color:#000;
+}
+span.add_focus{
+    display:block;
+    position:absolute;
+    top:50%;
+    right:-60px;
+    width:50px;
+    height:20px;
+    font-size:12px;
+    font-weight:500;
+    line-height:20px;
+    text-align:center;
+    color:#fff;
+    background-color:#3fc42d;
+    border-radius:8px;
+    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    box-shadow:1px 1px 5px #3fc42d;
+    cursor:pointer;
+}
+span.add_focus:hover{
+    box-shadow:1px 1px 5px #000;
+}
+span.artical_date,
+span.artical_reading,
+span.association_info_bottom_activities{
+    position:absolute;
+    top:40px;
+    left:80px;
+    font-size:12px;
+    color:#a1a1a1;
+}
+span.artical_reading{
+    left:190px;   
+}
+/*文章内容开始*/
+.content{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+.content_detail{
+    position:relative;
+    margin-top:30px;
+    width:900px;
+    height:auto;
+}
+pre{
+    font-size:16px;
+    font-weight:500;
+    line-height:30px;
+    color:#000;
+    text-align:left;
+    text-indent:2em;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    word-break:break-all;
+    transition:all .5s;
+    -webkit-transtion:all .5s;  
+}
+.content img{
+    width:100%;
+    height:auto;
+}
+.content h3{
+    font-size:20px;
+    line-height:47px;
+}
+.content p{
+    font-size:16px;
+    line-height:27px;
+    text-indent:2em;
+}
+span.red{
+    color:red;
+}
+span.activities_date,
+span.activities_range,
+span.activities_place{
+    position:absolute;
+    bottom:-250px;
+    left:0;
+    width:100%;
+    height:auto;
+    font-size:16px;
+    font-weight:700;
+    line-height:27;
+}
+span.activities_range{
+    bottom:-280px;
+}
+span.activities_place{
+    bottom:-310px;
+}
+span.article_copyright{
+    position:absolute;
+    right:0;
+    bottom:-180px;
+    font-size:12px;
+    font-weight:500;
+    line-height:30px;
+    color:#a1a1a1;
+}
+/*文章内容结束*/
+/*发表社团信息开始*/
+.artical_association{
+    position:absolute;
+    bottom:-350px;
+    left:0;
+    padding:20px;
+    width:calc(100% - 40px);
+    height:105px;
+    background-color:#f8f8f8;
+    border:1px solid #e1e1e1;
+    border-radius:3px;
+}
+.association_info_bottom{
+    position:relative;
+    width:100%;
+    height:75px;
+    border-bottom:1px solid #e1e1e1;
+}
+img.association_info_bottom{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    box-shadow:1px 1px 5px #000;
+}
+span.association_info_bottom_name{
+    top:5px;
+    left:70px;
+}
+span.association_info_bottom_activities{
+    left:70px;
+}
+strong{
+    font-weight:500;
+}
+span.association_info_bottom_motto{
+    position:absolute;
+    left:5px;
+    bottom:-30px;
+    width:100%;
+    color:#a1a1a1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.more_info{
+    display:block;
+    position:absolute;
+    top:30px;
+    right:20px;
+    width:100px;
+    height:40px;
+    font-size:16px;
+    line-height:40px;
+    text-align:center;
+    color:#fff;
+    background-color:#3fc42d;
+    border-radius:20px;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    z-index:99;
+}
+.more_info:hover{
+    box-shadow:2px 2px 5px #000;
+}
+/*发表社团信息结束*/
+/*点赞分享开始*/
+.share{
+    position:absolute;
+    bottom:-540px;
+    padding-top:20px;
+    padding-bottom:20px;
+    width:100%;
+    height:115px;
+    border-bottom:1px solid #e1e1e1;
+}
+span.share_p{
+    display:inline-block;
+    margin:0 auto;
+    width:100%;
+    font-size:16px;
+    text-align:center;
+}
+a.addIn_button{
+    opacity:0.8;
+    display:block;
+    margin:0 auto;
+    margin-top:20px;
+    padding:8px 25px;
+    width:64px;
+    height:22px;
+    font-size:16px;
+    font-weight:700;
+    line-height:22px;
+    text-align:center;
+    color:#fff;
+    background-color:#0072bc;
+    border-radius:5px;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+}
+.addIn_button:hover{
+    opacity:1;
+    box-shadow:2px 2px 5px #000;
+}
+.like{
+    position:absolute;
+    bottom:-90px;
+    left:0;
+    width:180px;
+    height:50px;
+    font-size:18px;
+    line-height:50px;
+    text-align:center;
+    color:#c03;
+    border-radius:30px;
+    border:1px solid #c03;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+}
+.like:hover{
+    background-color:rgba(204,0,51,0.1);
+}
+img.love{
+    position:absolute;
+    top:50%;
+    left:30px;
+    width:20px;
+    height:20px;
+    transform:translateY(-50%);
+}
+span.like_num{
+    position:absolute;
+    top:50%;
+    right:15px;
+    padding-left:10px;
+    height:20px;
+    font-size:18px;
+    line-height:20px;
+    transform:translateY(-50%);
+    border-left:1px solid #c03;
+}
+a.weixin_share,
+a.weibo_share,
+a.photo_share,
+a.more_share{
+    position:absolute;
+    right:270px;
+    bottom:-90px;
+    width:50px;
+    height:50px;   
+    border:1px solid #eee;
+    border-radius:50%;
+}
+a.weibo_share{
+    right:200px;
+}
+a.photo_share{
+    right:130px;
+}
+a.more_share{
+    right:0;
+    width:120px;
+    font-size:16px;
+    line-height:50px;
+    text-align:center;
+    color:#a1a1a1;
+    border-radius:30px;
+}
+img.share_icons{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:30px;
+    height:30px;
+    transform:translate(-50%,-50%);
+}
+a.weixin_share:hover,
+a.weibo_share:hover,
+a.photo_share:hover,
+a.more_share:hover{
+    background-color:rgba(238, 238, 238, 0.3);
+}
+a.weixin_share:hover .prompt{
+    opacity:1;
+    top:-40px;
+}
+a.weibo_share:hover .prompt{
+    opacity:1;
+    top:-40px;
+}
+a.photo_share:hover .prompt{
+    opacity:1;
+    top:-40px;
+}
+.prompt{
+    opacity:0;
+    position:absolute;
+    top:-50px;
+    left:50%;
+    width:90px;
+    height:30px;
+    font-size:12px;
+    line-height:30px;
+    text-align:center;
+    color:#fff;
+    background-color:#1a1a1a;
+    border-radius:3px;
+    transform:tranlateX(-50%);
+    -webkit-transform:translateX(-50%);
+    transition:all .5s;
+    -webkit-transition:all .5s;
+}
+span.triangle_bottom{   
+    position:absolute;
+    bottom:-5px;
+    left:50%;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #1a1a1a;
+    transform:tranlateX(-50%);
+    -webkit-transform:translateX(-50%); 
+    transition:all .5s;
+    -webkit-transition:all .5s;
+}
+/*点赞分享结束*/
+/*评论区开始*/
+.artical_comment{
+    position:absolute;
+    bottom:-1040px;
+    width:100%;
+    height:280px;
+}
+.artical_comment_frames{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+}
+textarea.artical_comment_framesContent{
+    position:absolute;
+    top:0;
+    left:80px;
+    padding:10px;
+    width:calc(100% - 100px);
+    height:80px;
+    font-size:16px;
+    line-height:25px;
+    background-color:#f8f8f8;
+    border:1px solid #eee;
+    border-radius:3px;
+}
+.artical_comment_framesContent_submit{
+    opacity:0.8;
+    position:absolute;
+    top:110px;
+    right:0;
+    width:80px;
+    height:40px;
+    font-size:18px;
+    line-height:40px;
+    text-align:center;
+    color:#fff;
+    background-color:#3fc42d;
+    border:none;
+    border-radius:3px;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    cursor:pointer;
+}
+.artical_comment_framesContent_submit:hover{
+    opacity:1;
+}
+input.artical_comment_framesContent_reset{
+    opacity:0.8;
+    position:absolute;
+    top:110px;
+    right:90px;
+    width:80px;
+    height:40px;
+    font-size:18px;
+    line-height:40px;
+    text-align:center;
+    color:#a1a1a1;
+    border:none;
+    outline:none;
+    background-color:#fff;
+    cursor:pointer;
+}
+input.artical_comment_framesContent_reset:hover{
+    opacity:1;
+}
+span.artical_comment_framesContent_shortcuts{
+    position:absolute;
+    top:105px;
+    left:80px;
+    padding:5px;
+    height:40px;
+    font-size:14px;
+    line-height:40px;
+    text-align:center;
+    color:#a1a1a1;
+}
+/*评论区历史内容*/
+.artical_comment_content{
+    position:absolute;
+    bottom:50px;
+    left:0;
+    width:100%;
+    height:auto;
+    border-top:1px solid #eee;
+}
+span.artical_comment_contentNum{
+    position:absolute;
+    top:-50px;
+    left:0;
+    font-size:18px;
+    font-weight:700;
+    line-height:35px;
+    text-align:left;
+    color:#000;
+}
+strong.artical_comment_content_num{
+    font-weight:700;
+}
+ul.artical_comment_sort{
+    position:absolute;
+    top:-40px;
+    right:0;
+    width:200px;
+    height:20px;
+}
+li.artical_comment_sort_time{
+    float:left;
+    margin-left:0;
+    width:100px;
+    font-size:14px;
+    font-weight:500;
+    line-height:20px;
+    text-align:right;
+    color:rgba(150, 150, 150, 1);
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    cursor:pointer;
+}
+li.artical_comment_sort_time:hover{
+    color:#000;
+}
+.sort_selected{
+    color:#000 !important;
+}
+/*评论区历史内容*/
+ul.artical_comment_content_ul{
+    position:absolute;
+    top:0;
+    left:0;
+    padding-bottom:20px;
+    width:100%;
+    height:auto;
+}
+li.artical_comment_content_li{
+    position:relative;
+    margin-top:30px;
+    padding-bottom:30px;
+    width:100%;
+    height:auto;
+    border-bottom:1px solid #e1e1e1;
+}
+img.artical_comment_content_userHeader{
+    position:absolute;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+span.artical_comment_content_userName,
+span.artical_comment_content_userfloor,
+span.artical_comment_content_date{
+    position:absolute;
+    top:0;
+    left:50px;
+    width:auto;
+    height:20px;
+    font-size:16px;
+    line-height:20px;
+    color:#000;
+}
+span.artical_comment_content_userfloor,
+span.artical_comment_content_date{
+    top:20px;
+    font-size:12px;
+    color:#a1a1a1;
+}
+span.artical_comment_content_date{
+    top:20px;
+    left:80px;
+}
+p.artical_comment_content_datail{
+    padding-top:60px;
+    width:100%;
+    height:auto;
+    font-size:16px;
+    line-height:25px;
+    color:#000;
+    vertical-align:middle;
+}
+span.good,
+span.return,
+span.report,
+span.focus{
+    opacity:0.8;
+    display:inline-block;
+    position:relative;
+    margin-top:10px;
+    margin-left:0;
+    width:120px;
+    height:20px;
+    font-size:14px;
+    line-height:20px;
+    color:#a1a1a1;
+    cursor:pointer;
+}
+span.good{
+    margin-left:0;
+}
+span.return{
+    margin-right:525px;
+}
+span.report,
+span.focus{
+    width:60px;
+}
+span.good:hover{
+    opacity:1;
+    color:#000;
+}
+span.return:hover{
+    opacity:1;
+    color:#000;
+}
+span.report:hover{
+    opacity:1;
+    color:#000;
+}
+span.focus:hover{
+    opacity:1;
+    color:#000;
+}
+img.good_img,
+img.return_img,
+img.report_img,
+img.focus_img{
+    position:relative;
+    top:5px;
+    width:20px;
+    height:20px;
+}
+/*评论区结束*/
+
+
+
+
+/*主体结束*/
