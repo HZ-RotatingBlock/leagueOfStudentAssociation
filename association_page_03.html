@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>社团概览</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/association_page.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	
+	<body>
+        <!--导航条开始-->
+		<div class="nav">
+            <a href="index.html" title="返回首页"><span class="logo"></span></a>
+            <ul class="login_header_ul">
+                <li class="user_header">
+                    <a href="personal_page.html" title="前往个人主页" class="personalpage_href">
+                        <img src="icons/association_leader_3.jpg" alt="用户头像" class="user_header_img" id="user_header_img">
+                    </a>
+                </li>
+                <li class="user_name" id="user_name">铿锵玫瑰</li>             
+            </ul> 
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="login.html" title="登录" class="nav_li_a">登录</a></li>
+                <li class="nav_li"><a href="login.html" title="注册" class="nav_li_a">注册</a></li>
+            </ul>
+        </div>
+        <!--导航条结束-->
+        <!--侧边快捷栏开始-->
+        <ul class="sidebar">
+            <li class="sidebar_option">
+                <img src="icons/returnTop.png" alt="回到顶部" class="sidebar_option_icons return_top">
+                <span class="prompt_sidebar">
+                    回到顶部<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/collect.png" alt="收藏" class="sidebar_option_icons collect">
+                <span class="prompt_sidebar">
+                    收藏活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/shareOther.png" alt="分享活动" class="sidebar_option_icons shareOther">
+                <span class="prompt_sidebar">
+                    分享活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/return_pre_1.png" alt="返回前页" class="sidebar_option_icons return_pre">
+                <span class="prompt_sidebar">
+                    返回前页<span class="triangle_right"></span>
+                </span>
+            </li>
+        </ul>
+        <!--侧边快捷栏结束--> 
+        <!--头部展示开始-->
+        <div class="video_part">
+            <video autoplay="autoplay" loop id="association_video" class="association_video">
+				<source src="video/3.mp4" type="video/mp4">
+			</video>
+            <div class="association_title">
+                <span class="association_name">中南民族大学自行车协会 </span>
+                <div class="association_content">
+                    <img src="images/association_icons/association_icons_03.jpg" alt="社团logo" class="association_header"/>
+                    中南民族大学自行车协会成立于2007年9月10日，是直属于中南民族大学校团委的一个有活力的社团
+                    <span class="association_content_line"></span>
+                    <div class="association_content_leaderdiv">
+                        <h3 class="association_leader">当前负责人</h3>
+                        <ul class="association_leader_ul">
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="join">我要加入</div>
+            </div>
+        </div> 
+        <!--头部展示结束-->        
+        <!--主体开始-->
+           
+        <div class="main">
+            <img src="icons/top_circle.png" alt="#" class="img_top_circle" />
+            <div class="content">
+                <!--目录-->
+                <ul class="catalog">
+                    <li class="catalog_li">目录</li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li strong">基本信息</li>
+                            <li class="cata_li_innerUl_li">简介</li>
+                        </ul>
+                    </li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li">协会历史</li>
+                        </ul>
+                    </li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li strong">往期活动</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--基本信息-->
+                <div class="base_info">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>基本信息<span class="info_line"></span>
+                    </h2>
+                    <table class="base_info_table">
+                        <tr>
+                            <td class="base_info_table_ele">中文名</td>
+                            <td>中南民族大学自行车协会</td>
+                            <td class="base_info_table_ele">宗旨</td>
+                            <td>历练意志品格，提高实践能力，丰富文化生活，服务广大学生</td>
+                        </tr>
+                        <tr>
+                            <td class="base_info_table_ele">隶属</td>
+                            <td>校体育类学生社团</td>
+                            <td class="base_info_table_ele">职能</td>
+                            <td>兴趣类学生社团</td>
+                        </tr>
+                    </table>
+                </div> 
+                <!--简介及相关-->
+                <div class="base_content">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>社团简介<span class="info_line"></span>
+                    </h2>
+                    <pre class="base_content_p">中南民族大学自行车协会成立于2007年9月10日，直属中南民族大学校团委。协会成立至今车协人一直秉承“行万里路，读万卷书”的宗旨和遵循“团结，向上，互助”的团队思想。功崇惟志，业广惟勤，车协人一直兢兢业业的奋斗着，扎根民大，走向社会，成就自我。民大车协力图通过拉练和远征途中的实践活动，结合当代大学生勇于拼搏的自身特点，进一步达到“学习、锻炼、成长”的目的。在车协实践活动中，磨砺个人意志，增强团队意识，提高实践能力，丰富文化生活，加强社会责任感，服务广大师生。
+                        骑上心爱的单车，穿越熙攘的人群,离开都市的喧嚣, 去那遥远的地方，欣赏沿途美丽的风光，呼吸扑面而来泥土的清香，惬意地驰骋在自由的天地里，用双脚去感受速度与力量，让自己的心情随着飞转的车轮而快乐.只要你拥有一颗想要追寻梦想的心，自行车协会带你奔向远方！
+                    </pre>
+                </div>
+                <!--团队历史-->
+                <div class="base_history">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>团队历史<span class="info_line"></span>
+                    </h2>
+                    <pre class="base_content_p">从06年至今，车协每年寒暑假都会组织远征队伍，目的地包括新疆、西藏、广西在内的二十余个国内省份。
+                        2006车协前身骑行天下车队--三峡行以及北京行
+                        2007暑假远征上海--简单的快乐 ；
+                        2008暑假远征北京；
+                        2009寒假远征珠三角行--江南之南；
+                        2009暑假远征青藏队--幸福，与海拔无关；
+                        2009暑假远征桂林行--一起开始的旅程；
+                        2014年阿肯诺杯第二届华中高校山地车交流赛女子组第一、三、七名，团体组第三名
+                        2014年第一届武汉高校山地自行车联赛“捷安特”杯华农狮子山站女子大众组第二名，男子精英组第三名
+                        2014年第一届武汉高校山地自行车联赛 “红岩”杯武职凌家山站女子组第一、五名，男子组第八、九、十一名
+                        2014年“道卡斯&PMT头盔”杯武汉山地XC越野联赛第三站-南望山男子组第二、四名，高校组第一、三名，女子组第一、五名
+                        2014年Running Man in Hust华科版跑男第二、三名
+                    </pre>
+                </div>
+                <!--往期活动-->
+                <div class="history_activities">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>往期活动<span class="info_line"></span>
+                    </h2>
+                    <div class="history_activities_div">
+                        <ul class="history_activities_ul">
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/cycling/association_cycling (7).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/cycling/association_cycling (2).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/cycling/association_cycling (3).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/cycling/association_cycling (4).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/cycling/association_cycling (5).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/overdue.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/cycling/association_cycling (6).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/overdue.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                        </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!--主体结束-->
+        <!--页尾开始-->
+        <div class="footer">
+            <span class="returnTop">top</span>
+            <div class="link">
+                <ul class="link_ul">
+                    <li class="link_li">
+                        <a href="#" title="网站首页">网站首页</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="合作团队">合作团队</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="成员招募">成员招募</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="加盟合作">加盟合作</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="意见反馈">意见反馈</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="常见问题">常见问题</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="人才招聘">人才招聘</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="联系我们">联系我们</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="友情链接">友情链接</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <span class="copyright_text">Copyright © 社团联盟开发团队 2017. All Rights Reserved</span>
+            </div>
+        </div>
+        <!--页尾结束-->
+        
+        <script type="text/javascript" src="js/general_js.js"></script>
+	</body>
+</html>

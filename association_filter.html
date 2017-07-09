@@ -1,0 +1,628 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>社团筛选页</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/association_filter.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<!--loading star-->    
+        <div class="loading_pagination" id="loading_pagination">
+            <div class="loading_center">
+                <img src="icons/loading_img.png" alt="loading" class="loading_img">
+                <span class="loading_circle_shadow"></span>
+            </div>        
+            <span class="loading_pagination_text">loading...</span>
+            <div class="loading_circle_inner"></div>
+            <div class="loading_circle_outer"></div>
+        </div>
+        <!--loading end-->
+        <!--导航条开始-->
+		<div class="nav">
+            <a href="index.html" title="返回首页"><span class="logo"></span></a>
+            <ul class="login_header_ul">
+                <li class="user_header">
+                    <a href="personal_page.html" title="前往个人主页" class="personalpage_href">
+                        <img src="icons/association_leader_3.jpg" alt="用户头像" class="user_header_img" id="user_header_img">
+                    </a>
+                </li>
+                <li class="user_name" id="user_name"><%=session.getAttribute("personal_name")%></li>             
+            </ul>   
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="login.html" title="登录" class="nav_li_a">登录</a></li>
+                <li class="nav_li"><a href="login.html" title="注册" class="nav_li_a">注册</a></li>
+            </ul>
+        </div>
+        <!--导航条结束--> 
+        <!--侧边快捷栏开始-->
+        <ul class="sidebar">
+            <li class="sidebar_option">
+                <img src="icons/returnTop.png" alt="回到顶部" class="sidebar_option_icons return_top">
+                <span class="prompt_sidebar">
+                    回到顶部<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/collect.png" alt="收藏" class="sidebar_option_icons collect">
+                <span class="prompt_sidebar">
+                    收藏社团<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/shareOther.png" alt="分享活动" class="sidebar_option_icons shareOther">
+                <span class="prompt_sidebar">
+                    社团分享<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/return_pre_1.png" alt="返回前页" class="sidebar_option_icons return_pre">
+                <span class="prompt_sidebar">
+                    返回前页<span class="triangle_right"></span>
+                </span>
+            </li>
+        </ul>
+        <!--侧边快捷栏结束-->      
+        <!--头部展示开始-->
+        <ul class="top_part">
+            <li alt="#" class="top_part_bg_01 top_part_bg"></li>
+            <li alt="#" class="top_part_bg_02 top_part_bg"></li>
+            <li alt="#" class="top_part_bg_03 top_part_bg"></li>
+            <li alt="#" class="top_part_bg_04 top_part_bg"></li>
+            <li alt="#" class="top_part_bg_05 top_part_bg"></li>
+            <li alt="#" class="top_part_bg_06 top_part_bg"></li>
+            <li alt="#" class="top_part_bg_07 top_part_bg"></li>
+            <li alt="#" class="top_part_bg_08 top_part_bg"></li>
+            <li alt="#" class="top_part_bg_09 top_part_bg"></li>
+            <li alt="#" class="top_part_bg_10 top_part_bg"></li>         
+        </ul>
+        <!--图片展示-->
+        <ul class="top_association_introduction">
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">中南民族大学瑜伽健身协会</h3>
+                <p class="association_li_content">中南民族大学瑜伽&健身协会成立于2015年4月，是在校团委和协会指导老师——熊炎老师的指导下开展工作的学生公益性组织，协会面向全校瑜伽、健身爱好者招新，并且每年有相关瑜伽和健身公益性活动，是学校老师和学生从事瑜伽、健身练习和交流的健身性学生社团。协会下设瑜伽组、健身组，分开教学</p>
+            </li>
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">中南民族大学武术协会</h3>
+                <p class="association_li_content">中南民族大学武术协会成立于1984年，由胡文雄副教授任主教练，是校体育类优秀学生社团。协会致力于为广大学生，特别是其中的武术爱好者提供学习武术的机会。使学员们能通过传统武术的训练，具有蓬勃向上的精神面貌、强健的体魄与坚强的意志</p>
+            </li>
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">中南民族大学自行车协会 </h3>
+                <p class="association_li_content">骑上心爱的单车，穿越熙攘的人群,离开都市的喧嚣, 去那遥远的地方，欣赏沿途美丽的风光，呼吸扑面而来泥土的清香，惬意地驰骋在自由的天地里，用双脚去感受速度与力量，让自己的心情随着飞转的车轮而快乐.只要你拥有一颗想要追寻梦想的心，自行车协会带你奔向远方！</p>
+            </li>
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">中南民族大学子衿阅读社</h3>
+                <p class="association_li_content">中南民族大学子衿阅读社成立于2009年9月8日，是由中南民族大学在籍学生因为热爱读书，愿意与人分享、与人交流，想要在某些时刻共同忆起当时阅读的心中的感受，自愿组成的群众性团体</p>
+            </li>
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">”舞生”舞蹈团</h3>
+                <p class="association_li_content">鞋尖的尘里，有旋律狂妄的堆积。镜里的我淋漓大汗，镜外的我盈盈笑意。我们是舞生，我们为舞而生</p>
+            </li>
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">中南民族大学摄影协会 </h3>
+                <p class="association_li_content">爱生活，爱摄影。让真正喜欢摄影的人融入这个集体，享受摄影乐趣</p>
+            </li>
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">中南民族大学影翼轮滑协会</h3>
+                <p class="association_li_content">影翼轮滑成立于2006年夏，是整个中南民族大学轮滑和滑板爱好者交流的平台。社团成立旨在推广普及轮滑运动，交流轮滑技术，弘扬轮滑精神，培养运动人才。 成立以来每年都会吸引一大批热爱自由、崇尚健康激情的年轻大学生加入，轮滑和滑板既丰富了我们的课余文化生活，另一方面也为我们提供了展现自我的舞台</p>
+            </li>
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">中南民族大学足球协会</h3>
+                <p class="association_li_content">中南民族大学足球协会成立于2006年，由各年级足球爱好者组成，通过承办足球赛事，宣传足球运动，增进同学之间友谊，促进校足球文化的发展，丰富文体生活。足球，有“世界第一运动”的美誉，是全球体育界最具影响力的单项体育运动。我校的南区操场和南湖操场均设有足球场。每年的十月，十一月，六月，足球场总是沸腾着。</p>
+            </li>
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">中南民族大学篮球协会</h3>
+                <p class="association_li_content">精英杯是篮协创办的一个大型赛事，每年十月份在校园内受到广泛关注。新生杯、安踏杯、南湖杯、楼栋杯和研究生杯等都是由篮协承办的赛事。篮协营造了民大校园浓厚的篮球氛围，成为了民大热爱篮球的同学们的温暖大家庭。</p>
+            </li>
+            <li alt="#" class="top_association_introduction_li">
+                <h3 class="association_li_title">中南民族大学乒乓球协会</h3>
+                <p class="association_li_content">协会于1988年由一群热爱乒乓球运动的年轻人共同发起创立，以营造良好校园体育文化氛围为己任，秉持着“发扬国球精神，致力民大运动”的信念，丰富广大师生的课余文化生活，为广大乒乓球爱好者提供一个娱乐、训练、锻炼和发展的平台。。</p></li>         
+        </ul> 
+        <!--头部展示结束-->      
+        <div class="main">
+            <img src="icons/top_circle.png" alt="#" class="img_top_circle" />
+            <!--筛选列表开始-->
+            <div class="filter">
+                <h3 class="filter_title">
+                    <span class="filter_title_left"></span>
+                    <span class="filter_title_right"></span>
+                    社团筛选
+                </h3>
+                <!--按类筛选-->
+                <ul class="filter_ul">
+                    <li class="filter_li all">全部</li>               
+                    <li class="filter_li wenyi_button">文艺类</li>
+                    <li class="filter_li yundong_button">运动类</li>
+                    <li class="filter_li gongyi_button">公益类</li>
+                    <li class="filter_li xingqu_button">兴趣类</li>
+                    <li class="filter_li jineng_button">技能类</li>
+                </ul>
+                <!--搜索框-->
+                <div class="search">
+                    <span class="filter_title_left"></span>
+                    <span class="filter_title_right"></span>
+                    请开始你的表演
+                    <div class="search_frames">
+                        <span class="search_icon"></span>
+                        <input type="text" name="search_frames" class="search_frames_input" id="search_frames_input" placeholder="请输入关键词"/>
+                        <button class="search_button">开始搜索</button>
+                    </div>
+                </div>
+            </div>
+            <!--筛选列表结束-->
+            <!--活动列表开始-->
+            <div class="activities">
+                <div class="activities_div">
+                    <ul class="association_ul" id="association_ul">
+                        <li class="association_li wenyi">
+                            <a href="association_page.html?id=1" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_20.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学野狼长跑队</span>
+                                    <span class="association_detail">中南民族大学管理学院长跑队是一个光荣的大家庭，于2002年建队开始，每年的成绩都很优秀，一直是管理学院的骄傲。2004年长跑队开始驶向正规化，由鲁光平担任第一届队长，野狼战队也初具雏形。就此开启了野狼战队的辉煌的序幕</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_01.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li jineng">
+                            <a href="association_page.html?id=2" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_02.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学武术协会</span>
+                                    <span class="association_detail">中南民族大学武术协会成立于1984年，由胡文雄副教授任主教练，是校体育类优秀学生社团。协会致力于为广大学生，特别是其中的武术爱好者提供学习武术的机会。使学员们能通过传统武术的训练，具有蓬勃向上的精神面貌、强健的体魄与坚强的意志</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_02.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li xingqu">
+                            <a href="association_page.html?id=3" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_03.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学自行车协会</span>
+                                    <span class="association_detail">中南民族大学自行车协会成立于2007年9月10日，直属中南民族大学校团委。协会成立至今车协人一直秉承“行万里路，读万卷书”的宗旨和遵循“团结，向上，互助”的团队思想。功崇惟志，业广惟勤，车协人一直兢兢业业的奋斗着，扎根民大，走向社会，成就自我</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_03.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li xingqu">
+                            <a href="association_page.html?id=4" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_04.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学子衿阅读社</span>
+                                    <span class="association_detail">中南民族大学子衿阅读社成立于2009年9月8日，是由中南民族大学在籍学生因为热爱读书，愿意与人分享、与人交流，想要在某些时刻共同忆起当时阅读的心中的感受，自愿组成的群众性团体</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_04.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li wenyi">
+                            <a href="association_page.html?id=5" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_05.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学“舞生”舞蹈团</span>
+                                    <span class="association_detail">鞋尖的尘里，有旋律狂妄的堆积。镜里的我淋漓大汗，镜外的我盈盈笑意。我们是舞生，我们为舞而生。</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_05.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li jineng">
+                            <a href="association_page_06.html" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_06.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学摄影协会</span>
+                                    <span class="association_detail">中南民族大学摄影协会成立于公元2006年10月8日。由党委的魏大江老师发起，首届民大摄影展获奖人 员为主体，成为学生摄影协会的前身。而创立至今，已有会员数百人，占据了民大高水平摄影人员的极大部分</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_06.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li xingqu">
+                            <a href="association_page_07.html" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_07.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学影翼轮滑协会</span>
+                                    <span class="association_detail">影翼轮滑成立于2006年夏，是整个中南民族大学轮滑和滑板爱好者交流的平台。社团成立旨在推广普及轮滑运动，交流轮滑技术，弘扬轮滑精神，培养运动人才</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_07.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li yundong">
+                            <a href="association_page_8.html" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_08.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学足球协会</span>
+                                    <span class="association_detail">中南民族大学足球协会成立于2006年，由各年级足球爱好者组成，通过承办（主办 协办 ）足球赛事，宣传足球运动，增进同学之间友谊，促进校足球文化的发展，丰富文体生活！</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_08.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li yundong">
+                            <a href="association_page_09.html" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_09.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学篮球协会</span>
+                                    <span class="association_detail"> 篮球协会，成立于2008年，协会每年负责组织主办或承办校内各大篮球赛事，致力于民大篮球水平的提高。</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_09.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li yundong">
+                            <a href="association_page_10.html" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_10.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学乒乓球协会</span>
+                                    <span class="association_detail">协会于1988年由一群热爱乒乓球运动的年轻人共同发起创立，以营造良好校园体育文化氛围为己任，秉持着“发扬国球精神，致力民大运动”的信念，丰富广大师生的课余文化生活，为广大乒乓球爱好者提供一个娱乐、训练、锻炼和发展的平台</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_10.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li xingqu">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_11.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学军事爱好者协会</span>
+                                    <span class="association_detail">军事爱好者协会在校人民武装部的指导下，在我校退役大学生士兵的支持下，于2016年4月正式成立。协会以“普及国防教育，提升国防素质，弘扬民族精神”为宗旨，致力于为全校师生普及国防知识，增强师生的国防观念；同时汇集全校的军事爱好者，打造校园军事平台</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_11.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li wenyi">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_12.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学辩论协会</span>
+                                    <span class="association_detail">中南民族大学辩论协会是一个新成立的学校辩论社团组织，成立于2006年9月。是一个新成立的学校辩论社团组织，为广大辩论爱好者提供练习平台</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_12.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li xingqu">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_13.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学烹饪协会</span>
+                                    <span class="association_detail">烹饪协会成立于2014年9月份，为人文类社团之一。现有社员36人，指导老师2人，辅导老师6人。这是一个介绍美食、让大家学习制作美食和品尝美食的社团。每次活动中，我们都会教授大家一种菜肴的烹饪方法，有冷盘热菜，还有甜羹咸汤，有中式菜肴当然还有西式大餐</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_13.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li yundong">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_14.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学网球协会</span>
+                                    <span class="association_detail">中南民族大学网球协会成立于2002年，是经共青团中南民族大学委员会批准成立，受中南民族大学学生团体联合会直接管理的学生社团，是一个朝气蓬勃、独具特色的学生团体</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_14.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li wenyi">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_15.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学天乐合唱团</span>
+                                    <span class="association_detail">碰撞与融合，琢磨与玩味，用耳朵去听、去调整、去体会总有一个音符会拨动你的心</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_15.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li jineng">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_16.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学计算机协会</span>
+                                    <span class="association_detail">中南民族大学计算机协会成立于1990年，是由中南民族大学在籍学生为能进行学术交流、推广电脑知识自愿组成的群众性团体</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_16.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li xingqu">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_17.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学笛萧协会</span>
+                                    <span class="association_detail">音乐之美来源于奏者之心，亦来源于听者内心的共鸣，每静心欣赏一首曲子就能感受到一个前所未见的奇妙音乐世界，那么换一个角度看世界是否也能如音乐一样得到一个前所未有的缤纷美丽的世界……</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_17.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li yundong">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_18.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学游泳协会</span>
+                                    <span class="association_detail">中南民族大学游泳协会通过组织广大冬泳爱好者和游泳爱好者开展多种形式的全校健身游泳（冬泳）活动，使我校越来越多的爱好者纷纷加入到全民健身游泳活动的行列。在体育部门的领导下，充分发挥了协会的桥梁和纽带作用，承办了各项多种形式的全民健身的体育活动</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_18.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li yundong">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_19.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学棒球协会</span>
+                                    <span class="association_detail">中南民族大学棒球协会是由棒球运动爱好者经过长期的努力，在大学生委员会的指导和帮助下，经批准，于2017年6月正式成立</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_19.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+                        <li class="association_li yundong">
+                            <a href="#" title="社团活动">
+                                <div class="association_li_topImg">
+                                    <img src="images/association_filter/video_part_bg_01.jpg" alt="社团活动" class="activities_img" />
+                                </div>
+                                <div class="association_li_content">
+                                    <span class="association_name">中南民族大学瑜伽健身协会</span>
+                                    <span class="association_detail"> 中南民族大学瑜伽&健身协会成立于2015年4月，协会面向全校瑜伽、健身爱好者招新，并且每年有相关瑜伽和健身公益性活动</span>
+                                </div>
+                            </a>
+                            <img src="images/association_icons/association_icons_20.jpg" class="association_icon_img" alt="社团标志"/>
+                        </li>
+
+                    </ul>
+                </div>
+            <!--活动列表结束-->
+            
+        </div>
+        <!--主体结束-->
+        
+        <script type="text/javascript" src="js/general_js.js"></script>
+        <script type="text/javascript">
+            //身份判定(连接数据库后去除注释)
+            /*           
+            var user_name = '<%=session.getAttribute("personal_name")%>';
+            if(user_name != null&&user_name != ""){
+                $(".login_header_ul").css("display","block");
+                $("nav_ul").css("display","none");
+            }else{
+                $(".login_header_ul").css("display","none");
+                $("nav_ul").css("display","block");
+            }
+            */
+        </script>
+        <script type="text/javascript">
+            $(function(){
+                $(".search_frames_input").focus(function(){
+                    $(this).animate({"width":"300px"},500);
+                    $(".search_icon").animate({"left":"+=50px"},500);
+                }).blur(function(){
+                    $(this).animate({"width":"200px"},500);
+                    $(".search_icon").animate({"left":"-=50px"},500);
+                })
+                /*筛选机制开始*/
+                //克隆原列表
+                var all = $(".association_li").clone(true);
+                //文艺类筛选
+                $(".wenyi_button").click(function(){
+                    original_list()
+                    $(this).addClass(".selected").siblings().removeClass(".selected");
+                    $(".association_li:not(.wenyi)").remove();
+                    $(".wenyi").hide(500).show(500,function(){
+                        //imgLocation_1();
+                    });
+                })
+                //运动类筛选
+                $(".yundong_button").click(function(){
+                    original_list()
+                    $(this).addClass(".selected").siblings().removeClass(".selected");
+                    $(".association_li:not(.yundong)").remove();
+                    $(".yundong").hide(500).show(500,function(){
+                        //imgLocation_1();
+                    });
+                })
+                //公益类筛选
+                $(".gongyi_button").click(function(){
+                    original_list()
+                    $(this).addClass(".selected").siblings().removeClass(".selected");
+                    $(".association_li:not(.gongyi)").remove();
+                    $(".gongyi").hide(500).show(500,function(){
+                        //imgLocation_1();
+                    });
+                })
+                //创业类筛选
+                $(".chuangye_button").click(function(){
+                    original_list()
+                    $(this).addClass(".selected").siblings().removeClass(".selected");
+                    $(".association_li:not(.chuangye)").remove();
+                    $(".chuangye").hide(500).show(500,function(){
+                        //imgLocation_1();
+                    });
+                })
+                //兴趣类筛选
+                $(".xingqu_button").click(function(){
+                    original_list()
+                    $(this).addClass(".selected").siblings().removeClass(".selected");
+                    $(".association_li:not(.xingqu)").remove();
+                    $(".xingqu").hide(500).show(500,function(){
+                        //imgLocation_1();
+                    });
+                })
+                //技能类筛选
+                $(".jineng_button").click(function(){
+                    $(".association_li").remove();
+                    $(".association_ul").html(all);
+                    $(this).addClass(".selected").siblings().removeClass(".selected");
+                    $(".association_li:not(.jineng)").remove();
+                    $(".jineng").hide(500).show(500,function(){
+                        //imgLocation_1();
+                    });
+                })
+                //去除筛选显示全部
+                $(".all").click(function(){
+                    $(this).siblings().removeClass(".selected");
+                    original_list();
+                })
+                //还原列表函数
+                function original_list(){
+                    $(".association_li").remove();
+                    $(".association_ul").html(all);
+                }   
+                /*关键词搜索开始*/        
+                var search_button = $(".search_button");
+                search_button.click(function(){
+                    let search_input = $("#search_frames_input");
+                    let key_search = search_input.val();
+                    if(key_search == ""){
+                        alert("请输入关键词！");
+                        console.log("请输入关键词！");
+                    }else{        
+                        let activities_li_box = $(".association_li");           
+                        activities_li_box.each(function(index,value){
+                            var result = $(value).text().search(key_search);
+                            if(result == "-1"){
+                                $(value).hide(500);
+                                //imgLocation_1();
+                            }else{
+                                $(value).show(500);
+                                //imgLocation_1();
+                            }
+                        })
+                    }
+                    
+                    
+                });
+                //列表一次从下出现
+                li_show_up(".association_li");
+
+
+                
+            });
+
+            
+			function imgLocation_1(){
+				var box = $(".association_li");
+				box.each(function(index,value){
+
+						$(value).css({
+							"position":"relative",
+							"top":0,
+							"left":0,
+                            "float":"left",
+                            "margin-right":"20px"
+						});
+					});
+                $(".association_li:nth-child(4n)").css("marginLeft","0px");     
+			};
+            /*瀑布流开始*/
+            window.onload = function(){
+				//imgLocation();
+				//$.each()与$(selector).each()不同, 后者专用于jquery对象的遍历, 前者可用于遍历任何的集合(无论是数组或对象),如果是数组,回调函数每次传入数组的索引和对应的值(值亦可以通过this 关键字获取,但javascript总会包装this 值作为一个对象—尽管是一个字符串或是一个数字),方法会返回被遍历对象的第一参数
+                //异步加载数据
+				window.onscroll = function(){
+                    $.ajax({
+                       type:'GET',
+                       url:'json/association_detail.json',
+                       contentType:"application/json;charset=utf-8",
+                       async:'true',  
+                       dataType:'json',
+                       success:function(data){
+                           if(data.list.length > 0){
+                                if(scrollside()){
+                                $.each(data.list,function(index,value){
+                                    //$("<div>")指的是创建一个div层
+                                    var box = $("<li>").addClass("association_li").addClass($(value).attr("class")).appendTo($("#association_ul"));		
+                                    var a_href = $("<a>").attr({"href":$(value).attr("href"),"title":"社团活动"}).appendTo(box);
+                                    var li_topImg = $("<div>").addClass("association_li_topImg").appendTo(a_href);
+                                    var activities_img = $("<img>").attr("src","images/" + $(value).attr("src")).addClass("activities_img").appendTo(li_topImg);
+                                    var li_content = $("<div>").addClass("association_li_content").appendTo(a_href);
+                                    var association_name = $("<span>").addClass("association_name").text($(value).attr("association_name")).appendTo(li_content);
+                                    var association_detail = $("<span>").addClass("association_detail").text($(value).attr("association_detail")).appendTo(li_content);
+                                    var association_icon_img = $("<img>").attr("src",$(value).attr("association_icon_img")).addClass("association_icon_img").appendTo(box);
+
+                                });
+                                //imgLocation();
+                            }
+                        }
+                      }
+                    });
+									
+				}
+                
+			}
+
+			function scrollside(){
+				var box = $(".association_li");
+				//根据imgLocation函数来看，最长的那一列的最后一个盒子是最后加上去的，所以可以用last来获取最长一列的高度
+                //last().get(0)可以获取原生DOM
+				var lastboxHeight = box.last().get(0).offsetTop + Math.floor(box.last().height()/2) + 1000;
+				var documentHeight = $(document).width();
+				var scrollHeight = $(window).scrollTop();
+				return (lastboxHeight < (scrollHeight+documentHeight)) ? true : false;
+			}
+
+            //瀑布流核心代码(position版本)
+			/*function imgLocation(){
+				var box = $(".association_li");
+				var boxWidth = box.eq(0).width();
+				var num = Math.floor($(".association_ul").width()/boxWidth);
+				var boxArr = [];
+				box.each(function(index,value){
+					var boxHeight = box.eq(index).height();
+					if(index < num){
+						boxArr[index] = boxHeight; 
+					}else{
+						//var max=Math.max.apply(null,array),这样轻易的可以得到一个数组中最大的一项 ,var max=Math.min.apply(null,array),这样轻易的可以得到一个数组中最小的一项 
+						var minboxHeight = Math.min.apply(null,boxArr);
+						//在数组中查找指定值并返回它的索引（如果没有找到，则返回-1）,value表示要查找的值，array表示一个数组，fromIndex表示数组索引值，表示从哪里开始查找，默认值为0，这将查找整个数组
+						var minboxIndex = $.inArray(minboxHeight,boxArr);
+						$(value).css({
+							"position":"absolute",
+							"top":minboxHeight + 20,
+							"left":box.eq(minboxIndex).position().left
+						});
+						boxArr[minboxIndex] += box.eq(index).height() + 20;
+					}
+				});
+			}*/
+            /*瀑布流结束*/
+            
+        </script>
+	</body>
+</html>

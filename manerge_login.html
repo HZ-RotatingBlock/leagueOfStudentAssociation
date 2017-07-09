@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>管理员登录界面</title>
+
+		<link rel="stylesheet" href="css/general_style.css">
+		<link rel="stylesheet" href="css/manerge_login.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="main">
+			<!--
+			<video loop autoplay src="video/inspiring.mp4" width="100%" height="100%" class="association_video" poster="video/poster.jpg"></video> 
+			-->      
+			<img src="icons/manerge_login_title.png" alt="社团联盟" class="login_title">
+			<span class="slogan">管理别人的青春</span>
+		
+			<!--底部星轨动画-->
+			<div class="circle">
+				<div class="circle_1">
+					<span class="circle_star_1"></span>
+					<span class="circle_star_2"></span>
+				</div>
+				<div class="circle_2">
+					<span class="circle_star_1"></span>
+					<span class="circle_star_2"></span>
+				</div>
+				<div class="circle_3">
+					<span class="circle_star_3"></span>
+					<span class="circle_star_2"></span>
+				</div>
+			</div>
+
+			<!--注册表单-->
+			<div class="login_frame">
+				<div class="login_frame_form">
+					<span class="entry selected">注册</span>
+					<span class="sign">登录</span>
+					<!--注册框-->
+					<form class="entry_form" action="managerregister" method="post">					
+						<div class="entry_frames">
+							<!--注册姓名验证-->
+							<input type="text" name="username" class="login_name" placeholder="姓名"/>
+							<span class="login_name_prompt">该项不能为空</span>
+							<span class="login_name_test"></span>
+							<!--注册手机验证-->
+							<input type="text" name="phone" class="login_cellphone" id="login_cellphone" placeholder="手机号码"/>
+							<span class="login_cellphone_prompt">该项不能为空</span>
+							<span class="login_cellphone_test"></span>
+							<!--图片验证码验证-->
+							<input type="text" name="identifying_code" class="identifying_code" id="identifying_code" placeholder="输入右方结果验证码"/>
+							<div class="code" id="code"></div>
+							<span class="identifying_code_prompt">该项不能为空</span>
+							<span class="identifying_code_test"></span>
+							<!--注册密码验证-->
+							<input type="password" name="password" class="login_password" placeholder="请输入4~16位的密码"/>
+							<span class="login_password_prompt">该项不能为空</span>
+							<span class="login_password_test"></span>
+							<button type="submit" class="submit entry_button">注册</button>
+						</div>
+					</form>
+					<!--登录框-->
+					<form class="sign_form" action="managerlogin" method="post">
+						<div class="sign_frames">
+							<!--登录手机或邮箱验证-->
+							<input type="text" name="phone" class="sign_cellphoneAndEmail" placeholder="手机或邮箱"/>
+							<span class="sign_cellphoneAndEmail_prompt">该项不能为空</span>
+							<span class="sign_cellphoneAndEmail_test"></span>
+							<!--登录密码验证-->						
+							<input type="password" name="password" class="sign_password" placeholder="请输入4~16位的密码"/>
+							<span class="sign_password_prompt">该项不能为空</span>
+							<span class="sign_password_test"></span>
+							<button type="submit" class="submit sign_button">登录</button>
+						</div>
+					</form>
+				</div>
+				
+			</div>
+			
+			<!--外链-->
+			<span class="contact">Contact with us:</span>
+			<ul class="link_icons">
+				<li class="link_icons_li">
+					<a href="#" title="">
+						<img src="icons/login_icons_5.png" alt="" class="link_icons_img" />
+					</a>
+				</li>
+				<li class="link_icons_li">
+					<img src="icons/login_icons_2.png" alt="" class="link_icons_img" />
+				</li>
+				<li class="link_icons_li">
+					<a href="#" title="">
+						<img src="icons/login_icons_1.png" alt="" class="link_icons_img" />
+					</a>
+				</li>
+				<li class="link_icons_li">
+					<a href="#" title="">
+						<img src="icons/login_icons_3.png" alt="" class="link_icons_img" />
+					</a>
+				</li>
+				<li class="link_icons_li">
+					<a href="#" title="">
+						<img src="icons/login_icons_4.png" alt="" class="link_icons_img" />
+					</a>
+				</li>
+				<li class="link_icons_li">
+					SHARE
+				</li>
+			</ul>
+			<a href="index.html" title="返回首页"><span class="logo_bottom"></span></a>
+
+		</div>
+		<canvas class="canvas" id="canvas"></canvas>
+		<script type="text/javascript" src="js/canvas.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				/*功能切换*/
+				$(".entry").click(function(){								
+					$(".entry_frames").css("display","block");
+					$(this).addClass("selected");
+					$(".sign_frames").css("display","none");
+					$(".sign").removeClass("selected");
+				})
+				$(".sign").click(function(){	
+					$(".sign_frames").css("display","block");
+					$(this).addClass("selected");			
+					$(".entry_frames").css("display","none");
+					$(".entry").removeClass("selected");					
+				})
+				$("#login_cellphone").focus(function(){
+					$(".send").css("display","block");
+				}).blur(function(){
+					$(".send").css("display","none");
+				})
+				/*提交验证*/
+				$(".entry_button").click(function(){
+					if($(".entry_frames span").css("display") == "block"||$(".entry_frames input").val() == ""){
+						$("#login_frame_form").submit(false);
+						alert("资料填写格式不正确！")
+					}else{
+						$("#login_frame_form").submit(true);
+					}
+				})
+				$(".sign_button").click(function(){
+					if($(".sign_frames span").css("display") == "block"||$(".sign_frames input").val() == ""){
+						$("#login_frame_form").submit(false);
+						alert("资料填写格式不正确！")
+					}else{
+						$("#login_frame_form").submit(true);
+					}
+				})
+				/*登录验证*/
+				/*姓名验证*/
+				$(".login_name").blur(function(){
+					if($(this).val() == ""){
+						$(".login_name_test").css("display","none");
+						$(".login_name_prompt").css("display","block");
+					}else{
+						$(".login_name_prompt").css("display","none");
+						$(".login_name_test").css("display","block");
+					}
+				})
+				/*注册手机验证*/
+				$(".login_cellphone").blur(function(){
+					if($(this).val() == ""){
+						$(".login_cellphone_test").css("display","none");
+						$(".login_cellphone_prompt").css("display","block");
+					}else{
+						$(".login_cellphone_prompt").css("display","none");
+						$(".login_cellphone_test").css("display","block");
+					}
+				})
+				/*注册密码验证*/
+				$(".login_password").blur(function(){
+					if($(this).val() == ""){
+						$(".login_password_test").css("display","none");
+						$(".login_password_prompt").css("display","block");
+					}else if($(this).val().length<4||$(this).val().length>16){						
+						$(".login_password_test").css("display","none");
+						$(".login_password_prompt").css("display","block").text("格式错误！");
+					}else{
+						$(".login_password_prompt").css("display","none");
+						$(".login_password_test").css("display","block");
+					}
+				})
+				/*登录手机或邮箱验证*/
+				$(".sign_cellphoneAndEmail").blur(function(){
+					if($(this).val() == ""){
+						$(".sign_cellphoneAndEmail_test").css("display","none");
+						$(".sign_cellphoneAndEmail_prompt").css("display","block");
+					}else{
+						$(".sign_cellphoneAndEmail_prompt").css("display","none");
+						$(".sign_cellphoneAndEmail_test").css("display","block");
+					}
+				})
+				/*登录密码验证*/
+				$(".sign_password").blur(function(){
+					if($(this).val() == ""){
+						$(".sign_password_test").css("display","none");
+						$(".sign_password_prompt").css("display","block");
+					}else if($(this).val().length<4||$(this).val().length>16){						
+						$(".sign_password_test").css("display","none");
+						$(".sign_password_prompt").css("display","block").text("格式错误！");
+					}else{
+						$(".sign_password_prompt").css("display","none");
+						$(".sign_password_test").css("display","block");
+					}
+				})
+				//随机数字图片运算验证码
+				var code = 9999; 
+				function codes(){	
+					//随机生成颜色				
+					var ranColor = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6); 
+					var ranColor2 = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6); 
+					var num1 = Math.floor(Math.random() * 100);  
+					var num2 = Math.floor(Math.random() * 100);  
+					code = num1 + num2;  					
+					$("#code").html(num1 + "+" + num2 + "=?");  
+					if ($("#code").hasClass("nocode")) {  
+						$("#code").removeClass("nocode");  
+						$("#code").addClass("code"); 					
+					}  
+					$("#code").css('background',ranColor);
+					$("#code").css('color',ranColor2);			
+				}
+				codes()
+				//点击重新生成
+				$("#code").on('click',codes)
+				
+				$("#identifying_code").blur(function(){ 
+					  
+				});
+				/*验证码验证*/
+				$(".identifying_code").blur(function(){
+					if($(this).val() == ""){
+						$(".identifying_code_test").css("display","none");
+						$(".identifying_code_prompt").css("display","block");
+					}else{					
+						if ($("#identifying_code").val() == code && code != 9999) {  
+						$(".identifying_code_prompt").css("display","none");
+						$(".identifying_code_test").css("display","block");  
+						} else {  
+							$(".identifying_code_prompt").html("输入有误!");  
+						}
+					}
+				})
+			});
+		</script>
+	</body>
+</html>

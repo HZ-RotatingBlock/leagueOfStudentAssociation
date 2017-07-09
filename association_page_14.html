@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>社团概览</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/association_page.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	
+	<body>
+        <!--导航条开始-->
+		<div class="nav">
+            <a href="index.html" title="返回首页"><span class="logo"></span></a>
+            <ul class="login_header_ul">
+                <li class="user_header">
+                    <a href="personal_page.html" title="前往个人主页" class="personalpage_href">
+                        <img src="icons/association_leader_3.jpg" alt="用户头像" class="user_header_img" id="user_header_img">
+                    </a>
+                </li>
+                <li class="user_name" id="user_name">铿锵玫瑰</li>             
+            </ul> 
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="login.html" title="登录" class="nav_li_a">登录</a></li>
+                <li class="nav_li"><a href="login.html" title="注册" class="nav_li_a">注册</a></li>
+            </ul>
+        </div>
+        <!--导航条结束-->
+        <!--侧边快捷栏开始-->
+        <ul class="sidebar">
+            <li class="sidebar_option">
+                <img src="icons/returnTop.png" alt="回到顶部" class="sidebar_option_icons return_top">
+                <span class="prompt_sidebar">
+                    回到顶部<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/collect.png" alt="收藏" class="sidebar_option_icons collect">
+                <span class="prompt_sidebar">
+                    收藏活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/shareOther.png" alt="分享活动" class="sidebar_option_icons shareOther">
+                <span class="prompt_sidebar">
+                    分享活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/return_pre_1.png" alt="返回前页" class="sidebar_option_icons return_pre">
+                <span class="prompt_sidebar">
+                    返回前页<span class="triangle_right"></span>
+                </span>
+            </li>
+        </ul>
+        <!--侧边快捷栏结束--> 
+        <!--头部展示开始-->
+        <div class="video_part">
+            <video autoplay="autoplay" loop id="association_video" class="association_video">
+				<source src="video/14.mp4" type="video/mp4">
+			</video>
+            <div class="association_title">
+                <span class="association_name">中南民族大学网球协会 </span>
+                <div class="association_content">
+                    <img src="images/association_icons/association_icons_14.jpg" alt="社团logo" class="association_header"/>
+                    中南民族大学网球协会成立于2002年，是经共青团中南民族大学委员会批准成立，受中南民族大学学生团体联合会直接管理的学生社团，是一个朝气蓬勃、独具特色的学生团体
+                    <span class="association_content_line"></span>
+                    <div class="association_content_leaderdiv">
+                        <h3 class="association_leader">当前负责人</h3>
+                        <ul class="association_leader_ul">
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="join">我要加入</div>
+            </div>
+        </div> 
+        <!--头部展示结束-->        
+        <!--主体开始-->
+           
+        <div class="main">
+            <img src="icons/top_circle.png" alt="#" class="img_top_circle" />
+            <div class="content">
+                <!--目录-->
+                <ul class="catalog">
+                    <li class="catalog_li">目录</li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li strong">基本信息</li>
+                            <li class="cata_li_innerUl_li">简介</li>
+                        </ul>
+                    </li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li">协会历史</li>
+                        </ul>
+                    </li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li strong">往期活动</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--基本信息-->
+                <div class="base_info">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>基本信息<span class="info_line"></span>
+                    </h2>
+                    <table class="base_info_table">
+                        <tr>
+                            <td class="base_info_table_ele">中文名</td>
+                            <td>中南民族大学网球协会</td>
+                            <td class="base_info_table_ele">宗旨</td>
+                            <td>增强体魄，贯彻网球精神</td>
+                        </tr>
+                        <tr>
+                            <td class="base_info_table_ele">职能</td>
+                            <td>校体育类学生社团</td>
+                        </tr>
+                    </table>
+                </div> 
+                <!--简介及相关-->
+                <div class="base_content">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>社团简介<span class="info_line"></span>
+                    </h2>
+                    <pre class="base_content_p">协会现设有会长、副会长、宣传部、组织部、训练部、财务部、外联部、裁判部、监察部十个部门，共有会员100余名。网球协会成立十年来，坚持日常授课与品牌特色活动相结合的发展思路。在这十年的时光里，我们不断努力，奋斗着。至今，网协已经成为具有完善的组织机构，完整的会员制度，拥有众多社员的社团组织。现在的我们要继续努力把网协办的更好，让网球魅力绽放民大校园
+                    </pre>
+                </div>
+                <!--团队历史-->
+                <div class="base_history">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>团队历史<span class="info_line"></span>
+                    </h2>
+                    <pre class="base_content_p">
+                        （1）日常训练初期，我们协会和网球校队紧密合作，在指导老师的带领下，增加教练人数，更好的解决会员入门时的技术需求。每次训练计划都提前一周订好，严格紧凑的实施。
+                        （2）积极鼓励网协高水平会员到校外参与交流赛，杯赛等较高水平赛事。对于那些网球技术水平较高的会员，以及有着浓烈兴趣的会员，我们会有专门的同学带队去各个高校的网球协会进行交流，切磋球技。
+                        （3）举办民大公开赛，针对初级入门会员，以娱乐为主，提升球技为辅的活动。
+                        （4）针对社团存在的裁判人员不足，会员对网球比赛规则不了解的问题，协会新增加裁判部，开展裁判训练活动。裁判培训给予了广大会员更为细致的了解网球，了解比赛规则的契机。让广大会员学到了网球知识，通过表演赛也实际体验了裁判工作。为协会提供了后备裁判人才。
+                        （5）而武汉高校网球公开赛作为我们的品牌项目，我们已经形成了完整的比赛体系，在全武汉的网球联盟中都是备受好评的比赛。几年下来，我们形成了：“赛前裁判培训+准备阶段分工到人+赛中人员合理分配+应急安全措施预备+校际友好交流+赛后整理妥当”这样的一套流程措施。以确保比赛的专业性和整体质量
+                    </pre>
+                </div>
+                <!--往期活动-->
+                <div class="history_activities">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>往期活动<span class="info_line"></span>
+                    </h2>
+                    <div class="history_activities_div">
+                        <ul class="history_activities_ul">
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/tennis/association_tennis (7).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/tennis/association_tennis (2).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/tennis/association_tennis (3).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/tennis/association_tennis (4).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/tennis/association_tennis (5).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/overdue.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/tennis/association_tennis (6).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/overdue.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                        </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!--主体结束-->
+        <!--页尾开始-->
+        <div class="footer">
+            <span class="returnTop">top</span>
+            <div class="link">
+                <ul class="link_ul">
+                    <li class="link_li">
+                        <a href="#" title="网站首页">网站首页</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="合作团队">合作团队</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="成员招募">成员招募</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="加盟合作">加盟合作</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="意见反馈">意见反馈</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="常见问题">常见问题</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="人才招聘">人才招聘</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="联系我们">联系我们</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="友情链接">友情链接</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <span class="copyright_text">Copyright © 社团联盟开发团队 2017. All Rights Reserved</span>
+            </div>
+        </div>
+        <!--页尾结束-->
+        
+        <script type="text/javascript" src="js/general_js.js"></script>
+	</body>
+</html>

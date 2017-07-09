@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>社团概览</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/association_page.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	
+	<body>
+        <!--导航条开始-->
+		<div class="nav">
+            <a href="index.html" title="返回首页"><span class="logo"></span></a>
+            <ul class="login_header_ul">
+                <li class="user_header">
+                    <a href="personal_page.html" title="前往个人主页" class="personalpage_href">
+                        <img src="icons/association_leader_3.jpg" alt="用户头像" class="user_header_img" id="user_header_img">
+                    </a>
+                </li>
+                <li class="user_name" id="user_name">铿锵玫瑰</li>             
+            </ul> 
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="login.html" title="登录" class="nav_li_a">登录</a></li>
+                <li class="nav_li"><a href="login.html" title="注册" class="nav_li_a">注册</a></li>
+            </ul>
+        </div>
+        <!--导航条结束-->
+        <!--侧边快捷栏开始-->
+        <ul class="sidebar">
+            <li class="sidebar_option">
+                <img src="icons/returnTop.png" alt="回到顶部" class="sidebar_option_icons return_top">
+                <span class="prompt_sidebar">
+                    回到顶部<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/collect.png" alt="收藏" class="sidebar_option_icons collect">
+                <span class="prompt_sidebar">
+                    收藏活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/shareOther.png" alt="分享活动" class="sidebar_option_icons shareOther">
+                <span class="prompt_sidebar">
+                    分享活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/return_pre_1.png" alt="返回前页" class="sidebar_option_icons return_pre">
+                <span class="prompt_sidebar">
+                    返回前页<span class="triangle_right"></span>
+                </span>
+            </li>
+        </ul>
+        <!--侧边快捷栏结束--> 
+        <!--头部展示开始-->
+        <div class="video_part">
+            <video autoplay="autoplay" loop id="association_video" class="association_video">
+				<source src="video/5.mp4" type="video/mp4">
+			</video>
+            <div class="association_title">
+                <span class="association_name">中南民族大学”舞生”舞蹈团 </span>
+                <div class="association_content">
+                    <img src="images/association_icons/association_icons_05.jpg" alt="社团logo" class="association_header"/>
+                    鞋尖的尘里，有旋律狂妄的堆积。镜里的我淋漓大汗，镜外的我盈盈笑意。我们是舞生，我们为舞而生
+                    <span class="association_content_line"></span>
+                    <div class="association_content_leaderdiv">
+                        <h3 class="association_leader">当前负责人</h3>
+                        <ul class="association_leader_ul">
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="join">我要加入</div>
+            </div>
+        </div> 
+        <!--头部展示结束-->        
+        <!--主体开始-->
+           
+        <div class="main">
+            <img src="icons/top_circle.png" alt="#" class="img_top_circle" />
+            <div class="content">
+                <!--目录-->
+                <ul class="catalog">
+                    <li class="catalog_li">目录</li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li strong">基本信息</li>
+                            <li class="cata_li_innerUl_li">简介</li>
+                        </ul>
+                    </li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li">协会历史</li>
+                        </ul>
+                    </li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li strong">往期活动</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--基本信息-->
+                <div class="base_info">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>基本信息<span class="info_line"></span>
+                    </h2>
+                    <table class="base_info_table">
+                        <tr>
+                            <td class="base_info_table_ele">中文名</td>
+                            <td>中南民族大学”舞生”舞蹈团</td>
+                            <td class="base_info_table_ele">宗旨</td>
+                            <td>多彩中南，魅力舞团，你和我，相约舞生，一梦四年，为舞而生，以舞落幕</td>
+                        </tr>
+                        <tr>
+                            <td class="base_info_table_ele">职能</td>
+                            <td>校艺术类学生社团</td>
+                        </tr>
+                    </table>
+                </div> 
+                <!--简介及相关-->
+                <div class="base_content">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>社团简介<span class="info_line"></span>
+                    </h2>
+                    <pre class="base_content_p">中南民族大学大学生艺术团舞蹈团组建于1981年，是大学生艺术团最早成立的团体，至今已有35年。团员们接受舞蹈基训，舞蹈排练，舞蹈编创，舞蹈理论等专业科目的学习与培训。在每年的校迎新晚会，德国、美国等兄弟院校访问团来我校参观的文艺汇演，毕业生晚会，庆国庆红歌会，湖北省和武汉市举办的大型文艺活动中，舞蹈团均参与演出。并且连续举办了第一届，“舞 印记"、”怒放舞生“、”舞尽年华“、”舞跃时光“、”当我们一起走过、”光阴的故事“、“筑梦时光”和”此心舞垠“等舞蹈专场。30多年来，来自不同院、不同专业、不同地区、不同民族的同学们怀着对舞蹈的执着与追求，相聚在大学生活动中心111排练厅，用自己柔软的身躯、优美的舞姿将一个个美丽动人的故事展示给大家
+                    </pre>
+                </div>
+                <!--团队历史-->
+                <div class="base_history">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>团队历史<span class="info_line"></span>
+                    </h2>
+                    <pre class="base_content_p">
+                    2002年 “洪山区高校艺术节”舞蹈专场比赛，《黑濮》金奖，《酷滴》银奖
+                    2003年 湖北省高校文艺节目汇演舞蹈《乡野小曲》 二等奖
+                    2004年 “青春激扬，舞动洪山”武汉地区第八届高 校文艺调演《干红》金奖，《黄河人家》银奖， 《丰收夜》银奖
+                    2005年 舞蹈《海那边》获湖北大学生五四文艺调演 一等奖，并受邀到湖北电视台参加演出
+                    2005年 国家民委举办的“海峡两岸，中华一家亲” 文艺晚会
+                    2005年 首届舞蹈专场
+                    2006年 湖北高校文艺调演《顶碗舞》《掀起了你的 盖头来》、《海那边》获银奖
+                    2007年11月 第二届舞蹈专场“舞印迹”
+                    2008年4月 赴香港参加“第二届中华民族文化周”活动 演出
+                    2008年4月 赴美国参加孔子学院建院晚会，迎接德国的 访问团
+                    2009年5月 贵州黔南干部与黔南学子联欢会演出
+                    2009年9月 武汉市民族宗教教研讨合文艺演出
+                    2009年11月 “青春激扬，舞动洪山”武汉地区第十届高 校文艺，《桃夭》金奖、《梅园梅》《山 鹰之邦》银奖
+                    2009年11月 第三届舞蹈团专场“舞生怒放”
+                    2009年12月 接待马来西亚访问团
+                    2010年5月 第四届舞蹈专场“舞尽年华”
+                    2010年6月 湖北省挑战杯闭幕式演出
+                    2010年11月 赴意大利罗马参加“中意青少年大联欢” 活动演出
+                    2011年5月 第五届舞蹈专场“舞跃拾光”
+                    2011年5月 湖北省第八届挑战杯颁奖典礼
+                    2011年6月 欢迎美国威斯康辛州大学专场演出
+                    2011年6月 湖北省高校庆祝建党90周年诗歌朗诵会
+                    2011年8月 湖北省青联12届一次全合、省学联第十次 代表大会
+                    2011年10月 校苗族馆开馆仪式
+                    2011年10月 十五所民族高校文艺比赛颁奖晚会
+                    2011年10月 湖北省第四届大学生艺术节，《山鹰之邦》获优秀文艺类节目一等奖
+                    2011年11月 湖北省美术节暨全国少数民族题材美术作 品邀请展开幕式
+                    2011年12月 大型音舞诗《我们的家园》参演湖北省少 数民族文艺汇演
+                    2012年4月 迎接德国访问团演出
+                    2012年4月 湖北省大学生社团文化节启动仪式
+                    2012年5月 湖北省团省委纪念共青团成立90周年青年 文化展演
+                    2012年5月 赴澳门参加中华民族文化周
+                    2012年5月 第六届舞蹈专场—“当我们一起走过”
+                    2013年 第七届舞蹈专场—“光阴的故事”
+                    2014年 第八届舞蹈专场—“筑梦时光”
+                    2015年 第九届舞蹈专场—“此心舞垠”
+                    2015年 武汉市大学生艺术节舞蹈金奖、银奖、优秀奖
+                    2016年 “艺生有你”毕业专场
+                    </pre>
+                </div>
+                <!--往期活动-->
+                <div class="history_activities">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>往期活动<span class="info_line"></span>
+                    </h2>
+                    <div class="history_activities_div">
+                        <ul class="history_activities_ul">
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/dance/association_dance (7).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/dance/association_dance (2).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/dance/association_dance (3).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/dance/association_dance (4).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/dance/association_dance (5).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/overdue.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/dance/association_dance (6).jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/overdue.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                        </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!--主体结束-->
+        <!--页尾开始-->
+        <div class="footer">
+            <span class="returnTop">top</span>
+            <div class="link">
+                <ul class="link_ul">
+                    <li class="link_li">
+                        <a href="#" title="网站首页">网站首页</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="合作团队">合作团队</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="成员招募">成员招募</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="加盟合作">加盟合作</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="意见反馈">意见反馈</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="常见问题">常见问题</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="人才招聘">人才招聘</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="联系我们">联系我们</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="友情链接">友情链接</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <span class="copyright_text">Copyright © 社团联盟开发团队 2017. All Rights Reserved</span>
+            </div>
+        </div>
+        <!--页尾结束-->
+        
+        <script type="text/javascript" src="js/general_js.js"></script>
+	</body>
+</html>

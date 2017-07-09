@@ -1,0 +1,426 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>活动页</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/activities_page.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<!--loading star-->    
+        <div class="loading_pagination" id="loading_pagination">
+            <div class="loading_center">
+                <img src="icons/loading_img.png" alt="loading" class="loading_img">
+                <span class="loading_circle_shadow"></span>
+            </div>        
+            <span class="loading_pagination_text">loading...</span>
+            <div class="loading_circle_inner"></div>
+            <div class="loading_circle_outer"></div>
+        </div>
+        <!--loading end-->
+        <!--导航条开始-->
+		<div class="nav">
+            <a href="index.html" title="返回首页"><span class="logo"></span></a>
+            <ul class="login_header_ul">
+                <li class="user_header">
+                    <a href="personal_page.html" title="前往个人主页" class="personalpage_href">
+                        <img src="" alt="用户头像" class="user_header_img" id="user_header_img">
+                    </a>
+                </li>
+                <li class="user_name" id="user_name">json</li>             
+            </ul>   
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="login.html" title="登录" class="nav_li_a">登录</a></li>
+                <li class="nav_li"><a href="login.html" title="注册" class="nav_li_a">注册</a></li>
+            </ul>
+        </div>
+        <!--导航条结束--> 
+        <!--侧边快捷栏开始-->
+        <ul class="sidebar">
+            <li class="sidebar_option">
+                <img src="icons/returnTop.png" alt="回到顶部" class="sidebar_option_icons return_top">
+                <span class="prompt_sidebar">
+                    回到顶部<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/collect.png" alt="收藏" class="sidebar_option_icons collect">
+                <span class="prompt_sidebar">
+                    收藏活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/shareOther.png" alt="分享活动" class="sidebar_option_icons shareOther">
+                <span class="prompt_sidebar">
+                    分享活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/return_pre_1.png" alt="返回前页" class="sidebar_option_icons return_pre">
+                <span class="prompt_sidebar">
+                    返回前页<span class="triangle_right"></span>
+                </span>
+            </li>
+        </ul>
+        <!--侧边快捷栏结束-->      
+              
+        <!--主体开始-->
+         <div class="main">
+             <!--活动名称标题-->
+            <h1 class="article_title" id="article_title">毕业季-TIANYUE [时光与树]毕业生音乐会</h1>
+            <!--发布方信息-->
+            <div class="article_info">
+                <div class="artical_header">
+                    <img class="artical_header_img" id="artical_header_img" src="images/association_icons/association_icons_15.jpg" />
+                    <div class="artical_user"><span class="activity_association" id="activity_association">天乐合唱团</span><span class="add_focus">+ 关注</span></div>
+                    <span class="artical_date" id="artical_date">2017.05.21</span>
+                    <span class="artical_reading">阅读数:<strong class="artical_readingNum">9999</strong></span>
+                    
+                </div>  
+            </div>
+            <!--文章内容开始-->
+            <div class="content">          
+                <img src="images/music/activities_img/1.jpg" alt="活动图片" class="association_music_img" id="association_music_img" />
+                <pre class="content_detail" id="content_detail">
+                    <h3>距离毕业还有<span class="red">1398</span>天：</h3>
+                    <p>那年你穿着短裤短袖，提着箱子来民大。那天你在广播里听到了校歌，看到了双子塔，见识了期待已久的南湖。你领了很多的新生材料，排了很久的队交学费，听各种学长学姐忽悠你进各种社团组织。</p>
+                    <img src="images\music\activities_img/2.jpg" alt="活动图片" class="association_music_img" />
+                    <p>那时候，你憧憬着会有什么样的舍友，会参加什么样的社团组织，会变成怎么样的自己，那时候，你还没想象过毕业。</p>
+                    <h3>距离毕业还有<span class="red">1003</span>天：</h3>
+                    <p>你已经摸透了民大的各种，哪个食堂的热干面最好吃，哪个打印店老板人最好，哪个门可以翻墙进来，哪个老师的课可以任意的逃。</p>
+                    <img src="images\music\activities_img/3.jpg" alt="活动图片" class="association_music_img" />
+                    <p>足球场有草地的芳香，南湖有“南湖”的“清香”，宿舍有室友的味道，图书馆没有味道。路过一二食堂，你看到一张海报，是学校的歌手大赛，你唱歌好像还不错，你决定去试试。</p>
+                    <h3>距离毕业还有<span class="red">668</span>天：</h3>
+                    <p>这学期，你发现学校多了很多新面孔，你发现“龙抄手”变成了“华莱士”，你发现打印店涨一毛钱，你发现学校多了校车的身影，你发现寝室大妈也换了一个，不过晚回去还是照样会挨骂。</p>
+                    <h3>距离毕业还有<span class="red">455</span>天：</h3>
+                    <p>身边的人有一些决定考研，开始频繁去图书馆自习室。你不准备考研了，决定下学期找份实习。
+                    有天，你经过宿舍楼门口，发现几个大四学长提着箱子往外走，他们跟你打招呼：”哎，走了啊。“哦，他们过几天就毕业了，我们也快了吧。</p>
+                    <h3>距离毕业还有<span class="red">302</span>天：</h3>
+                    <p>今天你突然发现校园广播好像换人了，你再也听不到刚来民大时的那个声音。这学期，你大四了，一周有三天要实习。实习的公司在光谷，光谷一直没变，一样在修路，一样在堵车。</p>
+                    <h3>距离毕业还有<span class="red">180</span>天：</h3>
+                    <p>学校的气氛感觉变轻松了，大概是考研结束了吧。你们开始商量着毕业旅行去哪里，你准备把接下来几个月的实习工资好好攒起来。最后一场期末考试似乎不是很难，你心里感谢老师没有为难，并发了一条朋友圈，图片是一叠复习资料，配文：大学里最后一场期末考试get。</p>
+                    <h3>距离毕业还有<span class="red">180</span>天：</h3>
+                    <p>学校的气氛感觉变轻松了，大概是考研结束了吧。你们开始商量着毕业旅行去哪里，你准备把接下来几个月的实习工资好好攒起来。最后一场期末考试似乎不是很难，你心里感谢老师没有为难，并发了一条朋友圈，图片是一叠复习资料，配文：大学里最后一场期末考试get。</p>
+                    <h3>距离毕业还有<span class="red">121</span>天：</h3>
+                    <p>好久不见的同学也陆陆续续回到学校了，大家开始一起准备毕业论文。你发现班里的女生都变好看了，怎么以前没发现呢。。</p>
+                    <h3>距离毕业还有<span class="red">60</span>天：</h3>
+                    <p>导师又给你提了一堆修改意见，你觉得心很累。舍友说，他也是。你们约好答完辩一起去拍毕业照，要拍酷酷的那种。</p>
+                    <img src="images\music\activities_img/4.jpg" alt="活动图片" class="association_music_img" />
+                    <h3>距离毕业还有<span class="red">41</span>天：</h3>
+                    <p>早上学院一起拍了毕业照，晚上是毕业晚会。结束后你走在路上，脑子里在想事情，想了很久，不知不觉走回了宿舍楼下，你发现原来肌肉真的是有记忆的。隔壁宿舍的同学正拎着箱子往外走，看到你打了声招呼：”哎，走了啊。“</p>
+                    <img src="images\music\activities_img/5.jpg" alt="活动图片" class="association_music_img" />
+                    <h3>距离毕业还有<span class="red">3</span>天：</h3>
+                    <p>你送走了一个又一个同学，路过了篮球场、15栋、大礼堂、游泳馆、大购、宿舍楼，朝花夕拾，你看见另一些你仍然活跃在这些地方。</p>
+                    <h3>毕业前一天：</h3>
+                    <p>从来不矫情的你，也开始躺在床上脑中过电影，毕竟这就是值得纪念的最后一夜早上醒来你提着箱子跟楼管大爷说了声再见今天，你毕业了！</p>
+                    <img src="images\music\activities_img/6.jpg" alt="活动图片" class="association_music_img" />
+                </pre>
+
+                <span class="activities_date">活动时间：<strong class="activities_dateNum" id="activities_dateNum">6月12日晚七点</strong></span>
+                <span class="activities_range">活动范围：<strong class="activities_rangeNum" id="activities_rangeNum">中南民大全体对象</strong></span>
+                <span class="activities_place">活动地点：<strong class="activities_placeNum" id="activities_placeNum">中南民族大学大礼堂</strong></span>
+                <span class="article_copyright">©著作权归活动负责人所有</span>
+            </div>
+            <!--文章内容结束-->
+            <!--发表社团信息开始-->
+            <div class="artical_association">
+                <a href="" title="了解更多" class="more_info" id="more_info">了解更多</a>
+                <div class="association_info_bottom" id="association_info_bottom">
+                    <img src="images/association_icons/association_icons_15.jpg" alt="社团" class="association_info_bottom" />
+                    <span class="association_info_bottom_name">天乐合唱团</span>
+                    <span class="association_info_bottom_activities">
+                        已发布活动：<strong class="association_info_bottom_activitiesNmu">99</strong>
+                    </span>
+                    <span class="association_info_bottom_motto">中南民族大学天乐 T I A N Y U E 合唱团是校大学生艺术团分团之一，直属于校团委，现有常在团员五十余人。合唱团现为中国音乐家协会合唱联盟会员团队，并聘请指挥家朱步熹老师、田晓宝老师、高伟老师担任艺术顾问。合唱团成员接受包括声乐发声技巧与合唱排练等方面的专业培训，并演唱了大量中外优秀的合唱与重唱、独唱作品。成立至今先后获得多个大型比赛奖项</span>
+                </div>  
+            </div>
+            <!--发表社团信息结束-->
+            <!--点赞分享开始-->
+            <div class="share">
+                <span class="share_p">心动不如行动，快来加入我们吧</span>
+                <a href="#" class="addIn_button" title="我要加入">我要加入</a>
+                <a class="like">
+                    <img src="icons/hollow.png" alt="空心" class="love" />喜欢<span class="like_num">666</span>
+                </a>
+                <a href="#" title="分享到微信" class="weixin_share">
+                    <div class="prompt">
+                        分享到微信<span class="triangle_bottom"></span>
+                    </div>
+                    <img src="icons/weixinIcon.png" alt="通过微信分享" class="share_icons">
+                </a>
+                <a href="#" title="分享到微博" class="weibo_share">
+                    <div class="prompt">
+                        分享到微博<span class="triangle_bottom"></span>
+                    </div>
+                    <img src="icons/weiboIcon.png" alt="通过微博分享" class="share_icons">
+                </a>
+                <a href="#" title="下载长图" class="photo_share">
+                    <div class="prompt">
+                        下载长图<span class="triangle_bottom"></span>
+                    </div>
+                    <img src="icons/photoIcon.png" alt="下载长图" class="share_icons">
+                </a>
+                <a href="#" title="更多分享" class="more_share">更多分享</a>              
+            </div>
+            <!--点赞分享结束-->
+            
+            <!--评论区开始-->
+            <div class="artical_comment">
+                <!--评论发表框-->
+                <div class="artical_comment_frames">
+                    <img class="artical_header_img" id="comment_person" src="images/association_icons/association_icons_15.jpg" />
+                    <form action="" method="post" class="artical_comment_frames_form">
+                        <textarea name="artical_comment_framesContent" class="artical_comment_framesContent" placeholder="请开始你的表演..."></textarea>  
+                        <span class="artical_comment_framesContent_shortcuts">按Enter 发表</span>
+                        <input type="reset" class="artical_comment_framesContent_reset" value="取消">
+                        <div class="artical_comment_framesContent_submit">发送</div>                     
+                    </form>                   
+                </div>
+                <!--评论区历史内容-->
+                <div class="artical_comment_content">
+                    <span class="artical_comment_contentNum">
+                        <strong class="artical_comment_content_num">2</strong>条评论
+                    </span>
+                    <ul class="artical_comment_sort">
+                        <li class="artical_comment_sort_time sort_selected">按时间正序</li>
+                        <li class="artical_comment_sort_time">按时间倒序</li>
+                    </ul>
+                    <!--评论区历史内容列表-->
+                    <ul class="artical_comment_content_ul">
+                        <li class="artical_comment_content_li">
+                            <a href="#" title="前往用户界面">
+                                <img src="icons/association_leader_1.jpg" alt="用户头像" class="artical_comment_content_userHeader">
+                            </a>
+                            <span class="artical_comment_content_userName">铿锵玫瑰</span>
+                            <span class="artical_comment_content_userfloor">
+                                <strong class="artical_comment_content_userFloorNum">1</strong>楼
+                            </span>
+                            <span class="artical_comment_content_date">
+                                2017/05/24 下午23:51
+                            </span>
+                            <p class="artical_comment_content_datail">沙发</p>
+                            <span class="good">
+                                <img src="icons/good.png" class="good_img" alt="点赞"/>
+                                <strong class="good_num">7</strong>人点赞
+                            </span>
+                            <span class="return">
+                                <img src="icons/return.png" class="return_img" alt="回复"/>
+                                回复
+                            </span>
+                            <span class="report">
+                                <img src="icons/report.png" class="report_img" alt="举报"/>
+                                举报
+                            </span>
+                            <span class="focus">
+                                <img src="icons/focus.png" class="focus_img" alt="关注"/>
+                                关注
+                            </span>
+                        </li>
+                        <li class="artical_comment_content_li">
+                            <a href="#" title="前往用户界面">
+                                <img src="icons/association_leader_3.jpg" alt="用户头像" class="artical_comment_content_userHeader">
+                            </a>
+                            <span class="artical_comment_content_userName">徐老师</span>
+                            <span class="artical_comment_content_userfloor">
+                                <strong class="artical_comment_content_userFloorNum">2</strong>楼
+                            </span>
+                            <span class="artical_comment_content_date">
+                                2017/05/24 下午23:51
+                            </span>
+                            <p class="artical_comment_content_datail">占地板传播套路学原理核心技术卷</p>
+                            <span class="good">
+                                <img src="icons/good.png" class="good_img" alt="点赞"/>
+                                <strong class="good_num">99</strong>人点赞
+                            </span>
+                            <span class="return">
+                                <img src="icons/return.png" class="return_img" alt="回复"/>
+                                回复
+                            </span>
+                            <span class="report">
+                                <img src="icons/report.png" class="report_img" alt="举报"/>
+                                举报
+                            </span>
+                            <span class="focus">
+                                <img src="icons/focus.png" class="focus_img" alt="关注"/>
+                                关注
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--评论区结束-->
+            
+         </div>
+        
+        <!--主体结束-->
+        
+        <script type="text/javascript" src="js/general_js.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                //非登录状态回复框聚焦时弹窗
+                $(".artical_comment_framesContent").focus(function(){
+                    if($(".login_header_ul").css("display") == "none"){
+                        alert("您还不是注册用户，请注册后再进行此操作~");
+                        $(".artical_comment_framesContent").blur();
+                    }
+                });
+
+                $("span.return").click(function(){
+                    $("html,body").animate({scrollTop:$("textarea.artical_comment_framesContent").offset().top - 600 + "px"},800);
+                });
+                //获取原有评论区最后一楼的层数
+                var floorNum = $(".artical_comment_content_userFloorNum:last").html();
+                //获取当前日期和时间
+                var nowDate = new Date();
+                var date = nowDate.toLocaleString();
+                //获取当前用户头像
+                //var artical_header_img = $("#user_header_img").attr("src");
+                //获取当前评论数
+                var artical_comment_content_num = $(".artical_comment_content_num").html();
+                //评论回复
+                $(".artical_comment_framesContent_submit").click(function(){
+                    floorNum++;
+                    if($("textarea.artical_comment_framesContent").val() != ""){
+                        document.querySelector(".artical_comment_content_ul").innerHTML += '<li class="artical_comment_content_li">'
+                                                                        + '<a href="#" title="前往用户界面">'
+                                                                        + '<img src="' + $("#user_header_img").attr("src") + '"' + 'alt="用户头像" class="artical_comment_content_userHeader">'
+                                                                        + '</a>'
+                                                                        + '<span class="artical_comment_content_userName">' + $("#user_name").html() + '</span>'
+                                                                        + '<span class="artical_comment_content_userfloor">'
+                                                                        + '<strong class="artical_comment_content_userFloorNum">' + floorNum + '</strong>楼'
+                                                                        + '</span>'
+                                                                        + '<span class="artical_comment_content_date">'
+                                                                        + date
+                                                                        + '</span>'
+                                                                        + '<p class="artical_comment_content_datail">'
+                                                                        + $("textarea.artical_comment_framesContent").val()
+                                                                        + '</p>'
+                                                                        + '<span class="good">'
+                                                                        + '<img src="icons/good.png" class="good_img" alt="点赞">'
+                                                                        + '<strong class="good_num">7</strong>人点赞'
+                                                                        + '</span>'
+                                                                        + '<span class="return">'
+                                                                        + '<img src="icons/return.png" class="return_img" alt="回复">'
+                                                                        + '回复'
+                                                                        + '</span>'
+                                                                        + '</li>';
+                        //评论数加1
+                        artical_comment_content_num ++;
+                        document.querySelector(".artical_comment_content_num").innerHTML = artical_comment_content_num;
+                    }
+                    
+                })
+                //评论点赞机制
+                $(".artical_comment_content_ul").delegate(".good_img","click",function(){
+                    let good_num = $(this).next().text();
+                    if($(this).attr("src") == "icons/gooded.png"){
+                        alert("您已经点过赞了");
+                    }else{
+                        good_num++;
+                        $(this).attr("src","icons/gooded.png").next().text(good_num);
+                    }
+                });
+                $(".like").click(function(){                   
+                    if($(".love").attr("src") != "icons/love.png"){
+                        let love_num = $(".like_num").html();
+                        love_num++;
+                        $(".like_num").html(love_num);
+                        $(".love").attr("src","icons/love.png");
+                    }else{
+                        alert("您已经点过赞了~");
+                    }
+                    
+                                  
+                })
+                //声明存储当前活动页面对应的id
+            	var location_href = window.location.href;
+                var association_location_id = location_href.split("=")[1];
+                //alert(association_location_id);
+                var activity_introduction_true = "";
+                //加载对应活动内容
+                $.ajax({
+                	type:'POST',
+                	url:'getactivity',
+                	dataType:'json',
+                	success:function(data){
+                		$.each(data.activity,function(index,value){
+                			let activity_id = value.activity_id;
+                			if(association_location_id == activity_id){
+                                let activity_association_id = value.activity_association['association_id'];
+                				let activity_name = value.activity_name;
+                    			let activity_association = value.activity_association['association_name'];
+                    			let activity_association_img = value.activity_association['association_img'].split("WebContent\\")[1].replace(/\\/g,"/");
+                    			//alert(activity_association_img);
+                    			let activity_apply_date = value.activity_apply_date;              			
+                    			let activity_img = value.activity_img.split("WebContent\\")[1].replace(/\\/g,"/");
+                    			//alert(activity_img);
+                    			activity_introduction_true = value.activity_introduction;
+                                //alert(activity_introduction_true);
+                    			let activity_date = value.activity_date_scope;
+                                let activity_object = value.activity_member_scope;
+                                let activity_place = value.activity_place;
+                                let personal_header = $("#user_header_img").attr("src");
+                                $("#article_title").html(activity_name);
+                                $("#activity_association").html(activity_association);
+                                $(".association_info_bottom_name").html(activity_association);
+                                $("#artical_header_img").attr("src",activity_association_img);
+                                $(".association_info_bottom").attr("src",activity_association_img);
+                                $("#artical_date").html(activity_apply_date);
+                                $("#association_music_img").attr("src",activity_img);
+                                //$("#content_detail").html(activity_introduction);
+                                $("#activities_dateNum").html(activity_date);
+                                $("#activities_rangeNum").html(activity_object);
+                                $("#activities_placeNum").html(activity_place);
+                                $("#comment_person").attr("src",personal_header);
+                                $("#more_info").attr("href","association_page.html?id=" + activity_association_id);
+                			}else{
+                				//window.location.href = "404.html";
+                			}             			                           
+                		})
+                	},
+                	error:function(){
+                		alert("您的网络开小差了~");
+                	}
+                })
+                var timer_fuck_association = setTimeout(function(){
+                    //活动信息读取
+                    $.ajax({
+                        type:'POST',
+                        url:activity_introduction_true,
+                        dataType:'text',
+                        //contentType: "application/x-www-form-urlencoded; charset=utf-8", 
+                        scriptCharset: 'utf-8',
+                        success:function(data){
+                            $("#content_detail").html(data);
+                        },
+                        error:function(){
+                            alert("社团简介信息失败！");
+                        }
+                    });
+                },500);
+                
+                //点击加入活动按钮
+                $(".addIn_button").click(function(){
+                    if($(".login_header_ul").css("display") == "none"){
+                        alert("请登录后再进行此操作~");
+                    }else{
+                        $(this).attr("href","joinactivity?activity_id=" + association_location_id);
+                    }                   
+                });
+                
+            })
+				
+        </script>
+	</body>
+</html>

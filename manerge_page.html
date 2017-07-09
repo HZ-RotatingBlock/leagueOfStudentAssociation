@@ -1,0 +1,1227 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>社团联盟后台管理系统</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/manerge_page.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/echarts.min.js"></script>
+	</head>
+	
+	<body>
+		<!--loading star-->    
+        <div class="loading_pagination" id="loading_pagination">
+            <div class="loading_center">
+                <img src="icons/loading_img.png" alt="loading" class="loading_img">
+                <span class="loading_circle_shadow"></span>
+            </div>        
+            <span class="loading_pagination_text">loading...</span>
+            <div class="loading_circle_inner"></div>
+            <div class="loading_circle_outer"></div>
+        </div>
+        <!--loading end-->
+        <!--导航栏-->
+        <div class="manerge_nav">
+            <img src="icons/manerge_logo.png" alt="logo" class="logo" />
+            <img src="icons/exit.png" alt="exit" class="exit" />
+            <img src="icons/exit_arrow.png" alt="exit_arrow" class="exit_arrow" />
+            <img src="icons/association_leader_3.jpg" alt="user_header_img" class="user_header_img"/>
+            <img src="icons/set.png" alt="设置" class="header_set" id="header_set" />
+        </div>
+        <!--侧边栏开始-->
+		<div class="manerge_sidebar">
+            <!--登陆者-->
+            <div class="manerge_sidebar_top">             
+                <div class="user_header">
+                    <img src="icons/set_1.png" alt="头像设置" class="header_set" />
+                    <img src="icons/association_leader_3.jpg" alt="user_header_img" class="user_header_img"/>
+                    <span class="user_name">我还没起名字</span>
+                    <span class="user_status">Administrator</span>
+                </div>
+            </div>
+            <!--列表项-->
+            <ul class="manerge_sidebar_option">
+               <li class="manerge_sidebar_option_li selected">
+                   <img src="icons/activities_test_1.png" alt="选项" class="option_icons">活动审核
+                   <img src="icons/arrow_right_1.png" alt="指针" class="option_pointer">
+                   <img src="icons/activities_test.png" alt="hover_icons" class="option_icons_hover">
+                   <img src="icons/arrow_right.png" alt="指针" class="option_pointer_hover">
+                </li>
+               <li class="manerge_sidebar_option_li">
+                   <img src="icons/association_test_1.png" alt="选项" class="option_icons">社团审核
+                   <img src="icons/arrow_right_1.png" alt="指针" class="option_pointer">
+                   <img src="icons/association_test.png" alt="hover_icons" class="option_icons_hover">
+                   <img src="icons/arrow_right.png" alt="指针" class="option_pointer_hover">
+                </li>
+               <li class="manerge_sidebar_option_li">
+                   <img src="icons/person_manerge_1.png" alt="选项" class="option_icons">用户管理
+                   <img src="icons/arrow_right_1.png" alt="指针" class="option_pointer">
+                   <img src="icons/person_manerge.png" alt="hover_icons" class="option_icons_hover">
+                   <img src="icons/arrow_right.png" alt="指针" class="option_pointer_hover">
+                </li>
+               <li class="manerge_sidebar_option_li">
+                   <img src="icons/association_manerge_1.png" alt="选项" class="option_icons">社团管理
+                   <img src="icons/arrow_right_1.png" alt="指针" class="option_pointer">
+                   <img src="icons/association_manerge.png" alt="hover_icons" class="option_icons_hover">
+                   <img src="icons/arrow_right.png" alt="指针" class="option_pointer_hover">
+                </li>
+               <li class="manerge_sidebar_option_li">
+                   <img src="icons/data_total_1.png" alt="选项" class="option_icons">数据统计
+                   <img src="icons/arrow_right_1.png" alt="指针" class="option_pointer">
+                   <img src="icons/data_total.png" alt="hover_icons" class="option_icons_hover">
+                   <img src="icons/arrow_right.png" alt="指针" class="option_pointer_hover">
+                </li>
+            </ul>
+            <div class="copyright">Copyright © 社团联盟开发团队 2017. All Rights Reserved</div>
+		</div>
+        <!--侧边栏结束-->
+        <!--主体开始-->
+        <div class="main">
+            <!--活动审核部分-->
+            <div class="activities_test tab_part">
+                <div class="search_frames">
+                    <div class="search_frames_conditions">
+                        <span class="search_conditions_name">请输入关键词：</span>
+                        <input type="text" name="key_name" class="search_conditions_input" id="activities_key_name" placeholder="请输入关键词"/>
+                        <div class="search_button">活动查询</div>
+                    </div>
+                </div>
+                <!--列表-->
+                <div class="list">
+                    <ul class="activities_list_ul">
+                        <li class="activities_list_li">
+                            <div class="activities_list_li_ele">活动名称</div>
+                            <div class="activities_list_li_ele">申请日期</div>
+                            <div class="activities_list_li_ele">申请社团</div>
+                            <div class="activities_list_li_ele">负责人</div>
+                            <div class="activities_list_li_ele">类别</div>
+                            <div class="activities_list_li_ele">状态</div>
+                            <div class="activities_list_li_ele">操作</div>
+                         </li>
+                         <li class="activities_list_li">
+                            <div class="activities_list_li_ele activities_list_applynanme">套路学核心技术讲座</div>
+                            <div class="activities_list_li_ele activities_list_applyDate">2017.05.01</div>
+                            <div class="activities_list_li_ele">套路学协会</div>
+                            <div class="activities_list_li_ele">徐老师</div>
+                            <div class="activities_list_li_ele">技能</div>
+                            <div class="activities_list_li_ele wait_examine">待审核</div>
+                            <div class="activities_list_li_ele">
+                                <div class="examine_button">审核</div>
+                            </div>
+                         </li>
+                         <li class="activities_list_li">
+                            <div class="activities_list_li_ele activities_list_applyPerson">化妆术</div>
+                            <div class="activities_list_li_ele activities_list_applyDate">2017.06.01</div>
+                            <div class="activities_list_li_ele">铿锵玫瑰协会</div>
+                            <div class="activities_list_li_ele">铿锵玫瑰</div>
+                            <div class="activities_list_li_ele">技能</div>
+                            <div class="activities_list_li_ele wait_examine">待审核</div>
+                            <div class="activities_list_li_ele">
+                                <span class="examine_button">审核</span>
+                            </div>
+                         </li>
+                         <li class="activities_list_li">
+                            <div class="activities_list_li_ele activities_list_applyPerson">"舌战群雄"讲座</div>
+                            <div class="activities_list_li_ele activities_list_applyDate">2017.07.01</div>
+                            <div class="activities_list_li_ele">辩论社</div>
+                            <div class="activities_list_li_ele">方大阳</div>
+                            <div class="activities_list_li_ele">技能</div>
+                            <div class="activities_list_li_ele wait_examine">待审核</div>
+                            <div class="activities_list_li_ele">
+                                <span class="examine_button">审核</span>
+                            </div>
+                         </li>
+                         
+                         
+                    </ul>                  
+                </div>
+            </div>
+            <!--社团审核部分-->
+            <div class="association_test tab_part">
+                <div class="search_frames">
+                    <div class="search_frames_conditions">
+                        <span class="search_conditions_name">请输入关键词：</span>
+                        <input type="text" name="key_name" class="search_conditions_input" id="association_key_name" placeholder="请输入关键词"/>
+                        <div class="search_button">社团申请查询</div>
+                    </div>
+                </div>
+                <!--列表-->
+                <div class="list">
+                    <ul class="association_list_ul">
+                        <li class="association_list_li">
+                            <div class="association_list_li_ele">申请人</div>
+                            <div class="association_list_li_ele">申请日期</div>
+                            <div class="association_list_li_ele">社团名称</div>
+                            <div class="association_list_li_ele">类别</div>
+                            <div class="association_list_li_ele">状态</div>
+                            <div class="association_list_li_ele">操作</div>
+                         </li>
+                         <li class="association_list_li">
+                            <div class="association_list_li_ele association_list_applyPerson">徐老师</div>
+                            <div class="association_list_li_ele association_list_applyDate">2017.05.01</div>
+                            <div class="association_list_li_ele association_list_applyName">套路学协会</div>                          
+                            <div class="association_list_li_ele">技能</div>
+                            <div class="association_list_li_ele wait_examine">待审核</div>
+                            <div class="association_list_li_ele">
+                                <div class="examine_button">审核</div>
+                            </div>
+                         </li>
+                         <li class="association_list_li">
+                            <div class="association_list_li_ele association_list_applyPerson">铿锵玫瑰</div>
+                            <div class="association_list_li_ele association_list_applyDate">2017.06.01</div>                          
+                            <div class="association_list_li_ele association_list_applyName">铿锵玫瑰协会</div>
+                            <div class="association_list_li_ele">技能</div>
+                            <div class="association_list_li_ele wait_examine">待审核</div>
+                            <div class="association_list_li_ele">
+                                <span class="examine_button">审核</span>
+                            </div>
+                         </li>
+                         <li class="association_list_li">
+                            <div class="association_list_li_ele association_list_applyPerson">方大阳</div>
+                            <div class="association_list_li_ele association_list_applyDate">2017.07.01</div>                          
+                            <div class="association_list_li_ele association_list_applyName">辩论社</div>
+                            <div class="association_list_li_ele">技能</div>
+                            <div class="association_list_li_ele wait_examine">待审核</div>
+                            <div class="association_list_li_ele">
+                                <span class="examine_button">审核</span>
+                            </div>
+                         </li>
+                         
+                         
+                    </ul>                  
+                </div>
+            </div>
+            <!--用户管理部分-->
+            <div class="person_manerge tab_part">
+                <div class="search_frames">
+                    <div class="search_frames_conditions">
+                        <span class="search_conditions_name">请输入关键词：</span>
+                        <input type="text" name="key_name" class="search_conditions_input" id="person_key_name" placeholder="请输入关键词"/>
+                        <div class="search_button">人员查询</div>
+                    </div>
+                </div>
+                <!--列表-->
+                <div class="list">
+                    <ul class="person_list_ul">
+                        <li class="person_list_li">
+                            <div class="person_list_li_ele">姓名</div>
+                            <div class="person_list_li_ele">注册日期</div>
+                            <div class="person_list_li_ele">性别</div>
+                            <div class="person_list_li_ele">邮箱</div>
+                            <div class="person_list_li_ele">手机</div>
+                            <div class="person_list_li_ele">操作</div>
+                         </li>
+                         <li class="person_list_li">
+                            <div class="person_list_li_ele">徐老师</div>
+                            <div class="person_list_li_ele">2017.05.01</div>
+                            <div class="person_list_li_ele">男</div>                          
+                            <div class="person_list_li_ele">1235151235@qq.com</div>
+                            <div class="person_list_li_ele">1235151235</div>
+                            <div class="person_list_li_ele">
+                                <a href="" class="delete_button">删除</a>
+                            </div>
+                         </li>
+                         <li class="person_list_li">
+                            <div class="person_list_li_ele">铿锵玫瑰</div>
+                            <div class="person_list_li_ele">2017.06.01</div>                          
+                            <div class="person_list_li_ele">女</div>
+                            <div class="person_list_li_ele">1235151235@qq.com</div>
+                            <div class="person_list_li_ele">1235151235</div>
+                            <div class="person_list_li_ele">
+                                <a href="" class="delete_button">删除</a>
+                            </div>
+                         </li>
+                         <li class="person_list_li">
+                            <div class="person_list_li_ele">方大阳</div>
+                            <div class="person_list_li_ele">2017.07.01</div>                          
+                            <div class="person_list_li_ele">女</div>
+                            <div class="person_list_li_ele">1235151235@qq.com</div>
+                            <div class="person_list_li_ele">1235151235</div>
+                            <div class="person_list_li_ele">
+                                <a href="" class="delete_button">删除</a>
+                            </div>
+                         </li>
+                         
+                         
+                    </ul>                  
+                </div>
+            </div>
+            <!--社团管理部分-->
+            <div class="association_manerge tab_part">
+                <div class="search_frames">
+                    <div class="search_frames_conditions">
+                        <span class="search_conditions_name">请输入关键词：</span>
+                        <input type="text" name="key_name" class="search_conditions_input" id="association_manerge_key_name" placeholder="请输入关键词"/>
+                        <div class="search_button">社团查询</div>
+                    </div>
+                </div>
+                <!--列表-->
+                <div class="list">
+                    <ul class="association_manerge_list_ul">
+                        <li class="association_manerge_list_li">
+                            <div class="association_manerge_list_li_ele">社团名称</div>
+                            <div class="association_manerge_list_li_ele">注册日期</div>
+                            <div class="association_manerge_list_li_ele">负责人</div>
+                            <div class="association_manerge_list_li_ele">类别</div>
+                            <div class="association_manerge_list_li_ele">操作</div>
+                         </li>
+                         <li class="association_manerge_list_li">
+                            <div class="association_manerge_list_li_ele">辩论社</div>
+                            <div class="association_manerge_list_li_ele">2017.07.01</div>
+                            <div class="association_manerge_list_li_ele">方大阳</div>
+                            <div class="association_manerge_list_li_ele">技能</div>
+                            <div class="association_manerge_list_li_ele">
+                                <a href="" class="delete_button">删除</a>
+                            </div>
+                         </li>
+                        
+                    </ul>                  
+                </div>
+            </div>
+            <!--数据统计部分-->
+            <div class="data_total tab_part">
+                <ul class="base_info">
+                    <li class="base_info_li">
+                        <span class="base_info_li_num">666,666.00</span>
+                        <span class="base_info_li_title">本月新增用户</span>
+                    </li>
+                    <li class="base_info_li">
+                        <span class="base_info_li_num">666,666.00</span>
+                        <span class="base_info_li_title">本月新增用户</span>
+                    </li>
+                    <li class="base_info_li">
+                        <span class="base_info_li_num">666,666.00</span>
+                        <span class="base_info_li_title">本月新增用户</span>
+                    </li>
+                    <li class="base_info_li">
+                        <span class="base_info_li_num">666,666.00</span>
+                        <span class="base_info_li_title">本月新增用户</span>
+                    </li>
+                </ul>
+                <div class="data_center">
+                    <!--数据柱状图-->
+                    <div class="chart">
+                        <div class="chart_center">
+                            <div id="histogram" style="width: 600px;height:300px;"></div>
+                        </div>  
+                    </div>
+                    <!--数据饼状图-->
+                    <div class="chart_01">
+                        <span class="pie_title">社团类别占比</span>
+                        <div class="chart_center">
+                            <div id="pie" style="width: 500px;height:500px;"></div>
+                        </div>  
+                    </div>
+                    
+                </div>
+                <!--用户登录数据时刻表-->
+                <div class="dynamicDate" id="dynamicDate">
+                    <div class="user_dynamicDate" id="user_dynamicDate"></div>
+                </div>
+
+
+            </div>
+
+        </div>  
+        <!--主体结束-->
+        <!--个人资料修改遮罩层-->
+        <div class="personal_change_shadow">
+            <span class="shadow"></span>
+            <div class="personal_change_shadow_panel">
+                <!--头像修改-->
+                <div class="user_header_change personal_change_shadow_panel_content">
+                    <span class="user_change_title">头像修改</span>
+                    <img src="icons/personal_info.png" alt="头像修改" class="user_change_img header_set_change" id="header_set_change"/>
+                    <span class="user_change_content">请上传新头像</span>
+                    <form class="user_change_form" action="" method="post">
+                        <span class="change_ele">新头像：</span>
+                        <input type="file" name="header_set_change_frames" class="header_set_change_frames" id="header_set_change_frames"/>
+                        <div class="confirm">确定</div>
+                        <div class="cancel">取消</div>
+                    </form>
+                </div>
+               <!--社团预览-->
+            </div>
+        </div>
+        <!--审核遮罩层-->
+        <div class="examine_shadow">
+            <div class="examine_preview">
+                <img src="icons/close.png" alt="关闭" class="close_preview">
+                <!--活动审核预览-->
+                <div class="activities_preview preview_tab">
+                    <!--预览活动名称标题-->
+                    <h1 class="article_title" id="activities_preview_name">五四定向越野：越野越有范儿</h1>
+                    <img src="images/running/association_run_activities_7.jpg" alt="活动图片" class="preview_img" id="activities_preview_img"/>
+                    <div class="preview_content_p">
+                        <pre class="preview_content" id="activities_preview_content">炎炎烈日下，有那么一群人，他们一路狂奔、挥汗如雨，他们斗智斗勇、齐心协力他们欢声笑语、朝气蓬勃.....
+                         五月，在民大不谈论“我们正青春·定向越野”，你是会被抛弃的。火炉城市，美丽民大，我们民大人，与生俱来的一种技能就是创造“热闹”。
+                        　为进一步推进“三走”活动的深入开展，贯彻落实《关于深入开展大学生“走下网络、走出宿舍、走向操场”主题群众性课外体育锻炼活动的指导意见》，进一步激发大学生的体育锻炼热情，提高大学生群体的身心素质，增强学校的体育运动氛围，我校团委特此开展以“我们正青春”为主题的五四青年节定向越野。
+                        定向越野是什么？
+                        定向越野作为一种新兴的，利用地图和指北针导航的运动，在世界各地正吸引着越来越多人参与并为之狂热。它既是一种户外休闲、娱乐运动，又是一种竞技运动。参加定向运动除需要指北针和地图外，不需要特殊的设备，是一种较为经济的运动项目。
+                        “我们正青春·定向越野”怎么玩？
+                        （1）参赛队伍将分为3个批次分别进行签到，每批次每支队伍在签到后，进行抽签决定游戏起点，并领取任务卡片、地图及卡包；
+                        （2）本次活动共设置七个任务点，每一任务点均有3个游戏，参赛队伍自行选择一项游戏完成即可。在任务点完成游戏后，到指定工作人员处进行抽签决定下一任务点，同时在任务卡上加盖下一任务点印章，凭此章方能参加下一任务点游戏；
+                        （3）穿越规则：参赛队伍在第四点完成游戏后，均返回上一任务点完成其余两项游戏中的任一游戏后，再次进行抽签决定下一任务点；
+                        （4）每项游戏均按照完成时间长短进行计分（详见计分总则），在完成所有的任务后，将任务卡带回大本营处进行统计并登记。
+
+                        你是不是对五四定向越野产生了期待！好奇就立即行动，有兴趣就快来参加吧！
+                        此次活动我们的报名方式如下：
+                        Ⅰ.线下报名：4月27日——4月28日在南区一二食堂之间、北区天桥下进行摆台宣传， 5月2日——5月3日仍在南区一二食堂间进行摆台宣传，报名参加的同学可在摆台处报名， 
+                        Ⅱ.线上报名：在微信公众号“中南民族大学野狼长跑队” 处回复“五四越野”，获取表单填写报名信息提交即可。
+                        当出发的欢笑响彻云霄，当游戏时的开心喜形于色，当结束时的满足溢于言表，试问谁还能忘记这弥足珍贵的一天，这一天，定向越野，这一年，我们正青春！
+                        </pre>
+                        <div class="preview_content_info">
+                            <span class="preview_content_info_time">
+                                活动时间：<strong class="preview_content_info_time_detail" id="activities_preview_date">2017.04.01-2017.05.01</strong>
+                            </span>
+                            <span class="preview_content_info_place">
+                                活动地点：<strong class="preview_content_info_time_detail" id="activities_preview_place">中南民族大学校园内</strong>
+                            </span>
+                            <span class="preview_content_info_ele">
+                                活动对象：<strong class="preview_content_info_time_detail" id="activities_preview_object">中南民族大学在读学生</strong>
+                            </span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!--社团审核预览-->
+                <div class="association_preview preview_tab">
+                    <!--预览头部开始-->
+                    <div class="association_preview_top">
+                        <div class="association_preview_icons">
+                            <img src="images/association_icons/association_icons_20.jpg" alt="社团图标" class="association_preview_icons_img" id="association_preview_icons_img"/>
+                            <span class="association_preview_name association_preview_name_span">中南民族大学野狼长跑队</span>
+                            <span class="icons_circle_inner"></span>
+                            <span class="icons_circle_outer"></span>
+                            <span class="line_left"></span>
+                            <span class="line_right"></span>
+                        </div>
+                    </div>
+                    <!--基本信息-->
+                    <div class="preview_base_info">
+                        <h2 class="preview_info_title">
+                            <span class="preview_info_pointer"></span>基本信息<span class="preview_info_line"></span>
+                        </h2>
+                        <table class="preview_base_info_table">
+                            <tr>
+                                <td class="preview_base_info_table_ele">中文名</td>
+                                <td class="association_preview_name_span">中南民族大学野狼战队</td>
+                                <td class="preview_base_info_table_ele">宗旨</td>
+                                <td id="association_preview_motto">野狼战队，无惧无畏。全力拼搏，力争夺桂</td>
+                            </tr>
+                            <tr>
+                                <td class="preview_base_info_table_ele">隶属</td>
+                                <td id="association_preview_department">中南民族大学管理学院学生会</td>
+                                <td class="preview_base_info_table_ele">职能</td>
+                                <td id="association_preview_work">运动类</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--简介预览及相关-->
+                    <div class="preview_base_content">
+                        <h2 class="preview_info_title">
+                            <span class="preview_info_pointer"></span>社团简介<span class="preview_info_line"></span>
+                        </h2>
+                        <pre class="preview_content" id="preview_content_base">主要训练的项目是长跑，包 括男子400米、800米、1500米、3000米、5000米，女子400米、800米、1500米、3000米。队中成员主要是管理学院各年级学生组成，队中训练主要有队长负责，外加管理学院学生会的辅助。
+                        野狼战队，无惧无畏，全力拼搏，力争夺桂。
+                        野狼战队的队服正面是一匹怒吼的狼头，代表的是野狼战队的狼性与像狼一样拼搏、不放弃的精神。背面是“野狼战队”四个红字，是野狼战队的logo
+                        </pre>
+                    </div>
+                    <!--团队历史-->
+                    <div class="preview_base_history">
+                        <h2 class="preview_info_title">
+                            <span class="preview_info_pointer"></span>团队历史<span class="preview_info_line"></span>
+                        </h2>
+                        <pre class="preview_content" id="preview_content_history">这是一支勇猛的团队，他们有着“野狼战队”威名；这是一支温馨的团队，他们团结友爱亲如一家。这是一支不倒的团队，他们在校运会连年硕果累累[1] 
+中南民族大学管理学院长跑队（即野狼战队）是一个光荣的大家庭，于2002年建队开始，每年的成绩都很优秀，一直是管理学院的骄傲。2004年长跑队开始驶向正规化，由鲁光平担任第一届队长，野狼战队也初具雏形。就此开启了野狼战队的辉煌的序幕。校刊《远航》弟12期这样写道：“长跑组——一支管院的精英队伍，是管院在历届校运会中获得优异成绩的中坚力量，实力非凡，气势磅礴。”
+                        </pre>
+                    </div>
+                </div>
+                <!--审核判断-->
+                <a href="" class="pass_button" id="pass_button">通过</a>
+                <a href="" class="no_pass_button" id="no_pass_button">不通过</a>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="js/general_js.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                
+                /*侧栏变换*/
+                $(".manerge_sidebar_option_li").each(function(index,value){
+                    //标志变换
+                    let li_src = $(this).children(".option_icons").attr("src");
+                    let header_src = li_src.replace(/_1\.png/,".png");
+                    if(li_src != header_src){
+                        $(value).hover(
+                            function(){
+                                $(this).children(".option_icons").attr("src",header_src);
+                        },function(){
+                                $(this).children(".option_icons").attr("src",li_src);                        
+                        });
+                    }  
+                    //箭头变换
+                    let pointer_src = $(this).children(".option_pointer").attr("src");
+                    let pointer_src_hover = pointer_src.replace(/_1\.png/,".png");
+                    if(pointer_src != pointer_src_hover){
+                        $(value).hover(
+                            function(){
+                                $(this).children(".option_pointer").attr("src",pointer_src_hover);
+                        },function(){
+                                $(this).children(".option_pointer").attr("src",pointer_src);                        
+                        });
+                    }                
+                });
+                //点击列表样式切换
+                $(".manerge_sidebar_option").delegate(".manerge_sidebar_option_li","click",function(){
+                    $(this).addClass("selected");
+                    $(this).siblings(".manerge_sidebar_option_li").removeClass("selected").children(".option_icons_hover,.option_pointer_hover").hide();
+                    $(this).children(".option_icons_hover,.option_pointer_hover").fadeToggle();
+                });
+                 /*列表面板切换*/
+                $("li.manerge_sidebar_option_li:eq(0)").click(function(){
+                    $(".tab_part").css("display","none");
+                    $(".activities_test").css("display","block");
+                })
+                $("li.manerge_sidebar_option_li:eq(1)").click(function(){
+                    $(".tab_part").css("display","none");
+                    $(".association_test").css("display","block");
+                })
+                $("li.manerge_sidebar_option_li:eq(2)").click(function(){
+                    $(".tab_part").css("display","none");
+                    $(".person_manerge").css("display","block");
+                })
+                $("li.manerge_sidebar_option_li:eq(3)").click(function(){
+                    $(".tab_part").css("display","none");
+                    $(".association_manerge").css("display","block");
+                })
+                $("li.manerge_sidebar_option_li:eq(4)").click(function(){
+                    $(".tab_part").css("display","none");
+                    $(".data_total").css("display","block");                  
+                })
+
+
+                /*头像修改*/
+                $(".header_set").click(function(){
+                    $(".personal_change_shadow").fadeToggle();
+                    $(".user_header_change").fadeToggle();
+                })
+                $("#header_set_change_frames").change(function(){
+                    var objUrl = getObjectURL(this.files[0]) ;
+                    console.log("objUrl = "+objUrl);
+                    if (objUrl) {
+                        $("#header_set_change").attr("src", objUrl) ;
+                    }
+                });
+                /*头像修改预览*/    
+                $("#association_header_img").change(function(){
+                    var objUrl = getObjectURL(this.files[0]) ;
+                    console.log("objUrl = "+objUrl);
+                    if (objUrl) {
+                        $("#association_header_Img").attr("src", objUrl) ;
+                    }
+                });
+                /*个人资料修改遮罩层*/
+                $(".shadow").click(function(){
+                    shadow_hidden();
+                })
+                /*取消按钮*/
+                $(".cancel").click(function(){
+                    shadow_hidden();
+                });
+                /*对应修改面板点击确定修改*/
+                $(".personal_change_shadow_panel_content").each(function(index,value){
+                    $(value).find(".confirm").click(function(){
+                        var user_change_title = $(value).find(".user_change_title");
+                        if(user_change_title.html() == "头像修改"){
+                            let change_header = $("#header_set_change").attr("src");
+                            $(".user_header_img").attr("src",change_header);
+                            shadow_hidden();
+                        }                        
+                    });
+                    
+                });
+                //单条件查询
+                $(".search_button").click(function(){
+                    let search_button_type = $(this).html();
+                    //活动审核查询  
+                    if(search_button_type == "活动查询"){ 
+                        //初始化列表
+                        $(".activities_list_li").each(function(index,value){
+                            $(value).css("backgroundColor","#fff").removeClass("search_li");
+                        })              
+                        //查询遍历
+                        let search_ele = $("#activities_key_name").val();
+                        $(".activities_list_li").each(function(index,value){                          
+                            if(search_ele != ""){
+                                let result = $(value).text().search(search_ele);
+                                if(result != "-1"){
+                                    $(value).addClass("search_li");
+                                }
+                            }               
+                        }) 
+                    }
+                    //社团申请审核查询  
+                    if(search_button_type == "社团申请查询"){ 
+                        //初始化列表
+                        $(".association_list_li").each(function(index,value){
+                            $(value).css("backgroundColor","#fff").removeClass("search_li");
+                        })              
+                        //查询遍历
+                        let search_ele = $("#association_key_name").val();
+                        $(".association_list_li").each(function(index,value){                          
+                            if(search_ele != ""){
+                                let result = $(value).text().search(search_ele);
+                                if(result != "-1"){
+                                    $(value).addClass("search_li");
+                                }
+                            }               
+                        }) 
+                    } 
+                    //人员查询  
+                    if(search_button_type == "人员查询"){ 
+                        //初始化列表
+                        $(".person_list_li").each(function(index,value){
+                            $(value).css("backgroundColor","#fff").removeClass("search_li");
+                        })              
+                        //查询遍历
+                        let search_ele = $("#person_key_name").val();
+                        $(".person_list_li").each(function(index,value){                          
+                            if(search_ele != ""){
+                                let result = $(value).text().search(search_ele);
+                                if(result != "-1"){
+                                    $(value).addClass("search_li");
+                                }
+                            }               
+                        }) 
+                    }
+                    //社团查询  
+                    if(search_button_type == "社团查询"){ 
+                        //初始化列表
+                        $(".association_manerge_list_li").each(function(index,value){
+                            $(value).css("backgroundColor","#fff").removeClass("search_li");
+                        })              
+                        //查询遍历
+                        let search_ele = $("#association_manerge_key_name").val();
+                        $(".association_manerge_list_li").each(function(index,value){                          
+                            if(search_ele != ""){
+                                let result = $(value).text().search(search_ele);
+                                if(result != "-1"){
+                                    $(value).addClass("search_li");
+                                }
+                            }               
+                        }) 
+                    }                                   
+                });
+                //列表删除
+                //用户管理列表删除功能
+                $(".person_list_ul").delegate(".delete_button","click",function(){
+                	var list_id = parseInt($(this).attr("value"));
+                    if(confirm("确定要删除此项吗？（该过程不可逆！）")){
+                        let delete_button_li = this;
+                        //alert(list_id);
+                        $(this).parents("li").stop().animate({right:"-1000px",opacity:"0"},500,function(){
+                            var delete_frames =setTimeout(function(){
+                                $(delete_button_li).parents("li").remove();
+                                $.ajax({
+                                	type:'POST',
+                                	url:'deletestudent',
+                                	data:{"personal_id":list_id},
+                                	dataType:'json',
+                                	success:function(data){
+                                		alert("删除成功！");
+                                	}
+                                });
+                                
+                            },500)
+                        });
+                         
+                    }
+                    return false;
+                })
+                //社团管理列表删除功能
+                $(".association_manerge_list_ul").delegate(".delete_button","click",function(){
+                	var list_id = parseInt($(this).attr("value"));
+                    if(confirm("确定要删除此项吗？（该过程不可逆！）")){
+                        let delete_button_li = this;
+                        //alert(list_id);
+                        $(this).parents("li").stop().animate({right:"-1000px",opacity:"0"},500,function(){
+                            var delete_frames =setTimeout(function(){
+                                $(delete_button_li).parents("li").remove();
+                                $.ajax({
+                                	type:'POST',
+                                	url:'deleteassociation',
+                                	data:{"association_id":list_id},
+                                	dataType:'json',
+                                	success:function(data){
+                                		alert("删除成功！");
+                                	}
+                                });
+                                
+                            },500)
+                        });
+                         
+                    }
+                    return false;
+                })
+                //预览关闭
+                $(".close_preview").click(function(){
+                    $(".examine_shadow").fadeToggle();
+                    $(".preview_tab").fadeOut();
+                })
+                //活动审核预览
+                var activities_preview = null;
+                $(".activities_list_ul").delegate(".examine_button","click",function(){
+                	var activities_introduction = "";
+                	if($(this).html() == "审核"&&$(this).parent().siblings(".wait_examine").html() == "待审查"){
+                        $(".examine_shadow").fadeToggle();
+                        $(".activities_preview").fadeToggle();
+                        var activities_list_applynanme= $(this).parent().siblings(".activities_list_applynanme").html();
+                        var activities_list_applyDate = $(this).parent().siblings(".activities_list_applyDate").html();
+                        $.ajax({
+                			type:'POST',
+                			url:'getactivity',
+                			dataType:'json',
+                			success:function(data){
+                				$.each(data.activity,function(index,value){
+                                    let activity_apply_date = value.activity_apply_date;
+                                    let activity_name = value.activity_name; 
+                					if(activities_list_applynanme == activity_name&&activities_list_applyDate == activity_apply_date){
+                						let activities_img = value.activity_img.split("WebContent\\")[1].replace(/\\/g,"/");
+                						//alert(activities_img);
+                						let activities_name = value.activity_name;
+                						activities_introduction = value.activity_introduction;
+                						let activities_date = value.activity_date_scope;
+                						let activities_place = value.activity_place;
+                						let activities_object = value.activity_member_scope;
+                						let activity_id = value.activity_id;
+                						$("#activities_preview_img").attr("src",activities_img);               						
+                						$("#activities_preview_name").html(activities_name);
+                						//$("#activities_preview_content").html(activities_introduction);
+                						$("#activities_preview_date").html(activities_date);
+                						$("#activities_preview_place").html(activities_place);
+                						$("#activities_preview_object").html(activities_object);          						
+                						$("#pass_button").attr("href","allowcreateactivity?activity_id=" + activity_id);
+                						$("#no_pass_button").attr("href","dropcreateactivity?activity_id=" + activity_id);               						
+                					}
+                				});               			               				
+                			},
+                			error:function(){
+                				alert("您的网络开小差了~");
+                			}
+                		});
+                        association_preview = this;
+                    }else{
+                        alert("您已经审核过了！");
+                    }
+                      //活动审核读取
+                        var timer_fuck_activity = setTimeout(function(){
+                        	$.ajax({
+                            	type:'POST',
+                            	url:activities_introduction,
+                            	dataType:'text',
+                            	//contentType: "application/x-www-form-urlencoded; charset=utf-8", 
+                                scriptCharset: 'utf-8',
+                            	success:function(data){
+                            		$("#activities_preview_content").html(data);
+                            	},
+                            	error:function(){
+                            		alert("活动审核读取失败！");
+                            	}
+                            });
+                        },500);
+                    
+                });
+                //社团审核预览
+                var association_preview = null;
+                $(".association_list_ul").delegate(".examine_button","click",function(){
+                	//var association_introduction = "";
+                    var association_history = "";
+                    if($(this).html() == "审核"&&$(this).parent().siblings(".wait_examine").html() == "待审核"){
+                        $(".examine_shadow").fadeToggle();
+                        $(".association_preview").fadeToggle();
+                        var association_list_applyPerson = $(this).parent().siblings(".association_list_applyPerson").html();
+                        var association_list_applyDate = $(this).parent().siblings(".association_list_applyDate").html();
+                        var association_list_applyName = $(this).parent().siblings(".association_list_applyName").html();                     
+                        $.ajax({
+                			type:'POST',
+                			url:'getcaa',
+                			dataType:'json',
+                			success:function(data){
+                				$.each(data.caaList,function(index,value){
+                					let personName = value.personName;
+                                    let applyDate = value.applyDate;
+                                    let asssociation_name = value.asssociation_name; 
+                					if(association_list_applyPerson == personName&&association_list_applyDate == applyDate&&association_list_applyName == asssociation_name){
+                						let association_img = value.association_img.split("WebContent\\")[1].replace(/\\/g,"/");
+                						let association_name = value.association_name;
+                						let association_purpose = value.association_purpose;
+                						let association_upper_department = value.association_upper_department;
+                						let association_function = value.association_function;
+                						let association_introduction = value.association_introduction;
+                						association_history = value.association_history;
+                						let createAssociationApplication_id = value.createAssociationApplication_id;
+                						$("#association_preview_icons_img").attr("src",association_img);               						
+                						$(".association_preview_name_span").html(association_name);
+                						$("#association_preview_motto").html(association_purpose);
+                						$("#association_preview_department").html(association_upper_department);
+                						$("#association_preview_work").html(association_function);
+                						$("#preview_content_base").html(association_introduction);
+                						//$("#preview_content_history").html(association_history);	
+                						$("#pass_button").attr("href","allowcreateassociation?createAssociationApplication_id=" + createAssociationApplication_id);
+                						$("#no_pass_button").attr("href","dropcreateassociation?createAssociationApplication_id=" + createAssociationApplication_id);               						
+                					}
+                				})             			                				
+                			},
+                			error:function(){
+                				alert("您的网络开小差了~");
+                			}
+                		});
+                      	//社团审核简介读取
+                        var timer_fuck = setTimeout(function(){
+                        	$.ajax({
+                            	type:'POST',
+                            	url:association_history,
+                            	dataType:'text',
+                            	//contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                                scriptCharset: 'utf-8', 
+                            	success:function(data){
+                            		$("#preview_content_history").html(data);
+                            	},
+                            	error:function(){
+                            		alert("社团审核读取失败！");
+                            	}
+                            });
+                        },500);
+                        
+                        association_preview = this;
+                    }else{
+                        alert("您已经审核过了！");
+                    }
+                    
+                    
+                    
+                    
+                });
+                //审核结果修改
+                $("#pass_button").click(function(){
+                    if($(".activities_preview").css("display") == "block"){
+                        if(confirm("确定让通过吗？")){
+                            
+                            $(".examine_shadow").fadeToggle();
+                            $(".preview_tab").fadeOut();
+                        }
+                    }else if($(".association_preview").css("display") == "block"){
+                        if(confirm("确定让通过吗？")){
+                            
+                            $(".examine_shadow").fadeToggle();
+                            $(".preview_tab").fadeOut();
+                        }
+                    }
+                    
+                })
+                $("#no_pass_button").click(function(){
+                    if($(".activities_preview").css("display") == "block"){
+                        if(confirm("确定不通过吗？")){
+                            
+                            $(".examine_shadow").fadeToggle();
+                            $(".preview_tab").fadeOut();
+                        }
+                    }else if($(".association_preview").css("display") == "block"){
+                        if(confirm("确定不通过吗？")){
+                       
+                            $(".examine_shadow").fadeToggle();
+                            $(".preview_tab").fadeOut();
+                        }
+                    }
+                })
+                //可视图
+                var histogram = echarts.init(document.getElementById("histogram"));
+                var pie = echarts.init(document.getElementById("pie"));
+                /*数据柱状图*/
+                var histogram_option = {
+                    title:{
+                        text: "近几月新增用户分布"
+                    },
+                    tooltip:{},
+                    legend: {
+                        data:['新增用户数']
+                    },
+                    xAxis:{
+                        data: ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"]
+                    },
+                    yAxis:{},
+                    series:[{
+                        name: '新增用户数',
+                        type: 'bar',
+                        data: [111,55,222,77,333,111,55,222,77,333,77,333],
+                    }]
+                };
+                histogram.setOption(histogram_option);
+                /*数据饼状图*/
+                pie.setOption({
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    series : [
+                        {   
+                            roseType: 'angle',
+                            name: '社团类别',
+                            type: 'pie',
+                            radius: '55%',
+                            data:[
+                                {
+                                    value:235, 
+                                    name:'文艺类',
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#e2e7ed'
+                                        }
+                                    }
+                                },
+                                {
+                                    value:274, 
+                                    name:'运动类',
+                                    itemStyle: {
+                                        normal: {
+                                            color:'#fdd24f'
+                                        }
+                                    }
+                                },
+                                {
+                                    value:310, 
+                                    name:'技能类',
+                                    itemStyle: {
+                                        normal: {
+                                            color:'#f36192'
+                                        }
+                                    }
+                                },
+                                {
+                                    value:335, 
+                                    name:'兴趣类',
+                                    itemStyle: {
+                                        normal: {
+                                            color:'#25d5e4'
+                                        }
+                                    }
+                                },
+                                {
+                                    value:400, 
+                                    name:'招新类',
+                                    itemStyle: {
+                                        normal: {
+                                            color:'#ff8a80'
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                })
+
+                //*******************************************活动审核信息列表加载*********************************
+                $.ajax({
+                	type:'POST',
+                	url:'getactivity',
+                	dataType:'json',
+                	success:function(data){
+                		//alert(data);             		
+                		$.each(data.activity,function(index,value){
+                			let activities_list_ul = $(".activities_list_ul").html();
+                			let activities_stage = value.activity_examine_stage;
+        					let new_li = "";
+        					//alert(value.activity_association['association_name']);	
+        					new_li += '<li class="activities_list_li">'
+		                            + '<div class="activities_list_li_ele activities_list_applynanme">' + value.activity_name + '</div>'
+		                            + '<div class="activities_list_li_ele activities_list_applyDate">' + value.activity_apply_date + '</div>'
+		                            + '<div class="activities_list_li_ele">' + value.activity_association['association_name'] + '</div>'
+		                            + '<div class="activities_list_li_ele">' + value.activity_association['association_boss'] + '</div>'
+		                            + '<div class="activities_list_li_ele">' + value.activity_association['association_function'] + '</div>'
+		                            + '<div class="activities_list_li_ele wait_examine">' + activities_stage + '</div>'
+		                            + '<div class="activities_list_li_ele">'
+		                            + '<div class="examine_button">' + '审核' + '</div>'
+		                            + '</div>'
+                         			+ '</li>'
+        					$(".activities_list_ul").html(activities_list_ul + new_li);
+                		})
+                		
+                	},
+                	error:function(){
+                		alert("活动审核列表加载失败!");
+                	}
+                })
+              //*********************************社团审核信息列表加载********************************
+        		$.ajax({
+        			type:'POST',
+        			url:'getcaa',
+        			dataType:'json',
+        			success:function(data){
+        				
+        				$.each(data.caaList,function(index,value){
+        					
+        					let association_list_ul = $(".association_list_ul").html();
+        					let new_li = "";
+        					new_li += '<li class="association_list_li">'
+        							+ '<div class="association_list_li_ele association_list_applyPerson">'
+        							+ value.personName
+        							+ '</div>'
+        							+ '<div class="association_list_li_ele association_list_applyDate">'
+        							+ value.applyDate
+        							+ '</div>'
+        							+ '<div class="association_list_li_ele association_list_applyName">'
+        							+ value.asssociation_name
+        							+ '</div>'
+        							+ '<div class="association_list_li_ele">'
+        							+ value.association_function
+        							+ '</div>'
+        							+ '<div class="association_list_li_ele wait_examine">'
+        							+ value.examinte_stage
+        							+ '</div>'
+        							+ '<div class="association_list_li_ele">'
+        							+ '<div class="examine_button">'
+        							+ '审核'
+        							+ '</div>'
+        							+ '</div>'
+        							+ '</li>';
+        					$(".association_list_ul").html(association_list_ul + new_li);
+        				})
+        			
+        				
+        			},
+        			error:function(){
+        				alert("社团审核列表加载失败!");
+        			}
+        		});
+                //***************************用户管理列表加载*************************************
+                
+                $.ajax({
+                    type:'POST',
+                    url:'getallstudent',
+                    dataType:'json',
+                    success:function(data){
+                    	//alert(data);
+                  		
+                        $.each(data.student,function(index,value){
+                        	let person_list_li_personal_id = value.personal_id;
+                            let person_list_li_personalName = value.personal_name;
+                            let person_list_li_loginDate = value.personal_register_date;
+                            let person_list_li_personalSex = value.personal_sex;
+                            let person_list_li_personalEmail = value.personal_email;
+                            let person_list_li_personlPhone = value.personal_phone;
+                            let person_list_ul = $(".person_list_ul").html();
+                            new_li = '<li class="person_list_li">'
+                                    + '<div class="person_list_li_ele">' + person_list_li_personalName + '</div>'
+                                    + '<div class="person_list_li_ele">' + person_list_li_loginDate + '</div>'
+                                    + '<div class="person_list_li_ele">' + person_list_li_personalSex + '</div> '                         
+                                    + '<div class="person_list_li_ele">' + person_list_li_personalEmail + '</div>'
+                                    + '<div class="person_list_li_ele">' + person_list_li_personlPhone + '</div>'
+                                    + '<div class="person_list_li_ele">'
+                                    + '<div value="' + person_list_li_personal_id + '" class="delete_button">' + '删除' + '</div>'
+                                    + '</div>'
+                                    + '</li>';
+                            $(".person_list_ul").html(person_list_ul + new_li);
+                        });
+                  		
+                    },
+                    error:function(){
+                        alert("用户管理列表加载失败！");
+                    }
+                })
+                
+                //***************************社团管理列表加载*************************************
+                $.ajax({
+                    type:'POST',
+                    url:'getassociation',
+                    dataType:'json',
+                    success:function(data){
+                        $.each(data.association,function(index,value){
+                        	let association_manerge_list_ul_associationId = value.association_id;
+                            let association_manerge_list_ul_associationName = value.association_name;
+                            let association_manerge_list_ul_loginDate = value.association_register_date;
+                            let association_manerge_list_ul_leaderName = value.association_boss;
+                            let association_manerge_list_ul_associationType = value.association_function;
+                            let association_manerge_list_ul = $(".association_manerge_list_ul").html();
+                            new_li = '<li class="association_manerge_list_li">'
+                                    + '<div class="association_manerge_list_li_ele">' + association_manerge_list_ul_associationName + '</div>'
+                                    + '<div class="association_manerge_list_li_ele">' + association_manerge_list_ul_loginDate + '</div>'
+                                    + '<div class="association_manerge_list_li_ele">' + association_manerge_list_ul_leaderName + '</div> '                         
+                                    + '<div class="association_manerge_list_li_ele">' + association_manerge_list_ul_associationType + '</div>'
+                                    + '<div class="association_manerge_list_li_ele">'
+                                    + '<div value="' + association_manerge_list_ul_associationId + '" class="delete_button">' + '删除' + '</div>'
+                                    + '</div>'
+                                    + '</li>';
+                            $(".association_manerge_list_ul").html(association_manerge_list_ul + new_li);
+                        });
+                    },
+                    error:function(){
+                        alert("用户管理列表加载失败！");
+                    }
+                })
+                
+        		//列表显示效果
+                li_show(".activities_list_li");
+                li_show(".association_list_li");
+            });
+            /**************************************以上为$(function(){})结束位置************************************/
+            //用户登录时刻数据表
+            var dom = document.getElementById("user_dynamicDate");
+            var myChart = echarts.init(dom);
+            option = {
+                title: {
+                    text: '用户登录时刻数据表',
+                    subtext: '模拟数据'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        label: {
+                            backgroundColor: '#283b56'
+                        }
+                    }
+                },
+                legend: {
+                    data:['登陆人数', '数据延迟']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        dataView: {readOnly: false},
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                dataZoom: {
+                    show: false,
+                    start: 0,
+                    end: 100
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        boundaryGap: true,
+                        data: (function (){
+                            var now = new Date();
+                            var res = [];
+                            var len = 10;
+                            while (len--) {
+                                res.unshift(now.toLocaleTimeString().replace(/^\D*/,''));
+                                now = new Date(now - 2000);
+                            }
+                            return res;
+                        })()
+                    },
+                    {
+                        type: 'category',
+                        boundaryGap: true,
+                        data: (function (){
+                            var res = [];
+                            var len = 10;
+                            while (len--) {
+                                res.push(len + 1);
+                            }
+                            return res;
+                        })()
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        scale: true,
+                        name: '登陆人数',
+                        max: 30,
+                        min: 0,
+                        boundaryGap: [0.2, 0.2]
+                    },
+                    {
+                        type: 'value',
+                        scale: true,
+                        name: '数据延迟',
+                        max: 1200,
+                        min: 0,
+                        boundaryGap: [0.2, 0.2]
+                    }
+                ],
+                series: [
+                    {
+                        name:'登陆人数',
+                        type:'bar',
+                        xAxisIndex: 1,
+                        yAxisIndex: 1,
+                        data:(function (){
+                            var res = [];
+                            var len = 10;
+                            while (len--) {
+                                res.push(Math.round(Math.random() * 1000));
+                            }
+                            return res;
+                        })()
+                    },
+                    {
+                        name:'数据延迟',
+                        type:'line',
+                        data:(function (){
+                            var res = [];
+                            var len = 0;
+                            while (len < 10) {
+                                res.push((Math.random()*10 + 5).toFixed(1) - 0);
+                                len++;
+                            }
+                            return res;
+                        })()
+                    }
+                ]
+            };
+            var app = new Object();
+            app.count = 11;
+            setInterval(function (){
+                axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
+
+                var data0 = option.series[0].data;
+                var data1 = option.series[1].data;
+                data0.shift();
+                data0.push(Math.round(Math.random() * 1000));
+                data1.shift();
+                data1.push((Math.random() * 10 + 5).toFixed(1) - 0);
+
+                option.xAxis[0].data.shift();
+                option.xAxis[0].data.push(axisData);
+                option.xAxis[1].data.shift();
+                option.xAxis[1].data.push(app.count++);
+                myChart.setOption(option);
+            }, 2100);
+
+            //遮罩层及内容隐藏
+                function shadow_hidden(){
+                    $(".personal_change_shadow").fadeToggle();
+                    $(".personal_change_shadow_panel_content").fadeOut();
+                }
+                //建立一個可存取到該file的url
+                function getObjectURL(file) {
+                    var url = null ; 
+                    if (window.createObjectURL!=undefined) { // basic
+                        url = window.createObjectURL(file) ;
+                    } else if (window.URL!=undefined) { // mozilla(firefox)
+                        url = window.URL.createObjectURL(file) ;
+                    } else if (window.webkitURL!=undefined) { // webkit or chrome
+                        url = window.webkitURL.createObjectURL(file) ;
+                    }
+                    return url ;
+                }
+        </script>
+        
+	</body>
+</html>

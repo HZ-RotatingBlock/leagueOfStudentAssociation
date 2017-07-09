@@ -1,0 +1,887 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>个人主页</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/personal_page.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/general_js.js"></script>
+	</head>
+	
+	<body>
+		<!--loading start-->    
+        <div class="loading_pagination" id="loading_pagination">
+            <div class="loading_center">
+                <img src="icons/loading_img.png" alt="loading" class="loading_img">
+                <span class="loading_circle_shadow"></span>
+            </div>        
+            <span class="loading_pagination_text">loading...</span>
+            <div class="loading_circle_inner"></div>
+            <div class="loading_circle_outer"></div>
+        </div>
+        <!--loading end-->
+        <!--导航条开始-->
+		<div class="nav">
+            <a href="index.html" title="返回首页"><span class="logo"></span></a>
+            <ul class="login_header_ul">
+                <li class="user_header">
+                    <a href="personal_page.html" title="前往个人主页" class="personalpage_href">
+                        <img src="icons/association_leader_3.jpg" alt="用户头像" class="user_header_img" id="user_header_img">
+                    </a>
+                </li>
+                <li class="user_name" id="user_name"><%=session.getAttribute("personal_name")%></li>             
+            </ul>   
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="login.html" title="登录" class="nav_li_a">登录</a></li>
+                <li class="nav_li"><a href="login.html" title="注册" class="nav_li_a">注册</a></li>
+            </ul>
+        </div>
+        <!--导航条结束-->
+        <!--侧边快捷栏开始-->
+        <ul class="sidebar">
+            <li class="sidebar_option">
+                <img src="icons/returnTop.png" alt="回到顶部" class="sidebar_option_icons return_top">
+                <span class="prompt_sidebar">
+                    回到顶部<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/collect.png" alt="收藏" class="sidebar_option_icons collect">
+                <span class="prompt_sidebar">
+                    收藏活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/shareOther.png" alt="分享活动" class="sidebar_option_icons shareOther">
+                <span class="prompt_sidebar">
+                    分享活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/return_pre_1.png" alt="返回前页" class="sidebar_option_icons return_pre">
+                <span class="prompt_sidebar">
+                    返回前页<span class="triangle_right"></span>
+                </span>
+            </li>
+        </ul>
+        <!--侧边快捷栏结束-->
+        <!--左侧功能栏-->
+        <!--个人头像-->
+        <div class="page_sidebar">
+            <div class="sidebar_user_header_pointer">
+                <span class="pointer_left"></span>
+                <span class="pointer_right"></span>            
+            </div>
+            <!--头像设置-->
+            <img src="icons/set.png" alt="设置" class="header_set" id="header_set" />
+            <img class="sidebar_user_header" id="sidebar_user_header" src="icons/personal_info_1.png" alt="用户头像">
+
+            <ul class="page_sidebar_ul">
+                <li class="page_sidebar_li li_selected">
+                    <img class="page_sidebar_li_icons" src="icons/personal_info.png">个人信息
+                    <img class="page_sidebar_li_icons_hover" src="icons/personal_info_1.png">
+                </li>
+                <li class="page_sidebar_li">
+                    <img class="page_sidebar_li_icons" src="icons/activities_save.png">活动记录
+                    <img class="page_sidebar_li_icons_hover" src="icons/activities_save_1.png">
+                </li>
+                <li class="page_sidebar_li">
+                    <img class="page_sidebar_li_icons" src="icons/personal_association.png">我的社团
+                    <img class="page_sidebar_li_icons_hover" src="icons/personal_association_1.png">
+                </li>
+                <li class="page_sidebar_li">
+                    <img class="page_sidebar_li_icons" src="icons/association_new.png">社团创建
+                    <img class="page_sidebar_li_icons_hover" src="icons/association_new_1.png">
+                </li>
+            </ul>   
+        </div> 
+        <!--头部展示开始-->
+        <div class="header">
+            <div class="personal_base">
+                <span class="personal_base_name" id="personal_base_name">铿锵玫瑰</span>
+                <span class="personal_base_motto">只要你想，全世界都会为你让路</span>
+            </div>  
+            <div class="focus">
+                <span class="focus_num">99</span>
+                <span class="focus_icon">关注</span>
+            </div>
+            <div class="fans">
+                <span class="fans_num">666</span>
+                <span class="fans_icon">粉丝</span>
+            </div>
+            
+        </div>  
+        <!--头部展示结束-->        
+        <!--主体开始-->
+        <div class="main">
+            <!--个人信息面板开始-->
+            <div class="personal_info_part">
+                <span class="personal_info_part_title">个人信息</span>
+                <ul class="personal_info_part_ul">
+                    <li class="personal_info_li">
+                        <img class="personal_info_li_icons" src="icons/name.png" alt="列表信息">
+                        <span class="personal_info_title">名称</span>
+                        <span class="personal_info_content" id="personal_info_content_name">铿锵玫瑰</span>
+                        <span class="personal_info_prompt">您注册登录时的名称，可以修改</span>
+                        <div class="personal_info_revise">修改</div>                        
+                    </li>
+                    <li class="personal_info_li">
+                        <img class="personal_info_li_icons" src="icons/cellphone.png" alt="列表信息">
+                        <span class="personal_info_title">手机</span>
+                        <span class="personal_info_content" id="personal_info_content_cellphone">18888888888</span>
+                        <span class="personal_info_prompt">可通过手机号登录社团联盟</span>
+                        <div class="personal_info_revise">修改</div>                        
+                    </li>
+                    <li class="personal_info_li">
+                        <img class="personal_info_li_icons" src="icons/email.png" alt="列表信息">
+                        <span class="personal_info_title">邮箱</span>
+                        <span class="personal_info_content" id="personal_info_content_email">24351234513@qq.com</span>
+                        <span class="personal_info_prompt">可通过邮箱登录社团联盟</span>
+                        <div class="personal_info_revise">修改</div>                        
+                    </li>
+                    <li class="personal_info_li">
+                        <img class="personal_info_li_icons" src="icons/password.png" alt="列表信息">
+                        <span class="personal_info_title">密码</span>
+                        <span class="personal_info_content"></span>
+                        <span class="personal_info_prompt">用于保护账号信息和登录安全，可以修改</span>
+                        <div class="personal_info_revise">修改</div>                        
+                    </li>
+                    <li class="personal_info_li">
+                        <img class="personal_info_li_icons" src="icons/sex.png" alt="列表信息">
+                        <span class="personal_info_title">性别</span>
+                        <span class="personal_info_content" id="personal_info_content_sex">女</span>
+                        <span class="personal_info_prompt">您的性别，一经填写后不可修改</span>
+                        <div class="personal_info_revise">修改</div>                        
+                    </li>
+
+                </ul>   
+            </div>
+            <!--个人信息面板结束-->
+            <!--活动记录面板开始-->
+            <div class="personal_activities">
+                <span class="personal_info_part_title">活动记录</span>
+                <a href="activities_filter.html" title="更多活动" class="more_activities">更多活动</a>
+                <ul class="personal_activities_ul">
+                	<!--
+                    <li class="personal_activities_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_activities_li_imgDiv">
+                                <img src="images/filter/video_part_bg_01.jpg" class="personal_activities_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_activities_name">优雅地老去，也不失为一种美感</span>
+                            <span class="personal_activities_content">优雅的老去，也不失为一种美感。瑜伽健身给你娴静之气，让你优雅生活。
+                            </span>
+                            <span class="personal_activities_association">中南民族大学瑜伽健身协会</span>
+                            <span class="personal_activities_date">2017.05.26-2017.05.28</span>
+                            <span class="activities_join">参与人数：<strong class="activities_join_nmu">9999</strong></span>
+                            <img src="icons/underway.png" class="personal_activities_state" alt="活动状态"/>
+                        </a>
+                    </li>
+                    <li class="personal_activities_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_activities_li_imgDiv">
+                                <img src="images/filter/video_part_bg_02.jpg" class="personal_activities_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_activities_name">徐老师降敌套路</span>
+                            <span class="personal_activities_content">徐老师叫我来巡山！小伙伴们快快前来报名吧！
+                            </span>
+                            <span class="personal_activities_association">中南民族大学武术协会</span>
+                            <span class="personal_activities_date">2017.04.01-2017.05.25</span>
+                            <span class="activities_join">参与人数：<strong class="activities_join_nmu">9999</strong></span>
+                            <img src="icons/underway.png" class="personal_activities_state" alt="活动状态"/>
+                        </a>
+                    </li>
+                    <li class="personal_activities_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_activities_li_imgDiv">
+                                <img src="images/filter/video_part_bg_03.jpg" class="personal_activities_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_activities_name">车协暑假远征</span>
+                            <span class="personal_activities_content">我做过许多大梦，放假了出去旅行，但寒与风啸，志与日去，好些天过去了，我还坐在这儿没有出发，上期带大家去游览了海南片刻，大家是否对外面的世界还充满留恋？
+                            </span>
+                            <span class="personal_activities_association">中南民族大学自行车协会</span>
+                            <span class="personal_activities_date">2017.05.26-2017.05.28</span>
+                            <span class="activities_join">参与人数：<strong class="activities_join_nmu">9999</strong></span>
+                            <img src="icons/underway.png" class="personal_activities_state" alt="活动状态"/>
+                        </a>
+                    </li>
+                    <li class="personal_activities_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_activities_li_imgDiv">
+                                <img src="images/filter/video_part_bg_04.jpg" class="personal_activities_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_activities_name">第十四届毕业生论坛</span>
+                            <span class="personal_activities_content">第十四届毕业生论坛开始啦！小伙伴们快快前来报名吧！
+                            </span>
+                            <span class="personal_activities_association">中南民族大学子衿阅读社</span>
+                            <span class="personal_activities_date">2017.04.01-2017.05.25</span>
+                            <span class="activities_join">参与人数：<strong class="activities_join_nmu">9999</strong></span>
+                            <img src="icons/underway.png" class="personal_activities_state" alt="活动状态"/>
+                        </a>
+                    </li>
+                    <li class="personal_activities_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_activities_li_imgDiv">
+                                <img src="images/filter/video_part_bg_05.jpg" class="personal_activities_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_activities_name">“艺生有你”毕业生专场晚会</span>
+                            <span class="personal_activities_content">一舞生四年 不悔梦归处
+                            </span>
+                            <span class="personal_activities_association">中南民族大学“舞生”舞蹈团</span>
+                            <span class="personal_activities_date">2017.04.01-2017.05.25</span>
+                            <span class="activities_join">参与人数：<strong class="activities_join_nmu">9999</strong></span>
+                            <img src="icons/underway.png" class="personal_activities_state" alt="活动状态"/>
+                        </a>
+                    </li>
+                    <li class="personal_activities_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_activities_li_imgDiv">
+                                <img src="images/filter/video_part_bg_06.jpg" class="personal_activities_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_activities_name">照片征集|给妈一个当网红的机会</span>
+                            <span class="personal_activities_content">将和妈妈的合照或妈妈的照片发给我们，附上照片背后的故事或想对母亲说的话，说出你的故事，让妈妈当次“网红”，给妈妈一个惊喜，这才是最棒的母亲节礼物。
+                            </span>
+                            <span class="personal_activities_association">中南民族大学摄影协会</span>
+                            <span class="personal_activities_date">2017.04.01-2017.05.25</span>
+                            <span class="activities_join">参与人数：<strong class="activities_join_nmu">9999</strong></span>
+                            <img src="icons/underway.png" class="personal_activities_state" alt="活动状态"/>
+                        </a>
+                    </li>
+                    -->
+
+                    
+                </ul>
+            </div>
+            <!--活动记录面板结束-->
+            <!--个人社团面板开始-->
+            <div class="personal_association">
+                <span class="personal_info_part_title">我的社团</span>
+                <a href="association_filter.html" title="更多社团" class="more_association">更多社团</a>
+                <ul class="personal_association_ul">
+                <!--  
+                    <li class="personal_association_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_association_li_imgDiv">
+                                <img src="images/filter/video_part_bg_01.jpg" class="personal_association_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_association_name">中南民族大学瑜伽健身协会</span>
+                            <span class="personal_association_content">中南民族大学瑜伽&健身协会成立于2015年4月，协会面向全校瑜伽、健身爱好者招新，并且每年有相关瑜伽和健身公益性活动
+                            </span>
+                            <span class="personal_association_job">
+                                职务：<strong class="personal_association_jobdetail">部长</strong>
+                            </span>
+                            <span class="personal_association_date">
+                                入社时间：<strong class="personal_association_dateNmu">2015.05.26</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="personal_association_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_association_li_imgDiv">
+                                <img src="images/filter/video_part_bg_02.jpg" class="personal_association_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_association_name">中南民族大学武术协会</span>
+                            <span class="personal_association_content">优中南民族大学武术协会成立于1984年，由胡文雄副教授任主教练，是校体育类优秀学生社团。协会致力于为广大学生，特别是其中的武术爱好者提供学习武术的机会。使学员们能通过传统武术的训练，具有蓬勃向上的精神面貌、强健的体魄与坚强的意志
+                            </span>
+                            <span class="personal_association_job">
+                                职务：<strong class="personal_association_jobdetail">部长</strong>
+                            </span>
+                            <span class="personal_association_date">
+                                入社时间：<strong class="personal_association_dateNmu">2015.05.26</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="personal_association_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_association_li_imgDiv">
+                                <img src="images/filter/video_part_bg_03.jpg" class="personal_association_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_association_name">中南民族大学自行车协会</span>
+                            <span class="personal_association_content">中南民族大学自行车协会成立于2007年9月10日，直属中南民族大学校团委。协会成立至今车协人一直秉承“行万里路，读万卷书”的宗旨和遵循“团结，向上，互助”的团队思想。功崇惟志，业广惟勤，车协人一直兢兢业业的奋斗着，扎根民大，走向社会，成就自我
+                            </span>
+                            <span class="personal_association_job">
+                                职务：<strong class="personal_association_jobdetail">部员</strong>
+                            </span>
+                            <span class="personal_association_date">
+                                入社时间：<strong class="personal_association_dateNmu">2017.05.26</strong>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="personal_association_li">
+                        <a href="#" title="活动名称">
+                            <div class="personal_association_li_imgDiv">
+                                <img src="images/filter/video_part_bg_01.jpg" class="personal_association_li_img" alt="活动图片">
+                            </div>
+                            <span class="personal_association_name">中南民族大学子衿阅读社</span>
+                            <span class="personal_association_content">中南民族大学子衿阅读社成立于2009年9月8日，是由中南民族大学在籍学生因为热爱读书，愿意与人分享、与人交流，想要在某些时刻共同忆起当时阅读的心中的感受，自愿组成的群众性团体
+                            </span>
+                            <span class="personal_association_job">
+                                职务：<strong class="personal_association_jobdetail">部员</strong>
+                            </span>
+                            <span class="personal_association_date">
+                                入社时间：<strong class="personal_association_dateNmu">2017.05.26</strong>
+                            </span>
+                        </a>
+                    </li>
+                    -->
+
+                    
+                </ul>
+            </div>
+            <!--个人社团面板结束-->
+            <!--社团创建开始-->
+            <div class="association_create">
+                <span class="personal_info_part_title">社团创建</span>
+                <div class="association_create_part">
+                    <form class="association_create_form" action="addassociation" method="post" enctype="multipart/form-data">
+                        <!--社团logo选择-->
+                        <div class="association_header">
+                            <span class="association_header_title">请选择社团LOGO</span>
+                            <input type="file" id="association_header_img" name="photo" class="association_header_img"/>
+                            <div class="association_header_div">
+                                <img src="icons/personal_info.png" id="association_header_Img" class="association_header_Img">
+                            </div>                        
+                        </div>
+                        <!--社团名称-->
+                        <div class="association_form_name">
+                            <span class="association_form_inputName">社团名称：</span>
+                            <input type="text" class="association_form_name_input" name="association_name"/>
+                        </div>
+                        <!--社团简介-->
+                        <div class="association_form_introduction">
+                            <span class="association_form_inputName">社团简介</span>
+                            <textarea class="association_form_introduction_input" name="association_introduction"></textarea>
+                        </div>
+                        <!--社团职能-->
+                        <div class="association_form_job">
+                            <span class="association_form_inputName">社团职能：</span>
+                            <select class="association_form_job_input" name="association_function">
+                                <option class="job_type">文艺类</option>
+                                <option class="job_type">运动类</option>
+                                <option class="job_type">公益类</option>
+                                <option class="job_type">兴趣类</option>
+                                <option class="job_type">技能类</option>
+                            </select>
+                        </div>
+                        <!--社团隶属-->
+                        <div class="association_form_contain">
+                            <span class="association_form_inputName">社团隶属：</span>
+                            <input type="text" class="association_form_contain_input" name="association_upper_department"/>
+                        </div>
+                        <!--社团宗旨-->
+                        <div class="association_form_purpose">
+                            <span class="association_form_inputName">社团宗旨：</span>
+                            <input type="text" class="association_form_purpose_input" name="association_purpose"/>
+                        </div>
+                        <!--社团基本信息-->
+                        <div class="association_form_baseInfo">
+                            <span class="association_form_inputName">社团基本信息：</span>
+                            <textarea type="text" class="association_form_baseInfo_input" name="association_baseInfo"></textarea>
+                        </div>
+                        <!--社团历史-->
+                        <div class="association_form_history">
+                            <span class="association_form_inputName">社团历史：</span>
+                            <textarea class="association_form_history_input" name="association_history"></textarea>
+                        </div>
+                        <button type="submit" class="association_form_submit">申请提交</button>
+                    </form>
+                </div>
+            </div>
+            <!--社团创建结束-->
+            
+        </div>          
+        <!--主体结束-->
+        <!--个人资料修改遮罩层-->
+        <div class="personal_change_shadow">
+            <span class="shadow"></span>
+            <div class="personal_change_shadow_panel">
+                <!--头像修改-->
+                <div class="user_header_change personal_change_shadow_panel_content">
+                    <span class="user_change_title">头像修改</span>
+                    <img src="icons/personal_info.png" alt="头像修改" class="user_change_img header_set_change" id="header_set_change"/>
+                    <span class="user_change_content">请上传新头像</span>
+                    <form class="user_change_form" id="user_info_headerchange" action="update_personal_header" enctype="multipart/form-data" method="post" >
+                        <span class="change_ele">新头像：</span>
+                        <input type="file" name="photo" class="header_set_change_frames" id="header_set_change_frames"/>
+                        <div class="confirm">确定</div>
+                        <div class="cancel">取消</div>
+                    </form>
+                </div>
+                <!--名称修改-->
+                <div class="user_name_change personal_change_shadow_panel_content">
+                    <span class="user_change_title">名称修改</span>
+                    <img src="icons/name_1.png" alt="名称修改" class="user_change_img" />
+                    <span class="user_change_content">请填写新的名称，该项修改后可以再次修改</span>
+                    <form class="user_change_form" id="user_info_namechange" action="personal_info_update" method="post">
+                        <span class="change_ele">新名称：</span>
+                        <input type="text" class="user_name_change_input"/>
+                        <div class="confirm">确定</div>
+                        <div class="cancel">取消</div>
+                    </form>
+                </div>
+                <!--手机修改-->
+                <div class="user_cellphone_change personal_change_shadow_panel_content">
+                    <span class="user_change_title">手机修改</span>
+                    <img src="icons/cellphone_1.png" alt="手机修改" class="user_change_img" />
+                    <span class="user_change_content">请填写手机号，该项修改后可以再次修改</span>
+                    <form class="user_change_form" id="user_info_phonechange" action="personal_info_update" method="post">
+                        <span class="change_ele">新手机号：</span>
+                        <input type="text" class="user_cellphone_change_input"/>
+                        <div class="confirm">确定</div>
+                        <div class="cancel">取消</div>
+                    </form>
+                </div>
+                <!--邮箱修改-->
+                <div class="user_email_change personal_change_shadow_panel_content">
+                    <span class="user_change_title">邮箱修改</span>
+                    <img src="icons/email_1.png" alt="邮箱修改" class="user_change_img" />
+                    <span class="user_change_content">请填写新的邮箱，该项修改后可以再次修改</span>
+                    <form class="user_change_form" id="user_info_emailchange" action="personal_info_update" method="post">
+                        <span class="change_ele">新邮箱：</span>
+                        <input type="text" class="user_email_change_input"/>
+                        <div class="confirm">确定</div>
+                        <div class="cancel">取消</div>
+                    </form>
+                </div>
+                <!--密码修改-->
+                <div class="user_password_change personal_change_shadow_panel_content">
+                    <span class="user_change_title">密码修改</span>
+                    <img src="icons/password_1.png" alt="密码修改" class="user_change_img" />
+                    <span class="user_change_content">请填写新的密码，该项修改后可以再次修改</span>
+                    <form class="user_change_form" id="user_info_passwordchange" action="personal_info_update" method="post">
+                        <span class="change_ele">新密码：</span>
+                        <input type="text" class="user_password_change_input"/>
+                        <div class="confirm">确定</div>
+                        <div class="cancel">取消</div>
+                    </form>
+                </div>
+                <!--性别修改-->
+                <div class="user_sex_change personal_change_shadow_panel_content">
+                    <span class="user_change_title">性别修改</span>
+                    <img src="icons/sex_1.png" alt="性别修改" class="user_change_img" />
+                    <span class="user_change_content">请填写您的性别，该项修改后不可以再次修改</span>
+                    <form class="user_change_form" id="user_info_sexchange" action="personal_info_update" method="post">
+                        <span class="change_ele">性别确认</span>
+                        <input type="text" class="user_sex_change_input"/>
+                        <div class="confirm">确定</div>
+                        <div class="cancel">取消</div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        <script type="text/javascript">
+            $(function(){
+                //***********************个人活动记录读取***********************
+                
+                $.ajax({
+                    type:'POST',
+                    url:'getstudent',
+                    dataType:'json',
+                    contentType:'applilcation.json;charset=urg-8',
+                    success:function(data){
+                    	//alert(data);
+                    	
+                        $.each(data.stu,function(index,value){
+                            //alert(value.personal_activity[0].activity_id);
+                            $.each(value.personal_activity,function(index,value){
+                            	//let association_id = value.activity_association['association_id'];
+                                let activity_id = value.activity_id;
+                                let activity_name = value.activity_name;
+                                let activity_date = value.activity_date_scope;
+                                let activity_summary = value.activity_summary;
+                                //alert(value.activity_img);
+                                let activity_img = value.activity_img.split("WebContent\\")[1].replace(/\\/g,"/");
+                                //alert(activity_img);
+                                let activity_association = value.activity_association.association_name;
+                                let acitivity_original_list = $(".personal_activities_ul").html();
+                                let new_li = '<li class="personal_activities_li">'
+                                            + '<a href="activities_page.html?id=' + activity_id + '" title="活动名称">'
+                                            + '<div class="personal_activities_li_imgDiv">'
+                                            + '<img src="' + activity_img + '" class="personal_activities_li_img" alt="活动图片">'
+                                            + '</div>'
+                                            + '<span class="personal_activities_name">' + activity_name + '</span>'
+                                            + '<span class="personal_activities_content">' + activity_summary
+                                            + '</span>'
+                                            + '<span class="personal_activities_association">' + activity_association + '</span>'
+                                            + '<span class="personal_activities_date">' + activity_date + '</span>'
+                                            + '<span class="activities_join">' + '参与人数：' + '<strong class="activities_join_nmu">' + '9999' + '</strong></span>'
+                                            + '<img src="icons/underway.png" class="personal_activities_state" alt="活动状态"/>'
+                                            + '</a>'
+                                            + '</li>';
+                                            $(".personal_activities_ul").html(acitivity_original_list + new_li);
+                            })
+                            
+                            
+                        	
+                        })
+                        
+                    },
+                    error:function(){
+                        alert("个人列表加载失败！");
+                    }
+                })
+                
+            	//***********************个人社团记录读取***********************
+            	$.ajax({
+            		type:'POST',
+            		url:'getstudent',
+            		dataType:'json',
+            		contentType: "application/json; charset=utf-8", 
+            		success:function(data){        			
+            			$.each(data.stu,function(index,value){            				         				
+            				//个人信息更新
+                        	let personal_info_name = value.personal_name;
+                        	let personal_info_phone = value.personal_phone;
+                        	let personal_info_email = value.personal_email;
+                        	let personal_info_sex = value.personal_sex;
+                        	//alert(value.personal_header);
+                        	let personal_original_header = value.personal_header;
+                        	if(personal_original_header != "icons/personal_info_1.png"){
+                        		var personal_info_header = value.personal_header.split("WebContent\\")[1].replace(/\\/g,"/");
+                                //alert(value.personal_header);
+                        		//alert(personal_info_header);
+                        	}
+                        	
+                        	//alert(personal_info_header);
+                        	$("#personal_base_name").html(personal_info_name);
+                        	//alert(personal_info_name);
+                        	$("#personal_info_content_name").html(personal_info_name);
+                        	$("#personal_info_content_cellphone").html(personal_info_phone);
+                        	$("#personal_info_content_email").html(personal_info_email);
+                        	$("#personal_info_content_sex").html(personal_info_sex);
+                        	$("#sidebar_user_header").attr("src",personal_info_header);
+                            $("#user_header_img").attr("src",personal_info_header);
+                            
+                            let personal_association_length = value.personal_association.length;
+                            for(var i = 0;i < personal_association_length;i++){
+                            	
+                                //个人主页社团记录
+                                let personal_association_id = value.personal_association[i].association_id;
+                                let personal_association_name = value.personal_association[i].association_name;
+                                //alert(value.personal_association[i].association_img);
+                                let personal_association_headerImg = value.personal_association[i].association_img.split("WebContent\\")[1].replace(/\\/g,"/");                          
+                                //alert(personal_association_headerImg);
+                                let personal_association_introduction = value.personal_association[i].association_introduction;
+                                let personal_join_association_date = value.personal_join_association_date[personal_association_name];
+            				    let personal_privilege = value.personal_privilege[personal_association_name];              				
+                                let new_association_li ='<li class="personal_association_li">'
+                                                        + '<a href="' + 'personal_association.html?id=' + personal_association_id +'" title="社团名称">'
+                                                        + '<div class="personal_association_li_imgDiv">'
+                                                        + '<img src="' + personal_association_headerImg + '" class="personal_association_li_img" alt="社团图片">'
+                                                        + '</div>'
+                                                        + '<span class="personal_association_name">' + personal_association_name + '</span>'
+                                                        + '<span class="personal_association_content">' + personal_association_introduction + '</span>'
+                                                        + '<span class="personal_association_job">'
+                                                        + '职务：<strong class="personal_association_jobdetail">'
+                                                        + personal_privilege
+                                                        + '</strong>'
+                                                        + '</span>'
+                                                        + '<span class="personal_association_date">'
+                                                        + '入社时间：<strong class="personal_association_dateNmu">'
+                                                        + personal_join_association_date
+                                                        + '</strong>'
+                                                        + '</span>'
+                                                        + '</a>'
+                                                        + '</li>';
+                                let personal_association_list = $(".personal_association_ul").html();
+                                $(".personal_association_ul").html(personal_association_list + new_association_li);
+                            	}            				                                            					
+            				});            				            				                    		            										
+            			          			
+            		},
+            		error:function(){
+            			alert("您的网络开小差了~");
+            		}
+            	});
+            	
+            	
+            });
+        </script>
+        <script type="text/javascript">       
+        $(function(){
+            $(".page_sidebar_li").each(function(index,value){
+                let li_src = $(this).children("img").attr("src");
+                let header_src = li_src.replace(/.png/,"_1.png");
+                if($(this).children("img").attr("src") != header_src){
+                    $(value).hover(
+                        function(){
+                            $(this).children(".page_sidebar_li_icons").attr("src",header_src);
+                    },function(){
+                            $(this).children(".page_sidebar_li_icons").attr("src",li_src);                        
+                    });
+                }                
+            });
+            $(".page_sidebar_ul").delegate(".page_sidebar_li","click",function(){
+                $(this).addClass("li_selected");
+                $(this).siblings(".page_sidebar_li").removeClass("li_selected").children(".page_sidebar_li_icons_hover").hide();
+                $(this).children(".page_sidebar_li_icons_hover").fadeToggle();
+            })
+            //列表出现效果      
+            li_show(".personal_info_li");
+            li_show(".personal_activities_li");
+            li_show(".personal_association_li");
+            /*社团logo上传预览*/    
+            $("#association_header_img").change(function(){
+                var objUrl = getObjectURL(this.files[0]) ;
+                console.log("objUrl = "+objUrl);
+                if (objUrl) {
+                    $("#association_header_Img").attr("src", objUrl) ;
+                }
+            });
+
+             /*列表面板切换*/
+            $("li.page_sidebar_li:eq(0)").click(function(){
+                $(".personal_info_part").css("display","block");
+                $(".personal_activities,.association_create,.personal_association").css("display","none");
+            })
+            $("li.page_sidebar_li:eq(1)").click(function(){
+                $(".personal_activities").css("display","block");
+                $(".personal_info_part,.association_create,.personal_association").css("display","none");
+            })
+            $("li.page_sidebar_li:eq(2)").click(function(){
+                $(".personal_association").css("display","block");
+                $(".personal_info_part,.personal_activities,.association_create").css("display","none");
+            })
+            $("li.page_sidebar_li:eq(3)").click(function(){
+                $(".association_create").css("display","block");
+                $(".personal_activities,.personal_info_part,.personal_association").css("display","none");
+            })
+            /*个人资料修改遮罩层*/
+            $(".shadow").click(function(){
+                shadow_hidden();
+            })
+            /*个人资料修改*/
+            /*对应遮罩层弹出*/
+            $(".personal_info_li").each(function(index,value){
+                $(value).find(".personal_info_revise").click(function(){
+                    if($(value).find(".personal_info_title").html() == "名称"){
+                        $(".personal_change_shadow").fadeToggle();
+                        $(".user_name_change").fadeToggle();
+                    }
+                    if($(value).find(".personal_info_title").html() == "手机"){
+                        $(".personal_change_shadow").fadeToggle();
+                        $(".user_cellphone_change").fadeToggle();
+                    }
+                    if($(value).find(".personal_info_title").html() == "邮箱"){
+                        $(".personal_change_shadow").fadeToggle();
+                        $(".user_email_change").fadeToggle();
+                    }
+                    if($(value).find(".personal_info_title").html() == "密码"){
+                        $(".personal_change_shadow").fadeToggle();
+                        $(".user_password_change").fadeToggle();
+                    }
+                    if($(value).find(".personal_info_title").html() == "性别"){
+                        $(".personal_change_shadow").fadeToggle();
+                        $(".user_sex_change").fadeToggle();
+                    }
+                })
+            });
+            /*取消按钮*/
+            $(".cancel").click(function(){
+                shadow_hidden();
+            });
+            /*对应修改面板点击确定修改*/
+            $(".personal_change_shadow_panel_content").each(function(index,value){
+                $(value).find(".confirm").click(function(){
+                    var user_change_title = $(value).find(".user_change_title");
+                    if(user_change_title.html() == "头像修改"){
+                    	//*****************************个人头像修改提交(ajax)**************************
+                    	$("#user_info_headerchange").submit();
+
+                    	//***************************************************************************
+                        let change_header = $("#header_set_change").attr("src");
+                        $("#sidebar_user_header").attr("src",change_header);
+                        $("#user_header_img").attr("src",change_header);
+                        shadow_hidden();
+                    }
+                    if(user_change_title.html() == "名称修改"){
+                        if($(".user_name_change_input").val() != ""){
+                        	$("#personal_info_content_name").html($(".user_name_change_input").val());
+                            $("#personal_base_name").html($(".user_name_change_input").val());
+                            $("#user_name").html($(".user_name_change_input").val());
+                        	//*****************************个人名称修改提交(ajax)**************************
+                        	let namechange_ele = $(".user_name_change_input").val();
+                        	//alert(namechange_ele);
+                        	$.ajax({
+                        		type:'POST',
+                        		url:'personal_info_update',
+                        		data:{"personal_name":namechange_ele},
+                        		dataType:'json',
+                        		success:function(data){
+                        			alert("修改成功！");
+                        		},
+                        		error:function(){
+                        			alert("您的网络开小差了，请稍后再试~");
+                        		}
+                        		
+                        	})
+                        	//***************************************************************************
+                            
+                            shadow_hidden();
+                        }else{
+                            alert("输入值不能为空！");
+                        }
+                    }
+                    if(user_change_title.html() == "手机修改"){
+                        if($(".user_cellphone_change_input").val() != ""){
+                        	$("#personal_info_content_cellphone").html($(".user_cellphone_change_input").val());
+                        	//*****************************个人手机修改提交(ajax)**************************
+                        	//$("#user_info_phonechange").submit();
+                        	let phonechange_ele = $(".user_cellphone_change_input").val();
+                        	//alert(phonechange_ele);
+                        	$.ajax({
+                        		type:'POST',
+                        		url:'personal_info_update',
+                        		data:{"personal_phone":phonechange_ele},
+                        		dataType:'json',
+                        		success:function(data){
+                        			alert("修改成功！");
+                        		},
+                        		error:function(){
+                        			alert("您的网络开小差了，请稍后再试~");
+                        		}
+                        		
+                        	})
+                        	//***************************************************************************
+                            
+                            shadow_hidden();
+                        }else{
+                            alert("输入值不能为空！");
+                        }
+                    }
+                    if(user_change_title.html() == "邮箱修改"){
+                        if($(".user_email_change_input").val() != ""){
+                        	$("#personal_info_content_email").html($(".user_email_change_input").val());
+                        	//*****************************个人邮箱修改提交(ajax)**************************
+                        	//$("#user_info_emailchange").submit();
+                        	let emailchange_ele = $(".user_email_change_input").val();
+                        	//alert(emailchange_ele);
+                        	$.ajax({
+                        		type:'POST',
+                        		url:'personal_info_update',
+                        		data:{"personal_email":emailchange_ele},
+                        		dataType:'json',
+                        		success:function(datq){
+                        			alert("修改成功！");
+                        		},
+                        		error:function(){
+                        			alert("您的网络开小差了，请稍后再试~");
+                        		}
+                        		
+                        	})
+                        	//***************************************************************************
+                            
+                            shadow_hidden();
+                        }else{
+                            alert("输入值不能为空！");
+                        }
+                    }
+                    if(user_change_title.html() == "密码修改"){
+                        if($(".user_password_change_input").val() != ""){
+                        	//*****************************个人密码修改提交(ajax)**************************
+                        	//$("#user_info_passwordchange").submit();
+                        	let passwordchange_ele = $(".user_password_change_input").val();
+                        	//alert(passwordchange_ele);
+                        	$.ajax({
+                        		type:'POST',
+                        		url:'personal_info_update',
+                        		data:{"personal_password":passwordchange_ele},
+                        		dataType:'json',
+                        		success:function(data){
+                        			alert("修改成功！");
+                        		},
+                        		error:function(){
+                        			alert("您的网络开小差了，请稍后再试~");
+                        		}
+                        		
+                        	})
+                        	//***************************************************************************
+                            //$("#personal_info_content_name").html($(".user_password_change_input").val());
+                            shadow_hidden();
+                        }else{
+                            alert("输入值不能为空！");
+                        }
+                    }
+                    if(user_change_title.html() == "性别修改"){
+                        if($(".user_sex_change_input").val() != ""){
+                        	$("#personal_info_content_sex").html($(".user_sex_change_input").val());
+                        	//*****************************个人性别修改提交(ajax)**************************
+                        	//$("#user_info_sexchange").submit();
+                        	let sexchange_ele = $(".user_sex_change_input").val();
+                        	//alert(sexchange_ele);
+                        	$.ajax({
+                        		type:'POST',
+                        		url:'personal_info_update',
+                        		data:{"personal_sex":sexchange_ele},
+                        		dataType:'json',
+                        		success:function(data){
+                        			alert("修改成功！");
+                        		},
+                        		error:function(){
+                        			alert("您的网络开小差了，请稍后再试~");
+                        		}
+                        		
+                        	})
+                        	//***************************************************************************
+                            
+                            shadow_hidden();
+                        }else{
+                            alert("输入值不能为空！");
+                        }
+                    }
+                        
+                });
+            });
+
+            /*头像修改*/
+            $(".header_set").click(function(){
+                $(".personal_change_shadow").fadeToggle();
+                $(".user_header_change").fadeToggle();
+            })
+            $("#header_set_change_frames").change(function(){
+                var objUrl = getObjectURL(this.files[0]) ;
+                console.log("objUrl = "+objUrl);
+                if (objUrl) {
+                    $("#header_set_change").attr("src", objUrl) ;
+                }
+            });
+
+
+        });
+
+        
+        //建立一個可存取到該file的url
+        function getObjectURL(file) {
+            var url = null ; 
+            if (window.createObjectURL!=undefined) { // basic
+                url = window.createObjectURL(file) ;
+            } else if (window.URL!=undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file) ;
+            } else if (window.webkitURL!=undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file) ;
+            }
+            return url ;
+        }
+
+        //遮罩层及内容隐藏
+        function shadow_hidden(){
+            $(".personal_change_shadow").fadeToggle();
+            $(".personal_change_shadow_panel_content").fadeOut();
+        }
+        </script>
+        
+	</body>
+</html>

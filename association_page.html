@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>社团概览</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/association_page.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/general_js.js"></script>
+	</head>
+	
+	<body>
+		<!--loading star-->    
+        <div class="loading_pagination" id="loading_pagination">
+            <div class="loading_center">
+                <img src="icons/loading_img.png" alt="loading" class="loading_img">
+                <span class="loading_circle_shadow"></span>
+            </div>        
+            <span class="loading_pagination_text">loading...</span>
+            <div class="loading_circle_inner"></div>
+            <div class="loading_circle_outer"></div>
+        </div>
+        <!--loading end-->
+        <!--导航条开始-->
+		<div class="nav">
+            <a href="index.html" title="返回首页"><span class="logo"></span></a>
+            <ul class="login_header_ul">
+                <li class="user_header">
+                    <a href="personal_page.html" title="前往个人主页" class="personalpage_href">
+                        <img src="icons/association_leader_3.jpg" alt="用户头像" class="user_header_img" id="user_header_img">
+                    </a>
+                </li>
+                <li class="user_name" id="user_name"><%=session.getAttribute("personal_name")%></li>             
+            </ul>   
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="login.html" title="登录" class="nav_li_a">登录</a></li>
+                <li class="nav_li"><a href="login.html" title="注册" class="nav_li_a">注册</a></li>
+            </ul>
+        </div>
+        <!--导航条结束-->
+        <!--侧边快捷栏开始-->
+        <ul class="sidebar">
+            <li class="sidebar_option">
+                <img src="icons/returnTop.png" alt="回到顶部" class="sidebar_option_icons return_top">
+                <span class="prompt_sidebar">
+                    回到顶部<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/collect.png" alt="收藏" class="sidebar_option_icons collect">
+                <span class="prompt_sidebar">
+                    收藏活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/shareOther.png" alt="分享活动" class="sidebar_option_icons shareOther">
+                <span class="prompt_sidebar">
+                    分享活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/return_pre_1.png" alt="返回前页" class="sidebar_option_icons return_pre">
+                <span class="prompt_sidebar">
+                    返回前页<span class="triangle_right"></span>
+                </span>
+            </li>
+        </ul>
+        <!--侧边快捷栏结束--> 
+        <!--头部展示开始-->
+        <div class="video_part">
+            <video autoplay="autoplay" loop id="association_video" class="association_video">
+				<source src="video/Training.mp4" type="video/mp4">
+			</video>
+            <div class="association_title">
+                <span class="association_name association_location_name">中南民族大学野狼战队</span>
+                <div class="association_content">
+                    <img src="images/association_icons/association_icons_20.jpg" alt="社团logo" class="association_header" id="association_header_img"/>
+                    	<span class="association_introduction" id="association_introduction">中南民族大学野狼战队隶属于中南民族大学管理学院学生会，是专为校运动会而成立的体育团体中南民族大学野狼战队隶属于中南民族大学管理学院学生会，是专为校运动会而成立的体育团体</span>
+                    <span class="association_content_line"></span>
+                    <div class="association_content_leaderdiv">
+                        <h3 class="association_leader">当前负责人</h3>
+                        <ul class="association_leader_ul">
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                            <li class="association_leader_li"><a href="#" title=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="join" id="join_button">我要加入</div>
+            </div>
+        </div> 
+        <!--头部展示结束-->        
+        <!--主体开始-->
+           
+        <div class="main">
+            <img src="icons/top_circle.png" alt="#" class="img_top_circle" />
+            <div class="content">
+                <!--目录-->
+                <ul class="catalog">
+                    <li class="catalog_li">目录</li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li strong">基本信息</li>
+                            <li class="cata_li_innerUl_li">简介</li>
+                        </ul>
+                    </li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li">协会历史</li>
+                        </ul>
+                    </li>
+                    <li class="catalog_li">
+                        <ul class="cata_li_inner">
+                            <li class="cata_li_innerUl_li strong">往期活动</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--基本信息-->
+                <div class="base_info">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>基本信息<span class="info_line"></span>
+                    </h2>
+                    <table class="base_info_table">
+                        <tr>
+                            <td class="base_info_table_ele">中文名</td>
+                            <td class=" association_location_name">中南民族大学野狼战队</td>
+                            <td class="base_info_table_ele">宗旨</td>
+                            <td id="association_motto">野狼战队，无惧无畏。全力拼搏，力争夺桂</td>
+                        </tr>
+                        <tr>
+                            <td class="base_info_table_ele">隶属</td>
+                            <td id="associaiton_belong">中南民族大学管理学院学生会</td>
+                            <td class="base_info_table_ele">职能</td>
+                            <td id="association_type">专为校运动会而成立的体育团体</td>
+                        </tr>
+                    </table>
+                </div> 
+                <!--简介及相关-->
+                <div class="base_content">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>社团简介<span class="info_line"></span>
+                    </h2>
+                    <pre class="base_content_p" id="association_baseInfo">简介
+    主要训练的项目是长跑，包 括男子400米、800米、1500米、3000米、5000米，女子400米、800米、1500米、3000米。队中成员主要是管理学院各年级学生组成，队中训练主要有队长负责，外加管理学院学生会的辅助。<br>
+    口号
+    野狼战队，无惧无畏，全力拼搏，力争夺桂。
+    队服
+    野狼战队的队服正面是一匹怒吼的狼头，代表的是野狼战队的狼性与像狼一样拼搏、不放弃的精神。背面是“野狼战队”四个红字，是野狼战队的logo<br>
+                    </pre>
+                </div>
+                <!--团队历史-->
+                <div class="base_history">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>团队历史<span class="info_line"></span>
+                    </h2>
+                    <pre class="base_content_p" id="association_history">这是一支勇猛的团队，他们有着“野狼战队”威名；这是一支温馨的团队，他们团结友爱亲如一家。这是一支不倒的团队，他们在校运会连年硕果累累[1] 
+                            	中南民族大学管理学院长跑队（即野狼战队）是一个光荣的大家庭，于2002年建队开始，每年的成绩都很优秀，一直是管理学院的骄傲。2004年长跑队开始驶向正规化，由鲁光平担任第一届队长，野狼战队也初具雏形。就此开启了野狼战队的辉煌的序幕。
+                            2005年，鲁光平受到《狼图腾》的影响，在训练过程中给队友逐步灌输狼“团结 拼搏 自信”的精神，训练师不许掉队，疲惫时怒吼出声，同时在训练过程中穿插一些趣味性活动，以减少训练的枯燥性，例如：团坐聊天，超越跑，接力跑，越野跑，聚会等等，这些大多都是野狼战队的传统。这年，野狼战队的成绩达到了顶峰:女子3000米金银牌，1500米金银牌，800米金铜牌，协力赛2枚金牌，男子800米第五名。在这年里管院所获得的33枚奖牌里，野狼就占了8个。校刊《远航》弟12期这样写道：“长跑组——一支管院的精英队伍，是管院在历届校运会中获得优异成绩的中坚力量，实力非凡，气势磅礴。”狼——我们不败的图腾，这一年，“野狼战队”的队名正式提出。
+                            2006年，由韦忠强担任队长，这一年，战队有了自己的口号:“野狼战队，无惧无畏，全力拼搏，力争夺桂！”同时，也填写了队歌，还有了自己的“形象代言”——狼吼。野狼的队伍越来越规范。这一年，由于一些优秀队员的毕业退出，战队的成绩受到了一些影响，女子组：3000米金牌和第八，1500米第五，男子组5000米第五，3000米第五，1500米金牌和第八，800米金牌和第八。虽然成绩不急上年，但队友们坚定的信念不曾改变，野狼的精神还在延续.......
+                            2007年由喻俊华和马涛带队,战队的成绩有了新的突破,在校运会中长跑的七个项目中取得五金一银的好成绩:女子组3000米金牌和第五,1500米金银牌,800米金牌和第五,男子组3000米第四和第七,1500米金牌和第四,800米金牌和第五.这一年里,我们的队伍不断壮大,成为校运会上名副其实的“梦之队”。
+                            2008年，由黄琦担任队长，战队顶住了分院的强大压力，延续着野狼战队的辉煌历史。在这一年里，战队获得女子3000米金银牌，1500米金银牌，800米金牌和第三，男子5000米第八，1500米金牌。包揽了女子长跑项目的所有金牌。辉煌再继续，野狼的队伍继续在壮大成长。
+                            2009年，王文杰和舒正文带队，是建队以来形式最为严峻的一年，新老交替，战队面临莫大的考验，一批优秀的老队员相继毕业，新队员经验不足，导致战绩有所下滑，女子组3000米第三，1500米第二和第四，800米金牌和第五，男子组800米第五。虽然，野狼的战绩很是不理想，但队友们始终坚持永不言弃，把野狼战队的精神延续下去。
+                            2010年，由李琴担任队长，正是新老交替的后期，优秀队员的缺少，新队员经验的不足，严重制约着队伍的发展。但是李琴队长仍然顶住压力，带出了一批优秀的队员，取得了不俗的成绩。女子800米第一和第二、1500米女子第三、3000米第三、男子800米第六、3000米第七，5000米第七。
+                            2011年，刘崇军带队，在为期一个多月的训练中，大家精诚团结，刻苦训练，在长跑队全体队员共同努力之下，取得了一定得成绩：女子组400米第二和第五、800米第二和第七、1500米女子第二和第五、3000米第二和第五、男子组400米第七、800米第六、3000米第七、5000米第七。
+                            2012年，由程浩带队，面临在大批优秀的老队员的毕业的困扰。还好在训练的一个月中不断的有新人涌现而出，大家精诚团结，刻苦训练，在全体队员共同努力之下，取得了一定得成绩：女子组400米第八、男子组400米第二和第八、男子组800米第二、女子组1500米第二和第五、女子组3000米第三和第五、男子组3000米第二、男子组5000米第二。
+                        </pre>
+                </div>
+                <!--往期活动-->
+                <div class="history_activities">
+                    <h2 class="info_title">
+                        <span class="info_pointer"></span>往期活动<span class="info_line"></span>
+                    </h2>
+                    <div class="history_activities_div">
+                        <ul class="history_activities_ul">
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/running/association_run_activities_1.jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/running/association_run_activities_2.jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/running/association_run_activities_3.jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/running/association_run_activities_4.jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/underway.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/running/association_run_activities_5.jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/overdue.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                            <li class="history_activities_li">
+                                <a href="#" title="社团活动">
+                                    <div class="hidtory_activities_li_topImg">
+                                        <img src="images/running/association_run_activities_6.jpg" alt="社团活动" class="history_activities_img" />
+                                    </div>
+                                    <div class="history_activities_li_content">
+                                        <span class="history_activities_name">定向越野</span>
+                                        <span class="history_activities_associatiesName">野狼战队</span>
+                                        <span class="history_activities_date">2017.04.01-2017.05.25</span>
+                                        <span class="history_activities_detail">一年一度的定向越野又要开始啦！小伙伴们快快前来报名吧！</span>
+                                    </div>
+                                </a>
+                                <img src="icons/overdue.png" class="activities_state" alt="活动状态"/>
+                            </li>
+                        </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!--主体结束-->
+        <!--页尾开始-->
+        <div class="footer">
+            <span class="returnTop">top</span>
+            <div class="link">
+                <ul class="link_ul">
+                    <li class="link_li">
+                        <a href="#" title="网站首页">网站首页</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="合作团队">合作团队</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="成员招募">成员招募</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="加盟合作">加盟合作</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="意见反馈">意见反馈</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="常见问题">常见问题</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="人才招聘">人才招聘</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="联系我们">联系我们</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="#" title="友情链接">友情链接</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <span class="copyright_text">Copyright © 社团联盟开发团队 2017. All Rights Reserved</span>
+            </div>
+        </div>
+        <!--页尾结束-->
+        
+        
+        <script type="text/javascript">      	
+	        $(function(){
+	        	//获取社团对应id
+                var location_href = window.location.href;
+                //截取规则
+                //var rule = /.*id\s*\=\s*(\w+)&personal_privilege\s*\=\s*(\w+).*/;
+	        	//var association_location_id = location_href.replace(rule,"$1").split("=")[1];
+	        	//var association_location_privilege = location_href.replace(rule,"$2");
+                //声明变量用以存放json的社团id以做比较
+                var association_id = "";
+                var association_true_id = "";
+                var association_location_id = location_href.split("=")[1];
+	        	//alert(association_location_id);
+	        	//alert(association_location_privilege);
+	        	var association_location_privilege = "";
+	        	var association_name = "";
+                var association_baseInfo = "";
+                var association_history = "";
+	        	$.ajax({
+	        		type:'POST',
+	        		url:'getassociation',
+	        		dataType:'json',
+	        		contentType: "application/json; charset=utf-8",
+	        		success:function(data){        		
+	        			$.each(data.association,function(index,value){
+	        				association_id = value.association_id;        				
+	        				if(association_id == association_location_id){
+	        					association_true_id = association_id;
+	        					//alert(association_id);
+	        					let association_header_img = value.association_img.split("WebContent\\")[1].replace(/\\/g,"/");
+	        					association_name = value.association_name;
+	        					//alert(association_name);
+	        					let association_introduction = value.association_introduction;
+	        					let association_motto = value.association_purpose;
+	        					let association_belong = value.association_upper_department;
+	        					let association_type = value.association_function;
+	        					association_baseInfo = value.association_baseInfo;
+	        					association_history = value.association_history;
+	        					$("#association_header_img").attr("src",association_header_img);
+	        					$(".association_location_name").html(association_name);
+	        					$("#association_introduction").html(association_introduction);
+	        					$("#association_motto").html(association_motto);
+	        					$("#associaiton_belong").html(association_belong);
+	        					$("#association_type").html(association_type);
+	        					$(".association_location_name").html(association_name);
+	        					//$("#association_baseInfo").html(association_introduction);
+	        					//$("#association_history").html(association_history);        					
+	        				}else{
+	        					//window.location.href = "404.html";
+	        				}
+	        			});
+	        		},
+	        		error:function(){
+	        			alert("您的网络开小差了~");
+	        		}
+	        	});
+                var timer =setTimeout(function(){
+                    //社团内容加载
+                    $.ajax({
+                        type:'POST',
+                        url:association_baseInfo,
+                        dataType:'text',
+                        success:function(data){
+                            $("#association_baseInfo").html(data);
+                        },
+                        error:function(){
+                            alert("社团内容加载错误！");
+                        }
+                    });
+                    //社团历史加载
+                    $.ajax({
+                        type:'POST',
+                        url:association_history,
+                        dataType:'text',
+                        success:function(data){
+                            $("#association_history").html(data);
+                        },
+                        error:function(){
+                            alert("社团内容加载错误！");
+                        }
+                    });
+                },500);
+
+
+
+	        	$.ajax({
+	        		type:'POST',
+	        		url:'getstudent',
+	        		dataType:'json',
+	        		contentType: "application/json; charset=utf-8",
+	        		success:function(data){
+	        			//alert(data);
+	        			
+	        			$.each(data.stu,function(index,value){
+	        				//alert(association_name);
+	        				association_location_privilege = value.personal_privilege[association_name];
+	        				//alert(association_location_privilege);
+	        			})
+	        			
+	        		},
+	        		error:function(){
+	        			alert("权限获取失败！");
+	        		}
+	        	})
+	        	//点击我要加入反馈
+	        	$("#join_button").click(function(){
+                    if(association_location_privilege != 1 || association_location_privilege != 2){
+                        $.ajax({
+                            type:'POST',
+                            url:'joinassociation',
+                            data:{"association_id":association_true_id},
+                            dataType:'json',
+                            success:function(data){
+                            	//alert(association_true_id);
+                                alert("您的加入信息提交成功，请等待社团负责人审核！");
+                            },
+                            error:function(){
+                                alert("网络君暂时开小差了，请稍后再做提交~");
+                            }
+                        });
+                    }else{
+                        $(this).css("backgroundColor","#a1a1a1");
+                        alert("您已经是社团成员！");
+                    }
+	        		
+	        	});
+	        	
+	        });
+        	
+
+        </script>
+	</body>
+</html>

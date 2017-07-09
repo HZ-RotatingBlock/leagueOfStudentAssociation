@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>活动任务页</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/activities_detail_page.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<!--loading star-->    
+        <div class="loading_pagination" id="loading_pagination">
+            <div class="loading_center">
+                <img src="icons/loading_img.png" alt="loading" class="loading_img">
+                <span class="loading_circle_shadow"></span>
+            </div>        
+            <span class="loading_pagination_text">loading...</span>
+            <div class="loading_circle_inner"></div>
+            <div class="loading_circle_outer"></div>
+        </div>
+        <!--loading end-->
+        <!--导航条开始-->
+		<div class="nav">
+            <a href="index.html" title="返回首页"><span class="logo"></span></a>
+            <ul class="login_header_ul">
+                <li class="user_header">
+                    <a href="personal_page.html" title="前往个人主页" class="personalpage_href">
+                        <img src="icons/association_leader_3.jpg" alt="用户头像" class="user_header_img" id="user_header_img">
+                    </a>
+                </li>
+                <li class="user_name" id="user_name"><%=session.getAttribute("personal_name")%></li>             
+            </ul>   
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="login.html" title="登录" class="nav_li_a">登录</a></li>
+                <li class="nav_li"><a href="login.html" title="注册" class="nav_li_a">注册</a></li>
+            </ul>
+        </div>
+        <!--导航条结束-->
+        <!--侧边快捷栏开始-->
+        <ul class="sidebar">
+            <li class="sidebar_option">
+                <img src="icons/returnTop_1.png" alt="回到顶部" class="sidebar_option_icons return_top">
+                <span class="prompt_sidebar">
+                    回到顶部<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/collected_1.png" alt="收藏" class="sidebar_option_icons collect">
+                <span class="prompt_sidebar">
+                    收藏活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/share_1.png" alt="分享活动" class="sidebar_option_icons shareOther">
+                <span class="prompt_sidebar">
+                    分享活动<span class="triangle_right"></span>
+                </span>
+            </li>
+            <li class="sidebar_option">
+                <img src="icons/return_pre.png" alt="返回前页" class="sidebar_option_icons return_pre">
+                <span class="prompt_sidebar">
+                    返回前页<span class="triangle_right"></span>
+                </span>
+            </li>
+        </ul>
+        <!--侧边快捷栏结束-->
+    
+        <!--主体开始-->
+        <div class="main">
+            <h1 class="activities_title" id="activities_title">五四定向越野：越野越有范儿</h1>
+            <!--头部开始-->
+            <div class="activities_association">
+                <div class="activities_association_icons">
+                    <img src="images/association_icons/association_icons_20.jpg" alt="社团图标" class="activities_association_icons_img" id="activities_association_icons_img"/>
+                    <span class="activities_association_name" id="activities_association_name">中南民族大学野狼长跑队</span>
+                    <span class="icons_circle_inner"></span>
+                    <span class="icons_circle_outer"></span>
+                    <span class="line_left"></span>
+                    <span class="line_right"></span>
+                </div>
+            </div>
+            <!--头部结束-->
+            <!--活动内容开始-->
+            <div class="content">
+                <img src="images/running/association_run_activities_7.jpg" alt="活动图片" class="association_img" id="activity_img" />
+                <div class="content_p">
+                    <pre class="activities_content" id="activities_content">炎炎烈日下，有那么一群人，他们一路狂奔、挥汗如雨，他们斗智斗勇、齐心协力他们欢声笑语、朝气蓬勃.....
+                     五月，在民大不谈论“我们正青春·定向越野”，你是会被抛弃的。火炉城市，美丽民大，我们民大人，与生俱来的一种技能就是创造“热闹”。
+                    　为进一步推进“三走”活动的深入开展，贯彻落实《关于深入开展大学生“走下网络、走出宿舍、走向操场”主题群众性课外体育锻炼活动的指导意见》，进一步激发大学生的体育锻炼热情，提高大学生群体的身心素质，增强学校的体育运动氛围，我校团委特此开展以“我们正青春”为主题的五四青年节定向越野。
+                    定向越野是什么？
+                    定向越野作为一种新兴的，利用地图和指北针导航的运动，在世界各地正吸引着越来越多人参与并为之狂热。它既是一种户外休闲、娱乐运动，又是一种竞技运动。参加定向运动除需要指北针和地图外，不需要特殊的设备，是一种较为经济的运动项目。
+                    “我们正青春·定向越野”怎么玩？
+                    （1）参赛队伍将分为3个批次分别进行签到，每批次每支队伍在签到后，进行抽签决定游戏起点，并领取任务卡片、地图及卡包；
+                    （2）本次活动共设置七个任务点，每一任务点均有3个游戏，参赛队伍自行选择一项游戏完成即可。在任务点完成游戏后，到指定工作人员处进行抽签决定下一任务点，同时在任务卡上加盖下一任务点印章，凭此章方能参加下一任务点游戏；
+                    （3）穿越规则：参赛队伍在第四点完成游戏后，均返回上一任务点完成其余两项游戏中的任一游戏后，再次进行抽签决定下一任务点；
+                    （4）每项游戏均按照完成时间长短进行计分（详见计分总则），在完成所有的任务后，将任务卡带回大本营处进行统计并登记。
+
+                    你是不是对五四定向越野产生了期待！好奇就立即行动，有兴趣就快来参加吧！
+                    此次活动我们的报名方式如下：
+                      Ⅰ.线下报名：4月27日——4月28日在南区一二食堂之间、北区天桥下进行摆台宣传， 5月2日——5月3日仍在南区一二食堂间进行摆台宣传，报名参加的同学可在摆台处报名， 
+                    Ⅱ.线上报名：在微信公众号“中南民族大学野狼长跑队” 处回复“五四越野”，获取表单填写报名信息提交即可。
+                    当出发的欢笑响彻云霄，当游戏时的开心喜形于色，当结束时的满足溢于言表，试问谁还能忘记这弥足珍贵的一天，这一天，定向越野，这一年，我们正青春！
+                    </pre>
+                    <div class="activities_info">
+                        <span class="activities_info_time">
+                            活动时间：<strong class="activities_info_time_detail" id="activities_info_time_detail">2017.04.01-2017.05.01</strong>
+                        </span>
+                        <span class="activities_info_place">
+                            活动地点：<strong class="activities_info_time_detail" id="activities_info_place_detail">中南民族大学校园内</strong>
+                        </span>
+                        <span class="activities_info_ele">
+                            活动对象：<strong class="activities_info_time_detail" id="activities_info_object_detail">中南民族大学在读学生</strong>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--活动内容结束-->
+            <!--活动任务开始-->
+            <div class="activities_task">
+                <span class="activities_task_name">活动任务</span>
+                <span class="line_left"></span>
+                <span class="line_right"></span>
+                <!--任务时间轴-->
+                <div class="activities_task_timeline">
+                    <img src="icons/add.png" alt="add_task" class="add_task" title="添加新任务" />
+                    <ul class="activities_task_line">
+                        <li class="activities_task_line_li">
+                            <img src="icons/task.png" alt="任务点" class="task_pointer"/>
+                            <div class="activities_task_line_li_frames">
+                                <div class="join_task btn">接受</div>
+                                <span class="triangle_left"></span>
+                                <span class="task_li_date">任务起始日期</span>
+                                <h3 class="activities_task_line_li_frames_title">子任务名称</h3>
+                                <p class="activities_task_line_li_frames_p">请点击左方纸飞机输入任务详情...</p>
+                                <ul class="activities_task_line_li_frames_bottom">
+                                <!--
+                                    <li class="activities_task_line_li_frames_bottom_li">
+                                        <img src="icons/association_leader_1.jpg" alt="任务负责人" class="task_li_person">
+                                        <span class="task_li_person_name">负责人姓名</span>
+                                    </li>
+                                    <li class="activities_task_line_li_frames_bottom_li">
+                                        <img src="icons/association_leader_2.jpg" alt="任务负责人" class="task_li_person">
+                                        <span class="task_li_person_name">负责人姓名</span>
+                                    </li>
+                                 -->
+                                </ul>
+                                <span class="task_li_person_title">当前负责人：</span>
+                            </div>  
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>  
+            <!--活动任务结束-->
+            
+        </div>          
+        <!--主体结束-->
+        <!--任务修改遮罩层-->
+        <div class="task_change_shadow">
+            <span class="shadow"></span>
+            <div class="task_change_shadow_panel">
+                <img src="icons/close.png" alt="关闭" class="close" id="close" />
+                <!--任务修改-->
+                <div class="task_revise shadow_panel_content">
+                    <span class="task_title">任务修改</span>
+                    <img src="icons/task_1.png" alt="任务修改" class="task_change_img" />
+                    <span class="task_content">请填写任务详细信息</span>
+                    <form class="task_form" action="" method="post">
+                        <span class="task_name">任务名：</span>
+                        <input type="text" class="task_name_input" id="task_name_input" placeholder="请填写任务名"/>
+                        <span class="task_date">任务起止日期：</span>
+                        <input type="text" class="task_date_input" id="task_date_input" placeholder="请填写起止日期如：2017.01.01-2017.02.02"/>
+                        <span class="task_cotent">任务内容：</span>
+                        <textarea class="task_cotent_input" id="task_cotent_input" placeholder="请填写需要发布的活动任务内容"></textarea>
+                        <div class="confirm">确定</div>
+                        <div class="delete">删除</div>
+                    </form>
+                </div>
+                
+
+            </div>
+        </div>
+        <script type="text/javascript" src="js/general_js.js"></script>
+        <script type="text/javascript">
+        $(function(){
+        	//获取本页地址id
+        	var location_href = window.location.href;
+        	var location_id = location_href.split("=")[1];
+        	//alert(location_id);
+        	//********************************活动基本内容及对应任务加载*********************************
+            var activity_base_info = "";
+            $.ajax({
+                type:'POST',
+                url:'getactivity',
+                dataType:'json',
+                success:function(data){
+                    $.each(data.activity,function(index,value){
+                        //比对当前页面id及获取数据id是否一致，一致则取出信息
+                        let activity_id = value.activity_id;
+                        if(activity_id == location_id){
+                            //活动基本信息加载
+                            let activity_name = value.activity_name;
+                            let activity_association_name = value.activity_association.association_name;
+                            //alert(activity_association_name);
+                            let activity_association_header = value.activity_association.association_img.split("WebContent\\")[1].replace(/\\/g,"/");
+                            //alert(activity_association_header);
+                            let activity_img = value.activity_img.split("WebContent\\")[1].replace(/\\/g,"/");
+                            //alert(activity_img);
+                            activity_base_info = value.activity_introduction;
+                            let activity_date = value.activity_date_scope;
+                            let activity_place = value.activity_place;
+                            let activity_object = value.activity_member_scope;
+                            $("#activities_title").html(activity_name);
+                            $("#activities_association_name").html(activity_association_name);
+                            $("#activities_association_icons_img").attr("src",activity_association_header);
+                            $("#activity_img").attr("src",activity_img);
+                            //$("#activities_content").html(activity_base_info);
+                            $("#activities_info_time_detail").html(activity_date);
+                            $("#activities_info_place_detail").html(activity_place);
+                            $("#activities_info_object_detail").html(activity_object);
+                            //活动对应任务加载
+                            let activity_task_length = value.activity_content.length;
+                            //alert(activity_task_length);
+                            if(activity_task_length != 0){
+                            	$(".activities_task_line_li").remove();
+                            	for(let i = 0;i < activity_task_length;i++){
+                                	let activity_task_name = value.activity_content[i].subactivity_name;
+                                    let activity_task_content = value.activity_content[i].subactivity_content;
+                                    let activity_task_date = value.activity_content[i].subactivity_date_scope;
+                                    let activity_task_subactivity_id = value.activity_content[i].subactivity_id;
+                                    //let activity_task_subactivity_id = value.activity_content[i].subactivity_id;
+                                    //let activity_task_leader_name  = value.activity_content[i].activity_task_leader_name;
+                                    //let activity_task_leader_header = value.activity_content[i].activity_task_leader_header;
+
+                                    let activities_task_line = $(".activities_task_line").html();
+                                    let new_li = '<li class="activities_task_line_li">'
+                                    			+ '<img src="icons/task.png" alt="任务点" class="task_pointer" value="' + activity_task_subactivity_id + '" />'
+                                                + '<div class="activities_task_line_li_frames">'
+                                                + '<div class="join_task btn">接受</div>'
+                                                + '<span class="triangle_left"></span>'
+                                                + '<span class="task_li_date">' + activity_task_date + '</span>'
+                                                + '<h3 class="activities_task_line_li_frames_title">' + activity_task_name + '</h3>'
+                                                + '<p class="activities_task_line_li_frames_p">' + activity_task_content + '</p>'
+                                                + '<ul class="activities_task_line_li_frames_bottom">'
+                                                //+ '<li class="activities_task_line_li_frames_bottom_li">'
+                                                //+ '<img src="icons/association_leader_1.jpg" alt="任务负责人" class="task_li_person">'
+                                                //+ '<span class="task_li_person_name">' + activity_task_leader_name + '</span>'
+                                                //+ '</li>'
+                                                //+ '<li class="activities_task_line_li_frames_bottom_li">'
+                                                //+ '<img src="icons/association_leader_2.jpg" alt="任务负责人" class="task_li_person">'
+                                                //+ '<span class="task_li_person_name">' + activity_task_leader_name + '</span>'
+                                                //+ '</li>'
+                                                + '</ul>'
+                                                + '<span class="task_li_person_title">当前负责人：</span>'
+                                                + '</div> '
+                                                + '</li>';
+                                    $(".activities_task_line").html(activities_task_line + new_li);
+                                }
+                            }
+                            
+                            
+                        }
+                                                                 
+                    })
+                },
+                error:function(){
+                    alert("活动加载失败!");
+                }
+            });
+            //社团内容加载
+            var timer = setTimeout(function(){
+                $.ajax({
+                    type:'POST',
+                    url:activity_base_info,
+                    dataType:'text',
+                    success:function(data){
+                        $("#activities_content").html(data);
+                    },
+                    error:function(){
+                        alert("活动内容加载失败！");
+                    }
+                })
+            },500);
+            /*对应修改面板点击确定修改*/
+            $(".shadow_panel_content").each(function(index,value){
+                $(value).find(".confirm").click(function(){
+                    var task_title = $(value).find(".task_title"); 
+                    if(task_title.html() == "任务修改"){
+                        /*任务名修改*/
+                        if($("#task_name_input").val() != ""){
+                            $(task_revise_that).siblings(".activities_task_line_li_frames").find(".activities_task_line_li_frames_title").html($("#task_name_input").val());
+                        }else{
+                            alert("任务名不能为空！");
+                        }                     
+                        /*任务起止日期修改*/
+                        if($("#task_date_input").val() != ""){
+                            $(task_revise_that).siblings(".activities_task_line_li_frames").find(".task_li_date").html($("#task_date_input").val());
+                        }else{
+                            alert("任务起止日期不能为空！");
+                        }                        
+                        /*任务内容修改*/
+                        if($("#task_cotent_input").val() != ""){
+                            $(task_revise_that).siblings(".activities_task_line_li_frames").find(".activities_task_line_li_frames_p").html($("#task_cotent_input").val());  
+                        }else{
+                            alert("任务内容不能为空！");
+                        }                                              
+                    }
+                    let task_name = $("#task_name_input").val();
+                	let task_date = $("#task_date_input").val();
+            		let task_cotent = $("#task_cotent_input").val();
+        			$.ajax({
+        				type:'POST',
+        				url:'addsubactivity',
+        				data:{"activity_id":location_id,"subactivity_name":task_name,"subactivity_content":task_cotent,"subactivity_date_scope":task_date},
+        				dataType:'json',
+        				success:function(data){
+        					//alert(data);
+        					//$.each(data,function(index,value){
+        						let subactivity_id = data.subactivity_id;
+        						//alert(subactivity_id);
+        						$(task_revise_that).attr("value",subactivity_id);
+        					//})
+        					alert("任务修改成功！");
+        					shadow_hidden();
+        				},
+        				error:function(){
+        					alert("您的网络开小差了~请重新提交任务内容~");
+        				}        				
+        			})                                        
+                });
+                /*删除任务*/
+                $(value).find(".delete").click(function(){
+                	var subactivity_value_id = $(task_revise_that).attr("value");
+                	//alert(subactivity_value_id);
+                    if(confirm("确定删除改任务吗？")) {
+                        $(task_revise_that).parent().stop().animate({right:"-2000px",opacity:"0"},500,function(){
+                            var delete_frames =setTimeout(function(){
+                            	$.ajax({
+                            		type:'POST',
+                            		url:'deletesubactivity',
+                            		data:{"subactivity_id":subactivity_value_id},
+                            		success:function(){
+                            			$(task_revise_that).parent().remove();
+                            			alert("任务删除成功！");                           			
+                            		},
+                            		error:function(){
+                            			alert("您的的网络开小差了~请重新执行本操作~");
+                            		}                           		
+                            	})                                
+                            },500)
+                        });
+                        shadow_hidden();
+                    }     
+                });               
+            });
+            /*点击添加新任务*/
+            $(".add_task").click(function(){
+                var activities_task_line = $(".activities_task_line").html();
+                //var activities_task_line_li_clone = $(".activities_task_line_li:first").clone();
+                var activities_task_line_li_clone = '<li class="activities_task_line_li">'
+                                                + '<img src="icons/task.png" alt="任务点" class="task_pointer"/>'
+                                                + '<div class="activities_task_line_li_frames">'
+                                                + '<div class="join_task btn">' + '接受' + '</div>'
+                                                + '<span class="triangle_left"></span>'
+                                                + '<span class="task_li_date">任务起始日期</span>'
+                                                + '<h3 class="activities_task_line_li_frames_title">' + '子任务名称' + '</h3>'
+                                                + '<p class="activities_task_line_li_frames_p">' + '请点击左方纸飞机输入任务详情...' + '</p>'
+                                                + '<ul class="activities_task_line_li_frames_bottom">'
+                                                + '</ul>'
+                                                + '<span class="task_li_person_title">' + '当前负责人：' + '</span>'
+                                                + '</div>'  
+                                                + '</li>';
+                $(".activities_task_line").append(activities_task_line_li_clone); 
+            });
+            /*点击修改任务*/
+            var task_revise_that = null;
+            $(".activities_task_line").delegate(".task_pointer","click",function(){
+                task_revise_that = this;
+                shadow_hidden();
+            });
+            /*设置子任务接受人物上限*/
+            var join_that = null;
+            var join_stage = 0;
+            $(".activities_task_line").delegate(".join_task","click",function(){
+                join_that = this;
+                if($(this).siblings(".activities_task_line_li_frames_bottom").find(".activities_task_line_li_frames_bottom_li").length >= 3){
+                    alert("此任务已达人数上限！");
+                }else{
+                    //将当前登录人添加进子任务负责人栏(前后数据交互)
+                    if(join_stage != 1){
+                        let personal_imgsrc = $("#user_header_img").attr("src");
+                        let personal_task_name = $("#user_name").html();                             
+                        let task_person = '<li class="activities_task_line_li_frames_bottom_li">'
+                                            + '<img src="' 
+                                            + personal_imgsrc 
+                                            + '" alt="任务负责人" class="task_li_person">'
+                                            + '<span class="task_li_person_name">' 
+                                            + personal_task_name 
+                                            + '</span>'
+                                            + '</li>'
+                        $(this).siblings(".activities_task_line_li_frames_bottom").append(task_person);
+                        join_stage = 1;
+                    }else{
+                        alert("您已经接受该任务了~");
+                    }
+                    
+                }
+            })
+
+
+
+        });
+        /*遮罩关闭*/
+        $("#close").click(function(){
+            shadow_hidden();
+        });
+
+        /*任务修改遮罩层*/
+        $(".shadow").click(function(){
+            shadow_hidden();
+        })
+        //遮罩层及内容隐藏
+        function shadow_hidden(){
+            $(".task_change_shadow").fadeToggle(500);
+            $(".shadow_panel_content").fadeToggle(500);
+        }
+        </script>
+        
+	</body>
+</html>

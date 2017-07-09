@@ -1,0 +1,1181 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<title>社团联盟</title>
+
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/general_js.js"></script>
+	</head>
+    
+	<body>
+        <!--loading-->
+        
+        <div class="loading" id="loading">
+            <div class="loading_before">
+                <span class="loading_text">Loading...</span>
+                <span class="circle_inner"></span>
+                <span class="circle_outer"></span>
+                <span class="circle_outer_01"></span>
+                <span class="circle_outer_02"></span>
+                <span class="circle_outer_03"></span>
+            </div>
+            <div class="loading_after">
+                <span class="span_title">社团联盟</span>
+                <span class="span_text_1">League</span>
+                <span class="span_text_2">of</span>
+                <span class="span_text_3">student</span>
+                <span class="span_text_4">association</span>
+            </div>           
+        </div>
+        
+        <!--导航条开始-->
+		<div class="nav">
+            <a href="index.html" title="返回首页"><span class="logo"></span></a>
+            <ul class="login_header_ul">
+                <li class="user_header">
+                    <a href="personal_page.html" title="前往个人主页" class="personalpage_href">
+                        <img src="icons/association_leader_3.jpg" alt="用户头像" class="user_header_img" id="user_header_img">
+                    </a>
+                </li>
+                <li class="user_name" id="user_name">json</li>             
+            </ul>   
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="login.html" title="登录" class="nav_li_a">登录</a></li>
+                <li class="nav_li"><a href="login.html" title="注册" class="nav_li_a">注册</a></li>
+            </ul>
+        </div>
+        <!--导航条结束-->
+        <!--主体开始-->
+        <div class="main">
+            <!--官方宣传幻灯or视频宣传部分开始-->
+            <div class="offical_video">
+                <div class="offical_title">社团联盟</div>
+                <span class="motto">League of student association</span>
+                <span class="offical_video_line"></span>
+                <span class="slogan">连接你我的青春</span>
+                <div class="join"><a href="login.html" title="前往登录注册">加入我们</a></div>
+                <span class="triangle_png"></span>
+            </div>
+            <!--官方宣传幻灯or视频宣传部分结束-->
+
+            <!--过渡页面_1开始-->
+            <div class="transition_1">
+                <ul class="transition_1_content">
+					<li class="transition_1_content_list">
+						<span class="transition_1_content_icon_1"></span>
+						<span class="transition_1_content_prompt">打造全新世界观，让你更<br>爱你的生活</span>
+						<span class="transition_1_content_line"></span>
+					</li>
+					<li class="transition_1_content_list">
+						<span class="transition_1_content_icon_2"></span>
+						<span class="transition_1_content_prompt">丰富多彩的社团活动，发<br>挥新世界的主人公意识</span>
+						<span class="transition_1_content_line"></span>
+					</li>
+					<li class="transition_1_content_list">
+						<span class="transition_1_content_icon_3"></span>
+						<span class="transition_1_content_prompt">时尚的新理念，超前体验<br>未知的生活</span>
+						<span class="transition_1_content_line"></span>
+					</li>
+					<li class="transition_1_content_list">
+						<span class="transition_1_content_icon_4"></span>
+						<span class="transition_1_content_prompt">完善的机制培养你<br>全新的世界观</span>
+					</li>
+				</ul>
+            </div>
+            <!--过渡页面_1结束-->
+
+            <!--社团概览轮播开始-->
+            <div class="carousel">
+                <h1 class="carousel_h1">社团概览</h1>
+                <span class="carousel_info">Introduction of student association</span>
+                <span class="create_association_line"></span>
+                <a href="association_filter.html" class="create_association">加入社团</a>
+                <div class="carousel_view">
+                    <ul class="carousel_ul" id="carousel_ul">
+                        <li class="carousel_list">
+                            <a href="association_page.html?id=1" title="前往社团概览" class="carousel_list_association_01">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/20.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">野狼长跑队</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">速度与美</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">Running</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page.html?id=2" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/2.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">武术协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">武道-人道</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">KongFu</strong>
+                                    </span>
+                                </div> 
+                            </a>                        
+                        </li>
+                        <li class="carousel_list">
+                            <a href="association_page.html?id=3" title="前往社团概览">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/3.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">骑行社</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">风行万里</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">Cycling</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page.html?id=4" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/4.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">读书社</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">遨游书海</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">Reading</strong>
+                                    </span>
+                                </div>   
+                            </a>                      
+                        </li> 
+                        <li class="carousel_list">
+                            <a href="association_page.html?id=5" title="前往社团概览">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/5.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">舞生舞蹈团</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">一舞生四年</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">Dance</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page_06.html" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/6.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">摄影协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">指尖的记忆</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">Photograph</strong>
+                                    </span>
+                                </div>  
+                            </a>                       
+                        </li> 
+                        <li class="carousel_list">
+                            <a href="association_page_07.html" title="前往社团概览">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/7.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">轮滑社</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">影翼轮滑</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">Skidding</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page_08.html" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/8.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">足球协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">驰骋绿茵场</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">Soccer</strong>
+                                    </span>
+                                </div> 
+                            </a>                        
+                        </li> 
+                        <li class="carousel_list">
+                            <a href="association_page_09.html" title="前往社团概览">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/9.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">篮球协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">碰撞-激情</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">basketball</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page_10.html" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/10.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">乒乓协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">小球大智慧</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">TableTennis</strong>
+                                    </span>
+                                </div> 
+                            </a>                        
+                        </li> 
+                        <li class="carousel_list">
+                            <a href="association_page_11.html" title="前往社团概览">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/11.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">军事协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">军人热血</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">Military</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page_12.html" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/12.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">辩论社</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">舌战群雄</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">Debate</strong>
+                                    </span>
+                                </div>
+                            </a>                         
+                        </li> 
+                        <li class="carousel_list">
+                            <a href="association_page_13.html?" title="前往社团概览">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/13.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">烹饪社</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">天下美食归处</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">Cooking</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page_14.html" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/14.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">网球协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">跃动球场</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">Tennis</strong>
+                                    </span>
+                                </div> 
+                            </a>                        
+                        </li> 
+                        <li class="carousel_list">
+                            <a href="association_page_15.html" title="前往社团概览">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/15.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">天乐合唱团</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">交响和声</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">Chorus</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page_16.html" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/16.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">计算机协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">代码的艺术</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">Computer</strong>
+                                    </span>
+                                </div>
+                            </a>                         
+                        </li> 
+                        <li class="carousel_list">
+                            <a href="association_page_17.html" title="前往社团概览">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/17.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">笛萧协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">自然之音</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">Flute</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page_18.html" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/18.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">游泳协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">水中游鱼</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">Swimming</strong>
+                                    </span>
+                                </div> 
+                            </a>                        
+                        </li> 
+                        <li class="carousel_list">
+                            <a href="association_page_19.html" title="前往社团概览">
+                                <div class="carousel_association_div_top">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/19.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">棒球协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">激情野球场</p>
+                                    </div>
+                                    <span class="carousel_association_front top_front">
+                                        <strong class="carsousel_association_name">Baseball</strong>
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="association_page_20.html" title="前往社团概览">
+                                <div class="carousel_association_div_bottom">
+                                    <span class="carousel_association_back">
+                                        <video loop autoplay src="video/1.mp4" class="association_video"></video>
+                                    </span>
+                                    
+                                    <span class="shadow"></span>
+                                    <div class="carousel_association_back_info">
+                                        <h3 class="carousel_association_back_info_h3">瑜伽健身协会</h3>
+                                        <span class="carousel_line"></span>
+                                        <p class="carousel_association_back_info_p">人体的的艺术</p>
+                                    </div>
+                                    <span class="carousel_association_front bottom_front">
+                                        <strong class="carsousel_association_name">Yoga</strong>
+                                    </span>
+                                </div>     
+                            </a>                    
+                        </li>     
+                    </ul>
+                </div>
+                <div class="more_recruitment_button">
+                     <a href="association_filter.html" title="查看更多社团招新" class="more_recruitment_a">
+                         <span class="more_circle_1 circle_left"></span>
+                         <span class="more_circle_2 circle_left"></span>
+                         <span class="more_circle_3 circle_left"></span>
+                         more
+                         <span class="more_circle_4 circle_right"></span>
+                         <span class="more_circle_5 circle_right"></span>
+                         <span class="more_circle_6 circle_right"></span>
+                     </a>
+                 </div>
+            </div>
+            <!--社团概览轮播结束-->
+            
+            <!--人物风采开始-->
+            <div class="personal_mien">
+                <span class="triangle_png_1"></span>
+                <span class="triangle_png"></span>
+                <h1 class="personal_mien_title">个人风采</h1>
+                <span class="personal_mien_titleEn">Personal style</span>
+                <!--个人风采第一部分-->
+                <div class="personal_1">
+                    <h3 class="personal_content">
+                        <div class="personal_content_inner">
+                            <h4 class="personal_nick">辩论协会</h4>
+                            <span class="personal_name">Debate Association</span>
+                        </div>
+                    </h3>
+                    <ul class="personal_content_ul">
+                        <li class="personal_content_li">
+                            <div class="personal_content_li_inner">
+                                <div class="personal_content_li_detail">
+                                    <span class="personal_content_li_icons">Jiang Han Rui</span>
+                                    <h3 class="personal_detail_name">江晗睿 <span class="personal_detail_date">2014年入社</span></h3>
+                                    <p class="personal_content_li_p">公共管理学院-公共事业管理专业，考研至武汉大学-国际法方向。在校期间，担任校辩论协会会长，年级团总支书记，公共管理学院辩论队队长</p>
+                                </div>
+                                <div class="personal_content_li_img">
+                                    <img class="personal_content_img" src="images/personal_mien/personal_mien_01.jpg" alt="铿锵玫瑰"/>
+                                </div>    
+                                <span class="personal_content_li_arrow">→</span>
+                                <span class="personal_content_li_shadow"></span>
+                            </div>            
+                        </li>
+                        <li class="personal_content_li">
+                            <div class="personal_content_li_inner">
+                                <div class="personal_content_li_detail">
+                                    <span class="personal_content_li_icons">Chen Jing Yu</span>
+                                    <h3 class="personal_detail_name">陈镜羽 <span class="personal_detail_date">2014年入社</span></h3>
+                                    <p class="personal_content_li_p">陈镜羽，中南民族大学辩论协会2014级成员，经济学院经济统计学专业。曾任2015-2016辩论协会副会长，经济学院辩论队队长。</p>
+                                </div>
+                                <div class="personal_content_li_img">
+                                    <img class="personal_content_img" src="images/personal_mien/personal_mien_02.jpg" alt="铿锵玫瑰"/>
+                                </div>    
+                                <span class="personal_content_li_arrow">→</span>
+                                <span class="personal_content_li_shadow"></span>
+                            </div>            
+                        </li>
+                        <li class="personal_content_li">
+                            <div class="personal_content_li_inner">
+                                <div class="personal_content_li_detail">
+                                    <span class="personal_content_li_icons">Liu Yang</span>
+                                    <h3 class="personal_detail_name">刘阳 <span class="personal_detail_date">2014年入社</span></h3>
+                                    <p class="personal_content_li_p">刘阳，中南民族大学辩论协会2013级成员，管理学院市场营销专业。曾任2015-2016辩论协会副会长，管理学院辩论队队长</p>
+                                </div>
+                                <div class="personal_content_li_img">
+                                    <img class="personal_content_img" src="images/personal_mien/personal_mien_03.jpg" alt="铿锵玫瑰"/>
+                                </div>    
+                                <span class="personal_content_li_arrow">→</span>
+                                <span class="personal_content_li_shadow"></span>
+                            </div>            
+                        </li>
+                    </ul>
+                </div>
+                <!--个人风采第二部分-->
+                <div class="personal_2">
+                    <h3 class="personal_content">
+                        <div class="personal_content_inner">
+                            <h4 class="personal_nick">天乐合唱团</h4>
+                            <span class="personal_name">Glee Club</span>
+                        </div>
+                    </h3>
+                    <ul class="personal_content_ul">
+                        <li class="personal_content_li">
+                            <div class="personal_content_li_inner">
+                                <div class="personal_content_li_detail">
+                                    <span class="personal_content_li_icons">Ma Suo</span>
+                                    <h3 class="personal_detail_name">马硕 <span class="personal_detail_date">2014年入社</span></h3>
+                                    <p class="personal_content_li_p">马硕，中南民族大学大学生艺术团·天乐合唱团2013级成员，2015~2016年担任团长一职。曾参演天乐合唱团2015年“光阴故事”音乐晚会、2016年“时光与树”音乐晚会等。</p>
+                                </div>
+                                <div class="personal_content_li_img">
+                                    <img class="personal_content_img" src="images/personal_mien/personal_mien_04.jpg" alt="铿锵玫瑰"/>
+                                </div>    
+                                <span class="personal_content_li_arrow">→</span>
+                                <span class="personal_content_li_shadow"></span>
+                            </div>            
+                        </li>
+                        <li class="personal_content_li">
+                            <div class="personal_content_li_inner">
+                                <div class="personal_content_li_detail">
+                                    <span class="personal_content_li_icons">Wang Yao</span>
+                                    <h3 class="personal_detail_name">王瑶 <span class="personal_detail_date">2014年入社</span></h3>
+                                    <p class="personal_content_li_p">王瑶，中南民族大学天乐合唱团2014级成员，管理学院人力资源管理专业。担任2016-2017年天乐合唱团副团长，女高音部部长。曾参演天乐合唱团2015年“光阴故事”音乐晚会、2016年“时光与树”音乐晚会等</p>
+                                </div>
+                                <div class="personal_content_li_img">
+                                    <img class="personal_content_img" src="images/personal_mien/personal_mien_05.jpg" alt="铿锵玫瑰"/>
+                                </div>    
+                                <span class="personal_content_li_arrow">→</span>
+                                <span class="personal_content_li_shadow"></span>
+                            </div>            
+                        </li>
+                        <li class="personal_content_li">
+                            <div class="personal_content_li_inner">
+                                <div class="personal_content_li_detail">
+                                    <span class="personal_content_li_icons">Yi Li Sha</span>
+                                    <h3 class="personal_detail_name">易丽莎 <span class="personal_detail_date">2014年入社</span></h3>
+                                    <p class="personal_content_li_p">易丽莎，中南民族大学天乐合唱团2014级团员，生命科学学院食品安全专业。担任天乐合唱团2016-2017副团长，钢琴伴奏。曾参演天乐合唱团2015年“光阴故事”音乐晚会、2016年“时光与树”音乐晚会等</p>
+                                </div>
+                                <div class="personal_content_li_img">
+                                    <img class="personal_content_img" src="images/personal_mien/personal_mien_06.jpg" alt="铿锵玫瑰"/>
+                                </div>    
+                                <span class="personal_content_li_arrow">→</span>
+                                <span class="personal_content_li_shadow"></span>
+                            </div>            
+                        </li>
+                    </ul>
+                </div>
+                <!--个人风采第三部分-->
+                <div class="personal_3">
+                    <h3 class="personal_content">
+                        <div class="personal_content_inner">
+                            <h4 class="personal_nick">舞生舞蹈团</h4>
+                            <span class="personal_name">Dance Agency</span>
+                        </div>
+                    </h3>
+                    <ul class="personal_content_ul">
+                        <li class="personal_content_li">
+                            <div class="personal_content_li_inner">
+                                <div class="personal_content_li_detail">
+                                    <span class="personal_content_li_icons">Qin Jing Han</span>
+                                    <h3 class="personal_detail_name">秦镜涵 <span class="personal_detail_date">2014年入社</span></h3>
+                                    <p class="personal_content_li_p">秦镜涵，大学生艺术团·舞生舞蹈团2013级成员，民社院社会工作专业，担任2015-2016中南民大艺术团舞蹈团团长。参演2015年“此心舞垠”毕业舞蹈专场、2015年“你好民大”冬季小专场、2016年“艺生有你”毕业舞蹈专场等</p>
+                                </div>
+                                <div class="personal_content_li_img">
+                                    <img class="personal_content_img" src="images/personal_mien/personal_mien_07.jpg" alt="铿锵玫瑰"/>
+                                </div>    
+                                <span class="personal_content_li_arrow">→</span>
+                                <span class="personal_content_li_shadow"></span>
+                            </div>            
+                        </li>
+                        <li class="personal_content_li">
+                            <div class="personal_content_li_inner">
+                                <div class="personal_content_li_detail">
+                                    <span class="personal_content_li_icons">Zhou Yi Jun</span>
+                                    <h3 class="personal_detail_name">周意钧 <span class="personal_detail_date">2014年入社</span></h3>
+                                    <p class="personal_content_li_p">周意钧，大学生艺术团·舞生舞蹈团2015级成员，文传院新闻与传播专业，担任2016-2017中南民大艺术团舞蹈团副团长。参演2015年“你好民大”冬季小专场、2016年“艺生有你”毕业舞蹈专场、2017年“肆年舞年”毕业舞蹈专场等</p>
+                                </div>
+                                <div class="personal_content_li_img">
+                                    <img class="personal_content_img" src="images/personal_mien/personal_mien_08.jpg" alt="铿锵玫瑰"/>
+                                </div>    
+                                <span class="personal_content_li_arrow">→</span>
+                                <span class="personal_content_li_shadow"></span>
+                            </div>            
+                        </li>
+                    </ul>
+                </div>
+                <!--个人风采第四部分-->
+                <div class="personal_4">
+                    <h3 class="personal_content">
+                        <div class="personal_content_inner">
+                            <h4 class="personal_nick">子衿阅读协会</h4>
+                            <span class="personal_name">Reading Club</span>
+                        </div>
+                    </h3>
+                    <ul class="personal_content_ul">
+                        <li class="personal_content_li">
+                            <div class="personal_content_li_inner">
+                                <div class="personal_content_li_detail">
+                                    <span class="personal_content_li_icons">Ren Peng Fei</span>
+                                    <h3 class="personal_detail_name">任鹏飞 <span class="personal_detail_date">2014年入社</span></h3>
+                                    <p class="personal_content_li_p">任鹏飞，中南民族大学子衿阅读协会2014级成员， 数学与统计学学院应用统计学专业，现任中南民族大学子衿阅读协会会长，数学与统计学院兼职辅导员，校团委学生副书记，历任校学生会主席、少数民族学生骨干训练营负责人</p>
+                                </div>
+                                <div class="personal_content_li_img">
+                                    <img class="personal_content_img" src="images/personal_mien/personal_mien_09.jpg" alt="铿锵玫瑰"/>
+                                </div>    
+                                <span class="personal_content_li_arrow">→</span>
+                                <span class="personal_content_li_shadow"></span>
+                            </div>            
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="more_recruitment_button">
+                     <a href="activities_page.html" title="查看更多社团招新" class="more_recruitment_a">
+                         <span class="more_circle_1 circle_left"></span>
+                         <span class="more_circle_2 circle_left"></span>
+                         <span class="more_circle_3 circle_left"></span>
+                         more
+                         <span class="more_circle_4 circle_right"></span>
+                         <span class="more_circle_5 circle_right"></span>
+                         <span class="more_circle_6 circle_right"></span>
+                     </a>
+                 </div>
+            </div>
+            <!--人物风采结束-->
+
+            <!--社团活动开始-->
+            <div class="activities_info">
+                <h3 class="activities_info_title">社团活动</h3>
+                <span class="activities_info_en">Activities of student association</span>
+                <span class="activities_info_line"></span>
+                <!--活动列表-->
+                <div class="activities_info_content">
+                    <ul class="activities_info_content_ul">
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=1" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_20.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">定向越野</span>
+                                <p class="activities_info_img_p">五四定向越野：越野越有范儿</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=2" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_02.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">徐老师降敌套路</span>
+                                <p class="activities_info_img_p">徐老师叫我来巡山！</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=3" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_03.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">车协暑假远征</span>
+                                <p class="activities_info_img_p">我做过许多大梦，放假了出去旅行</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=4" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_04.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">第十四届毕业生论坛</span>
+                                <p class="activities_info_img_p">第十四届毕业生论坛开始啦！</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=5" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_05.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">“艺生有你”毕业生专场晚会</span>
+                                <p class="activities_info_img_p">一舞生四年 不悔梦归处</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=6" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_06.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">给妈一个当网红的机会</span>
+                                <p class="activities_info_img_p">说出你的故事，让妈妈当次“网红”</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=7" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_07.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">LOVE$ROLL轮滑节</span>
+                                <p class="activities_info_img_p">这是属于你们的节日，有你们才完美！</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=8" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_08.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">你的圣杯，我的不弃不离！</span>
+                                <p class="activities_info_img_p">今日，足协杯再次启航！</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=9" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_09.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">民大各大院系篮球挑战赛</span>
+                                <p class="activities_info_img_p">开启新的征程，为冠军而战！</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=10" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_10.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">民大乒乓球比赛活动</span>
+                                <p class="activities_info_img_p">中南民族大学第十六届学生乒乓球比赛</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=11" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_11.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">军事素质拓展大赛</span>
+                                <p class="activities_info_img_p">想不想成为战队核心带领队伍冲向冠军？</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=12" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_12.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">社团联合晚会</span>
+                                <p class="activities_info_img_p">无社团 不青春</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=13" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_13.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">山河湖海，厨房与爱</span>
+                                <p class="activities_info_img_p">在回到家葛优瘫的那一刻世界还是美好的！</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=14" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_14.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">趣味网球活动</span>
+                                <p class="activities_info_img_p">一年一度的社团文化节今天就要开始咯</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=15" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_15.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">[时光与树]毕业生音乐会</span>
+                                <p class="activities_info_img_p">给予你毕业最后的温暖</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                        <li class="activities_info_content_li">
+                            <a href="activities_page.html?id=16" title="前往活动详情">
+                                <img src="images/association_filter/video_part_bg_16.jpg" alt="社团活动" class="activities_img"/>
+                                <span class="activities_info_imgtitle">创意点亮校园设计大赛</span>
+                                <p class="activities_info_img_p">贴近生活，激发更多学生的兴趣</p>
+                                <span class="activities_more_button">view more</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="more_info">
+                    <a href="activities_filter.html" title="查看更多社团活动" class="more_activities">
+                        <span class="more_circle_1 circle_left"></span>
+                        <span class="more_circle_2 circle_left"></span>
+                        <span class="more_circle_3 circle_left"></span>
+                        more
+                        <span class="more_circle_4 circle_right"></span>
+                        <span class="more_circle_5 circle_right"></span>
+                        <span class="more_circle_6 circle_right"></span>
+                    </a>
+                </div>
+                
+            </div>
+            <!--社团活动结束-->             
+            <!--社团招新开始-->             
+            <div class="recruitment">
+                <span class="triangle_png_1"></span>
+                <h3 class="recruitment_title">社团招新</h3>
+                <span class="recruitment_span">Recruitment of student association</span>
+                <span class="recruitment_line"></span>
+
+                <!--社团招新活动内容-->
+                <div class="recruitment_content">
+                    <ul class="recruitment_content_ul">
+                        <li class="recruitment_content_li">
+                            <a href="#" title="冲浪社招新" target="_blank">
+                                <div class="recruitment_imgdiv">
+                                    <img src="images/activities_filter/activities_filter_01.jpg" alt="冲浪社招新" class="recruitment_img" />
+                                </div>
+                                <span class="recruitment_date">
+                                    <strong class="recruitment_date_effect">有效日期：</strong>2017-05-01~~2017-06-01
+                                </span>
+                                <span class="recruitment_content_line"></span>
+                                <div class="recruitment_content_detail">
+                                    <h3 class="recruitment_content_h3">辩论社等待你的加入</h3>
+                                    <p class="recruitment_content_p">或许，你向往的大学生活是这样的：三五好友，共饮美酒；给你舞台，唇枪舌战。关于大学的n种可能，这里都能给你。是思维的碰撞，更是灵魂的融合，为伴，真理为友。锻炼口才，培养逻辑，思考狮城舌战，条理清晰，辩论，有着多种可能，等待你们来发现。生有涯，思无限，辩无胜，理自明。
+                                    </p>
+                                </div>
+                                <div class="recruitment_hot">
+                                    <span class="recruitment_good">
+                                        <strong class="recruitment_good_num">88</strong>
+                                    </span>
+                                    <span class="recruitment_comment">
+                                        <strong class="recruitment_comment_num">77</strong>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="recruitment_content_li">
+                            <a href="#" title="冲浪社招新" target="_blank">
+                                <div class="recruitment_imgdiv">
+                                    <img src="images/activities_filter/activities_filter_02.jpg" alt="冲浪社招新" class="recruitment_img" />
+                                </div>
+                                <span class="recruitment_date">
+                                    <strong class="recruitment_date_effect">有效日期：</strong>2017-05-01~~2017-06-01
+                                </span>
+                                <span class="recruitment_content_line"></span>
+                                <div class="recruitment_content_detail">
+                                    <h3 class="recruitment_content_h3">游泳协会招新</h3>
+                                    <p class="recruitment_content_p">本着以锻炼学生体质，培养社员们优秀的心理素质和强健的体魄为目标，不再为妈妈和女友同时掉到水里而烦恼，并从中发现优秀人才培养其加入游泳队，为自己为学校取得好成绩，让大学生活丰富多彩
+                                    </p>
+                                </div>
+                                <div class="recruitment_hot">
+                                    <span class="recruitment_good">
+                                        <strong class="recruitment_good_num">88</strong>
+                                    </span>
+                                    <span class="recruitment_comment">
+                                        <strong class="recruitment_comment_num">77</strong>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="recruitment_content_li">
+                            <a href="#" title="冲浪社招新" target="_blank">
+                                <div class="recruitment_imgdiv">
+                                    <img src="images/activities_filter/activities_filter_03.jpg" alt="冲浪社招新" class="recruitment_img" />
+                                </div>
+                                <span class="recruitment_date">
+                                    <strong class="recruitment_date_effect">有效日期：</strong>2017-05-01~~2017-06-01
+                                </span>
+                                <span class="recruitment_content_line"></span>
+                                <div class="recruitment_content_detail">
+                                    <h3 class="recruitment_content_h3">网球协会招新</h3>
+                                    <p class="recruitment_content_p">如果你想约会一个女孩，有什么比“周日我教你打网球”更令人无法拒绝呢?如果一个你心仪的男生问你业余时间通常有些什么娱乐活动，又有什么比“我喜欢打网球”更令人刮目相看呢?快快来加入我们吧，这周三四我们三食堂门口不见不散~~~
+                                    </p>
+                                </div>
+                                <div class="recruitment_hot">
+                                    <span class="recruitment_good">
+                                        <strong class="recruitment_good_num">88</strong>
+                                    </span>
+                                    <span class="recruitment_comment">
+                                        <strong class="recruitment_comment_num">77</strong>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="recruitment_content_li">
+                            <a href="#" title="冲浪社招新" target="_blank">
+                                <div class="recruitment_imgdiv">
+                                    <img src="images/activities_filter/activities_filter_04.jpg" alt="冲浪社招新" class="recruitment_img" />
+                                </div>
+                                <span class="recruitment_date">
+                                    <strong class="recruitment_date_effect">有效日期：</strong>2017-05-01~~2017-06-01
+                                </span>
+                                <span class="recruitment_content_line"></span>
+                                <div class="recruitment_content_detail">
+                                    <h3 class="recruitment_content_h3">舞生·舞蹈团招新</h3>
+                                    <p class="recruitment_content_p">30多年来，来自不同院、不同专业、不同地区、不同民族的同学们怀着对舞蹈的执着与追求，相聚在大学生活动中心111排练厅，用自己柔软的身躯、优美的舞姿将一个个美丽动人的故事展示给大家。我们期待与热爱舞蹈的你相遇。
+                                    </p>
+                                </div>
+                                <div class="recruitment_hot">
+                                    <span class="recruitment_good">
+                                        <strong class="recruitment_good_num">88</strong>
+                                    </span>
+                                    <span class="recruitment_comment">
+                                        <strong class="recruitment_comment_num">77</strong>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="recruitment_content_li">
+                            <a href="#" title="冲浪社招新" target="_blank">
+                                <div class="recruitment_imgdiv">
+                                    <img src="images/activities_filter/activities_filter_05.jpg" alt="冲浪社招新" class="recruitment_img" />
+                                </div>
+                                <span class="recruitment_date">
+                                    <strong class="recruitment_date_effect">有效日期：</strong>2017-05-01~~2017-06-01
+                                </span>
+                                <span class="recruitment_content_line"></span>
+                                <div class="recruitment_content_detail">
+                                    <h3 class="recruitment_content_h3">天乐合唱团招新</h3>
+                                    <p class="recruitment_content_p">也许你担忧自己的音准，也许你纠结于自己的音色，也许你害怕单独歌唱，也许……没有关系！只要你热爱音乐、喜欢合唱，享受歌声带给你的美妙，就请毫不犹豫的到我们天乐TIANYUE的碗里来吧！如果你身边有着热爱音乐的朋友，告诉他，TIANYUE将带领你踏上通往美的音乐旅途！
+                                    </p>
+                                </div>
+                                <div class="recruitment_hot">
+                                    <span class="recruitment_good">
+                                        <strong class="recruitment_good_num">88</strong>
+                                    </span>
+                                    <span class="recruitment_comment">
+                                        <strong class="recruitment_comment_num">77</strong>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="recruitment_content_li">
+                            <a href="#" title="冲浪社招新" target="_blank">
+                                <div class="recruitment_imgdiv">
+                                    <img src="images/activities_filter/activities_filter_06.jpg" alt="冲浪社招新" class="recruitment_img" />
+                                </div>
+                                <span class="recruitment_date">
+                                    <strong class="recruitment_date_effect">有效日期：</strong>2017-05-01~~2017-06-01
+                                </span>
+                                <span class="recruitment_content_line"></span>
+                                <div class="recruitment_content_detail">
+                                    <h3 class="recruitment_content_h3">笛箫协会招新</h3>
+                                    <p class="recruitment_content_p">笛萧协会下设笛部，箫部，葫芦丝部，策宣部，外联部，后勤部，表演部，笛萧协会采用零基础教学模式，加上名师指导，相信你可以得到你想要的！在这里不仅可以培养你的爱好，更可以锻炼的能力，更重要的是可以收获珍贵的友谊！在这里相信你会更加美丽！
+                                    </p>
+                                </div>
+                                <div class="recruitment_hot">
+                                    <span class="recruitment_good">
+                                        <strong class="recruitment_good_num">88</strong>
+                                    </span>
+                                    <span class="recruitment_comment">
+                                        <strong class="recruitment_comment_num">77</strong>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="more_recruitment_button">
+                     <a href="activities_filter.html" title="查看更多社团招新" class="more_recruitment_a">
+                         <span class="more_circle_1 circle_left"></span>
+                         <span class="more_circle_2 circle_left"></span>
+                         <span class="more_circle_3 circle_left"></span>
+                         more
+                         <span class="more_circle_4 circle_right"></span>
+                         <span class="more_circle_5 circle_right"></span>
+                         <span class="more_circle_6 circle_right"></span>
+                     </a>
+                 </div>
+            </div>
+
+            <!--社团招新结束-->             
+
+        </div>
+        <!--主体结束-->
+        <!--页尾开始-->
+        <div class="footer">
+            <span class="returnTop">top</span>
+            <div class="link">
+                <ul class="link_ul">
+                    <li class="link_li">
+                        <a href="link_a" title="网站首页">网站首页</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="link_a" title="合作团队">合作团队</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="link_a" title="成员招募">成员招募</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="link_a" title="加盟合作">加盟合作</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="link_a" title="意见反馈">意见反馈</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="link_a" title="常见问题">常见问题</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="link_a" title="人才招聘">人才招聘</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="link_a" title="联系我们">联系我们</a>
+                    </li>
+                    <li class="link_li">
+                        <a href="link_a" title="友情链接">友情链接</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <span class="copyright_text">Copyright © 社团联盟开发团队 2017. All Rights Reserved</span>
+            </div>
+        </div>
+        <!--页尾结束-->   
+        <--<script type="text/javascript" src="js/index.js"></script>-->
+        <script type="text/javascript">
+        $(function(){
+        
+            /*社团概览*/
+            //function movenext(){
+            //    $("#carousel_ul").animate({left:"-=15.1px"},100,function(){
+            //    	$(".carousel_view ul>li").eq(0).appendTo($(".carousel_view ul"));
+            //    });             
+            //}
+            //var timer=setInterval(movenext,100);
+            /*鼠标移入停止*/
+            //鼠标移入
+            //$("#carousel_ul").mouseover(function(){
+                //clearInterval(timer);
+            //});
+            //鼠标移开
+            //$("#carousel_ul").mouseleave(function(){
+                //timer=setInterval(movenext,100);
+            //});
+            /*个人风采部分动画*/
+            $(window).scroll(function(){
+                /*个人风采标题*/
+                if($(window).scrollTop() >= 2000){
+                    $("h1.personal_mien_title,span.personal_mien_titleEn").animate({"opacity":"1","margin-top":"20px"},500);
+                }
+                /*个人风采第一部分*/        
+                if($(window).scrollTop() >= 2500){
+                    $(".personal_1 .personal_content").animate({"left":"0px"},500).animate({"width":"50%"},500);
+                    $(".personal_1 .personal_content_inner").animate({"opacity":"1","left":"50%"},1000);
+                    $(".personal_1 .personal_content_li:nth-child(1)").delay(1000);
+                    $(".personal_1 .personal_content_li:nth-child(2)").delay(1500);
+                    $(".personal_1 .personal_content_li:nth-child(3)").delay(2000);
+                    $(".personal_1 .personal_content_li").animate({"width":"850px","padding":"10px"},500);
+                    $(".personal_1 .personal_content_li_inner").delay(2500).animate({"opacity":"1"},500);
+                    $(".personal_1 li.personal_content_li:nth-child(1) .personal_content_li_shadow").delay(2500);
+                    $(".personal_1 li.personal_content_li:nth-child(2) .personal_content_li_shadow").delay(3000);
+                    $(".personal_1 li.personal_content_li:nth-child(3) .personal_content_li_shadow").delay(3500);
+                    $(".personal_1 .personal_content_li_shadow").animate({"width":"0"},500);
+                }
+                /*个人风采第二部分*/
+                if($(window).scrollTop() >= 3500){
+                    $(".personal_2 .personal_content").animate({"left":"50%"},500).animate({"width":"50%"},500);
+                    $(".personal_2 .personal_content_inner").animate({"opacity":"1","left":"50%"},1000);
+                    $(".personal_2 .personal_content_li:nth-child(1)").delay(1000);
+                    $(".personal_2 .personal_content_li:nth-child(2)").delay(1500);
+                    $(".personal_2 .personal_content_li:nth-child(3)").delay(2000);
+                    $(".personal_2 .personal_content_li").animate({"width":"850px","padding":"10px"},500);
+                    $(".personal_2 .personal_content_li_inner").delay(2500).animate({"opacity":"1"},500);
+                    $(".personal_2 li.personal_content_li:nth-child(1) .personal_content_li_shadow").delay(2500);
+                    $(".personal_2 li.personal_content_li:nth-child(2) .personal_content_li_shadow").delay(3000);
+                    $(".personal_2 li.personal_content_li:nth-child(3) .personal_content_li_shadow").delay(3500);
+                    $(".personal_2 .personal_content_li_shadow").animate({"width":"0"},500);
+                }
+                /*个人风采第三部分*/        
+                if($(window).scrollTop() >= 4500){
+                    $(".personal_3 .personal_content").animate({"left":"0px"},500).animate({"width":"50%"},500);
+                    $(".personal_3 .personal_content_inner").animate({"opacity":"1","left":"50%"},1000);
+                    $(".personal_3 .personal_content_li:nth-child(1)").delay(1000);
+                    $(".personal_3 .personal_content_li:nth-child(2)").delay(1500);
+                    $(".personal_3 .personal_content_li:nth-child(3)").delay(2000);
+                    $(".personal_3 .personal_content_li").animate({"width":"850px","padding":"10px"},500);
+                    $(".personal_3 .personal_content_li_inner").delay(2500).animate({"opacity":"1"},500);
+                    $(".personal_3 li.personal_content_li:nth-child(1) .personal_content_li_shadow").delay(2500);
+                    $(".personal_3 li.personal_content_li:nth-child(2) .personal_content_li_shadow").delay(3000);
+                    $(".personal_3 li.personal_content_li:nth-child(3) .personal_content_li_shadow").delay(3500);
+                    $(".personal_3 .personal_content_li_shadow").animate({"width":"0"},500);
+                }
+                /*个人风采第四部分*/
+                if($(window).scrollTop() >= 5500){
+                    $(".personal_4 .personal_content").animate({"left":"50%"},500).animate({"width":"50%"},500);
+                    $(".personal_4 .personal_content_inner").animate({"opacity":"1","left":"50%"},1000);
+                    $(".personal_4 .personal_content_li:nth-child(1)").delay(1000);
+                    $(".personal_4 .personal_content_li:nth-child(2)").delay(1500);
+                    $(".personal_4 .personal_content_li:nth-child(3)").delay(2000);
+                    $(".personal_4 .personal_content_li").animate({"width":"850px","padding":"10px"},500);
+                    $(".personal_4 .personal_content_li_inner").delay(2500).animate({"opacity":"1"},500);
+                    $(".personal_4 li.personal_content_li:nth-child(1) .personal_content_li_shadow").delay(2500);
+                    $(".personal_4 li.personal_content_li:nth-child(2) .personal_content_li_shadow").delay(3000);
+                    $(".personal_4 li.personal_content_li:nth-child(3) .personal_content_li_shadow").delay(3500);
+                    $(".personal_4 .personal_content_li_shadow").animate({"width":"0"},500);
+                }
+                
+
+                
+            }); 
+        });
+        /*
+        	$(function(){
+        		
+        		$.ajax({
+        			type:'POST',
+        			url:'getassociation',
+        			dataType:'json',
+        			success:function(data){
+       				        			
+        				$.each(data.association,function(index,value){
+        					if(index == 0){
+        						let association_name = value.association_name;
+            					let association_id = value.association_id; 
+            					$(".carousel_list_association_01").attr("href","association_page.html?id=" + association_id);
+            					$(".carousel_list_association_01").children(".carousel_association_back_info_h3").html(association_name);
+        					}
+        					
+     					
+        				})
+        				
+        			},
+        			error:function(){
+        				alert("您的网络开小差了~");
+        			}
+        			
+        		});
+        		$.ajax({
+        			type:'POST',
+        			url:'getstudent',
+        			dataType:'json',
+        			success:function(data){   	
+        				$.each(data.stu,function(index,value){
+        					let personal_association_length = value.personal_association.length;
+        					for(var i = 0;i < personal_association_length;i++){
+        						let personal_association_name = value.personal_association[i].association_name;
+        						$(".carousel_association_back_info_h3").html(personal_association_name);
+        						//let personal_privilege = value.personal_privilege[personal_association_name];
+        						//let now_a = $(".carousel_list_association_01").attr("href");
+        						//alert(now_a);
+        						//$(".carousel_list_association_01").attr("href",now_a + "&personal_privilege=" + personal_privilege);
+        						//alert($(".carousel_list_association_01").attr("href"));
+        					}       					       					    					
+        				})
+        				
+        			},
+        			error:function(){
+        				alert("您的网络开小差了~");
+        			}
+        			
+        		});
+        		
+        	})
+        	*/
+        </script>
+
+	</body>
+</html>
