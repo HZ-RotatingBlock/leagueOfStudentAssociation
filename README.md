@@ -12,7 +12,7 @@ PS:本地版以完成所有功能，但因交互数据未同步至Github因此�
 - [个人面板页](https://hz-rotatingblock.github.io/leagueOfStudentAssociation/personal_page.html)
 - [社团面板页](https://hz-rotatingblock.github.io/leagueOfStudentAssociation/personal_association_page.html)
 - [社团活动任务页](https://hz-rotatingblock.github.io/leagueOfStudentAssociation/activities_detail_page.html)
-- [后台登录页](https://hz-rotatingblock.github.io/leagueOfStudentAssociation/manerge_page.html)
-- [后台管理页](https://hz-rotatingblock.github.io/leagueOfStudentAssociation/personal_page.html)
+- [后台登录页](https://hz-rotatingblock.github.io/leagueOfStudentAssociation/manerge_login.html)
+- [后台管理页](https://hz-rotatingblock.github.io/leagueOfStudentAssociation/manerge_page.html)
 ## Copyright © 社团联盟开发团队 2017. All Rights Reserved
 
